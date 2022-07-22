@@ -1,15 +1,24 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'v5.4.99',
-        'version' => '5.4.99.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
-        'name' => 'symfony/website-skeleton',
+        'reference' => '6dd347f2572b29f3329563cd673833df9aa800df',
+        'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'type' => 'project',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => '6dd347f2572b29f3329563cd673833df9aa800df',
+            'dev_requirement' => false,
+        ),
         'doctrine/annotations' => array(
             'pretty_version' => '1.13.3',
             'version' => '1.13.3.0',
@@ -46,6 +55,15 @@
             'reference' => 'c824e95d4c83b7102d8bc60595445a6f7d540f96',
             'dev_requirement' => false,
         ),
+        'doctrine/data-fixtures' => array(
+            'pretty_version' => '1.5.3',
+            'version' => '1.5.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../doctrine/data-fixtures',
+            'aliases' => array(),
+            'reference' => 'ba37bfb776de763c5bf04a36d074cd5f5a083c42',
+            'dev_requirement' => true,
+        ),
         'doctrine/dbal' => array(
             'pretty_version' => '3.3.7',
             'version' => '3.3.7.0',
@@ -72,6 +90,15 @@
             'aliases' => array(),
             'reference' => 'd2088fc50494e4e7441fecca54732245a613eeb6',
             'dev_requirement' => false,
+        ),
+        'doctrine/doctrine-fixtures-bundle' => array(
+            'pretty_version' => '3.4.2',
+            'version' => '3.4.2.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../doctrine/doctrine-fixtures-bundle',
+            'aliases' => array(),
+            'reference' => '601988c5b46dbd20a0f886f967210aba378a6fd5',
+            'dev_requirement' => true,
         ),
         'doctrine/doctrine-migrations-bundle' => array(
             'pretty_version' => '3.2.2',
@@ -170,6 +197,15 @@
             'install_path' => __DIR__ . '/../friendsofphp/proxy-manager-lts',
             'aliases' => array(),
             'reference' => '8419f0158715b30d4b99a5bd37c6a39671994ad7',
+            'dev_requirement' => false,
+        ),
+        'jms/metadata' => array(
+            'pretty_version' => '2.6.1',
+            'version' => '2.6.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../jms/metadata',
+            'aliases' => array(),
+            'reference' => 'c3a3214354b5a765a19875f7b7c5ebcd94e462e5',
             'dev_requirement' => false,
         ),
         'laminas/laminas-code' => array(
@@ -1280,15 +1316,6 @@
             'reference' => 'f61c99d8dbd864b11935851b598f784bcff36fc7',
             'dev_requirement' => true,
         ),
-        'symfony/website-skeleton' => array(
-            'pretty_version' => 'v5.4.99',
-            'version' => '5.4.99.0',
-            'type' => 'project',
-            'install_path' => __DIR__ . '/../../',
-            'aliases' => array(),
-            'reference' => NULL,
-            'dev_requirement' => false,
-        ),
         'symfony/yaml' => array(
             'pretty_version' => 'v5.4.10',
             'version' => '5.4.10.0',
@@ -1323,6 +1350,15 @@
             'install_path' => __DIR__ . '/../twig/twig',
             'aliases' => array(),
             'reference' => 'e939eae92386b69b49cfa4599dd9bead6bf4a342',
+            'dev_requirement' => false,
+        ),
+        'vich/uploader-bundle' => array(
+            'pretty_version' => '1.20.0',
+            'version' => '1.20.0.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../vich/uploader-bundle',
+            'aliases' => array(),
+            'reference' => '6b8ac89b54ee8340e3fc108927b2c20226118436',
             'dev_requirement' => false,
         ),
         'webmozart/assert' => array(
