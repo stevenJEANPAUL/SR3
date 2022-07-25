@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rncp index{% endblock %}
+
+{% block body %}
+    <h1>Rncp index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Formation</th>
+                <th>Niveau</th>
+                <th>Descriptif</th>
+                <th>ImageName</th>
+                <th>UpdatedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for rncp in rncps %}
+            <tr>
+                <td>{{ rncp.id }}</td>
+                <td>{{ rncp.titre }}</td>
+                <td>{{ rncp.formation }}</td>
+                <td>{{ rncp.niveau }}</td>
+                <td>{{ rncp.descriptif }}</td>
+                <td>{{ rncp.imageName }}</td>
+                <td>{{ rncp.updatedAt ? rncp.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_admin_rncp_show', {'id': rncp.id}) }}">show</a>
+                    <a href="{{ path('app_admin_rncp_edit', {'id': rncp.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_rncp_new') }}">Create new</a>
+{% endblock %}
