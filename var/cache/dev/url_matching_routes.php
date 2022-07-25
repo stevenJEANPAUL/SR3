@@ -11,6 +11,8 @@ return [
         '/accueil' => [[['_route' => 'app_accueil', '_controller' => 'App\\Controller\\AccueilController::index'], null, null, null, false, false, null]],
         '/admin/accueil' => [[['_route' => 'app_admin_accueil_index', '_controller' => 'App\\Controller\\AdminAccueilController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/accueil/new' => [[['_route' => 'app_admin_accueil_new', '_controller' => 'App\\Controller\\AdminAccueilController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/admin/team' => [[['_route' => 'app_admin_team', '_controller' => 'App\\Controller\\AdminTeamController::index'], null, null, null, false, false, null]],
+        '/team' => [[['_route' => 'app_team', '_controller' => 'App\\Controller\\TeamController::index'], null, null, null, false, false, null]],
         '/_profiler' => [[['_route' => '_profiler_home', '_controller' => 'web_profiler.controller.profiler::homeAction'], null, null, null, true, false, null]],
         '/_profiler/search' => [[['_route' => '_profiler_search', '_controller' => 'web_profiler.controller.profiler::searchAction'], null, null, null, false, false, null]],
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],

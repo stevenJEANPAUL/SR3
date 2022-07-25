@@ -9,6 +9,8 @@ return [
     'app_admin_accueil_show' => [['id'], ['_controller' => 'App\\Controller\\AdminAccueilController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/accueil']], [], [], []],
     'app_admin_accueil_edit' => [['id'], ['_controller' => 'App\\Controller\\AdminAccueilController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/admin/accueil']], [], [], []],
     'app_admin_accueil_delete' => [['id'], ['_controller' => 'App\\Controller\\AdminAccueilController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/accueil']], [], [], []],
+    'app_admin_team' => [[], ['_controller' => 'App\\Controller\\AdminTeamController::index'], [], [['text', '/admin/team']], [], [], []],
+    'app_team' => [[], ['_controller' => 'App\\Controller\\TeamController::index'], [], [['text', '/team']], [], [], []],
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
     '_wdt' => [['token'], ['_controller' => 'web_profiler.controller.profiler::toolbarAction'], [], [['variable', '/', '[^/]++', 'token', true], ['text', '/_wdt']], [], [], []],
     '_profiler_home' => [[], ['_controller' => 'web_profiler.controller.profiler::homeAction'], [], [['text', '/_profiler/']], [], [], []],
