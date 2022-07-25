@@ -1,0 +1,11 @@
+{% extends 'base-backend.html.twig' %}
+
+{% block title %}New Rncp{% endblock %}
+
+{% block body %}
+    <h1>Create new Rncp</h1>
+
+    {{ include('admin_rncp/_form.html.twig') }}
+
+    <a href="{{ path('app_admin_rncp_index') }}">back to list</a>
+{% endblock %}

@@ -5,7 +5,11 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
+<<<<<<< HEAD
         'reference' => '6e5ccb0191ee4a6f81de4b0be8704242ab1952ac',
+=======
+        'reference' => '57691816d93df2058f9fa7761187a5c8b3e77259',
+>>>>>>> main
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +20,11 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
+<<<<<<< HEAD
             'reference' => '6e5ccb0191ee4a6f81de4b0be8704242ab1952ac',
+=======
+            'reference' => '57691816d93df2058f9fa7761187a5c8b3e77259',
+>>>>>>> main
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -197,6 +205,24 @@
             'install_path' => __DIR__ . '/../friendsofphp/proxy-manager-lts',
             'aliases' => array(),
             'reference' => '8419f0158715b30d4b99a5bd37c6a39671994ad7',
+            'dev_requirement' => false,
+        ),
+        'friendsofsymfony/ckeditor-bundle' => array(
+            'pretty_version' => '2.4.0',
+            'version' => '2.4.0.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../friendsofsymfony/ckeditor-bundle',
+            'aliases' => array(),
+            'reference' => 'a4df4056b2832881e17b939e83f25406a6cc6414',
+            'dev_requirement' => false,
+        ),
+        'jms/metadata' => array(
+            'pretty_version' => '2.6.1',
+            'version' => '2.6.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../jms/metadata',
+            'aliases' => array(),
+            'reference' => 'c3a3214354b5a765a19875f7b7c5ebcd94e462e5',
             'dev_requirement' => false,
         ),
         'laminas/laminas-code' => array(
@@ -1307,6 +1333,18 @@
             'reference' => 'f61c99d8dbd864b11935851b598f784bcff36fc7',
             'dev_requirement' => true,
         ),
+<<<<<<< HEAD
+=======
+        'symfony/webpack-encore-bundle' => array(
+            'pretty_version' => 'v1.15.1',
+            'version' => '1.15.1.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../symfony/webpack-encore-bundle',
+            'aliases' => array(),
+            'reference' => '718673b1e758533614190ae74d07305a72bc66a9',
+            'dev_requirement' => false,
+        ),
+>>>>>>> main
         'symfony/yaml' => array(
             'pretty_version' => 'v5.4.10',
             'version' => '5.4.10.0',
@@ -1341,6 +1379,15 @@
             'install_path' => __DIR__ . '/../twig/twig',
             'aliases' => array(),
             'reference' => 'e939eae92386b69b49cfa4599dd9bead6bf4a342',
+            'dev_requirement' => false,
+        ),
+        'vich/uploader-bundle' => array(
+            'pretty_version' => '1.20.0',
+            'version' => '1.20.0.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../vich/uploader-bundle',
+            'aliases' => array(),
+            'reference' => '6b8ac89b54ee8340e3fc108927b2c20226118436',
             'dev_requirement' => false,
         ),
         'webmozart/assert' => array(
