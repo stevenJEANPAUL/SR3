@@ -270,6 +270,6 @@ class __TwigTemplate_1ea29bdb1316fc5b8da750b6e1ef96ccba81bbf8886b8623793519881f3
     </div>
 {%- endblock -%}
 
-", "@VichUploader/Form/fields.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/vich/uploader-bundle/templates/Form/fields.html.twig");
+", "@VichUploader/Form/fields.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/vich/uploader-bundle/templates/Form/fields.html.twig");
     }
 }
