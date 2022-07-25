@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\ACCUEILRepository;
+use App\Repository\AccueilRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=ACCUEILRepository::class)
+ * @ORM\Entity(repositoryClass=AccueilRepository::class)
  */
-class ACCUEIL
+class Accueil
 {
     /**
      * @ORM\Id
@@ -23,12 +23,12 @@ class ACCUEIL
     private $imageName;
 
     /**
-     * @ORM\Column(type="datetime_immutable", nullable=true)
+     * @ORM\Column(type="datetime_immutable")
      */
     private $UpdatedAt;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text")
      */
     private $description;
 
@@ -43,7 +43,7 @@ class ACCUEIL
     private $nom;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     private $commentaire;
 
@@ -74,7 +74,7 @@ class ACCUEIL
         return $this->UpdatedAt;
     }
 
-    public function setUpdatedAt(?\DateTimeImmutable $UpdatedAt): self
+    public function setUpdatedAt(\DateTimeImmutable $UpdatedAt): self
     {
         $this->UpdatedAt = $UpdatedAt;
 
@@ -86,7 +86,7 @@ class ACCUEIL
         return $this->description;
     }
 
-    public function setDescription(?string $description): self
+    public function setDescription(string $description): self
     {
         $this->description = $description;
 
@@ -122,7 +122,7 @@ class ACCUEIL
         return $this->commentaire;
     }
 
-    public function setCommentaire(string $commentaire): self
+    public function setCommentaire(?string $commentaire): self
     {
         $this->commentaire = $commentaire;
 

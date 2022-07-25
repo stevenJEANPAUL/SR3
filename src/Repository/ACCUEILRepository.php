@@ -2,26 +2,26 @@
 
 namespace App\Repository;
 
-use App\Entity\ACCUEIL;
+use App\Entity\Accueil;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<ACCUEIL>
+ * @extends ServiceEntityRepository<Accueil>
  *
- * @method ACCUEIL|null find($id, $lockMode = null, $lockVersion = null)
- * @method ACCUEIL|null findOneBy(array $criteria, array $orderBy = null)
- * @method ACCUEIL[]    findAll()
- * @method ACCUEIL[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Accueil|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Accueil|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Accueil[]    findAll()
+ * @method Accueil[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ACCUEILRepository extends ServiceEntityRepository
+class AccueilRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, ACCUEIL::class);
+        parent::__construct($registry, Accueil::class);
     }
 
-    public function add(ACCUEIL $entity, bool $flush = false): void
+    public function add(Accueil $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -30,7 +30,7 @@ class ACCUEILRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(ACCUEIL $entity, bool $flush = false): void
+    public function remove(Accueil $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
@@ -40,7 +40,7 @@ class ACCUEILRepository extends ServiceEntityRepository
     }
 
 //    /**
-//     * @return ACCUEIL[] Returns an array of ACCUEIL objects
+//     * @return Accueil[] Returns an array of Accueil objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -54,7 +54,7 @@ class ACCUEILRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?ACCUEIL
+//    public function findOneBySomeField($value): ?Accueil
 //    {
 //        return $this->createQueryBuilder('a')
 //            ->andWhere('a.exampleField = :val')
