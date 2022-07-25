@@ -1,13 +1,13 @@
 {% extends 'base-backend.html.twig' %}
 
-{% block title %}Edit Rncp{% endblock %}
+{% block title %}Modifier Titre Rncp{% endblock %}
 
 {% block body %}
-    <h1>Edit Rncp</h1>
 
-    {{ include('admin_rncp/_form.html.twig', {'button_label': 'Update'}) }}
+<a href="{{ path('app_admin_rncp_index') }}" class="btn btn-dark my-3">Retour à la liste</a>
 
-    <a href="{{ path('app_admin_rncp_index') }}">back to list</a>
+    <h1 class="text-center">Modifier Titre Rncp</h1>
 
+    {{ include('admin_rncp/_form.html.twig', {'button_label': 'Modifier'}) }}
     {{ include('admin_rncp/_delete_form.html.twig') }}
 {% endblock %}

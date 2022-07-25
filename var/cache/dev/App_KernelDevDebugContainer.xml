@@ -397,6 +397,9 @@
         <argument type="service" id=".service_locator.GNc8e5B.App\Controller\AdminRncpController"/>
       </call>
     </service>
+    <service id="App\DataFixtures\FormationFixtures" class="App\DataFixtures\FormationFixtures" autowire="true" autoconfigure="true">
+      <tag name="doctrine.fixture.orm"/>
+    </service>
     <service id="App\DataFixtures\RncpFixtures" class="App\DataFixtures\RncpFixtures" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
     </service>
@@ -404,6 +407,10 @@
       <tag name="form.type"/>
     </service>
     <service id="App\Repository\ACCUEILRepository" class="App\Repository\ACCUEILRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\FormationRepository" class="App\Repository\FormationRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -4313,7 +4320,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.H5uhOrO"/>
+      <argument type="service" id=".service_locator.G4MEgTF"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -6575,6 +6582,10 @@
       <call method="addFixtures">
         <argument type="collection">
           <argument type="collection">
+            <argument key="fixture" type="service" id="App\DataFixtures\FormationFixtures"/>
+            <argument key="groups" type="collection"/>
+          </argument>
+          <argument type="collection">
             <argument key="fixture" type="service" id="App\DataFixtures\RncpFixtures"/>
             <argument key="groups" type="collection"/>
           </argument>
@@ -6721,12 +6732,16 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AdminRncpController" class="App\Controller\AdminRncpController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AdminRncpController" class="App\Controller\AdminRncpController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AdminRncpController" class="App\Controller\AdminRncpController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\FormationFixtures" class="App\DataFixtures\FormationFixtures" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\DataFixtures\FormationFixtures" class="App\DataFixtures\FormationFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\RncpFixtures" class="App\DataFixtures\RncpFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\RncpFixtures" class="App\DataFixtures\RncpFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RncpType" class="App\Form\RncpType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\RncpType" class="App\Form\RncpType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ACCUEILRepository" class="App\Repository\ACCUEILRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ACCUEILRepository" class="App\Repository\ACCUEILRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\FormationRepository" class="App\Repository\FormationRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\FormationRepository" class="App\Repository\FormationRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\RncpRepository" class="App\Repository\RncpRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\RncpRepository" class="App\Repository\RncpRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.gSv9zYw" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -7254,10 +7269,11 @@
         <argument key="vich_uploader.listener.upload.rncp" type="service_closure" id="vich_uploader.listener.upload.rncp"/>
       </argument>
     </service>
-    <service id=".service_locator.H5uhOrO" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.G4MEgTF" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\ACCUEILRepository" type="service_closure" id="App\Repository\ACCUEILRepository"/>
+        <argument key="App\Repository\FormationRepository" type="service_closure" id="App\Repository\FormationRepository"/>
         <argument key="App\Repository\RncpRepository" type="service_closure" id="App\Repository\RncpRepository"/>
       </argument>
     </service>

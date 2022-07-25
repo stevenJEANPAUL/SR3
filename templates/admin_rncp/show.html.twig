@@ -3,7 +3,15 @@
 {% block title %}Rncp{% endblock %}
 
 {% block body %}
-    <h1>Rncp</h1>
+
+    <a href="{{ path('app_admin_rncp_index') }}"class="btn btn-dark my-3">Retour à la liste</a>
+    <h1 class="text-center">Titre Rncp</h1>
+
+    <div class="d-flex justify-content-end align-items-end">
+        {{ include('admin_rncp/_delete_form.html.twig') }}
+        <a href="{{ path('app_admin_rncp_edit', {'id': rncp.id}) }}"title="Modifier" class="btn btn-success ms-2">
+        <i class="align-middle" data-feather="edit"></i></a>
+    </div>
 
     <table class="table">
         <tbody>
@@ -24,23 +32,29 @@
                 <td>{{ rncp.niveau }}</td>
             </tr>
             <tr>
-                <th>Descriptif</th>
+                <th>Sous-Titre</th>
                 <td>{{ rncp.descriptif }}</td>
             </tr>
             <tr>
-                <th>ImageName</th>
-                <td>{{ rncp.imageName }}</td>
+            <th>Description</th>
+            <td>{{ rncp.texte|raw }}</td>
+        </tr>
+            <tr>
+                <th>Photo</th>
+                <td>
+                    {% if rncp.imageName is defined and rncp.imageName is not null %}
+                        <img src="{{ asset('images/rcnp/' ~ rncp.imageName) }}" alt="{{rncp.imageName}}" class="img-fluid">
+                    {% else %}
+                        N/A
+                    {% endif %}
+                </td>
             </tr>
             <tr>
-                <th>UpdatedAt</th>
-                <td>{{ rncp.updatedAt ? rncp.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <th>Mise à jour</th>
+                <td>{{ rncp.updatedAt ? rncp.updatedAt|date('d-m-d Y:i:s') : 'N/A' }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_rncp_index') }}">back to list</a>
 
-    <a href="{{ path('app_admin_rncp_edit', {'id': rncp.id}) }}">edit</a>
-
-    {{ include('admin_rncp/_delete_form.html.twig') }}
 {% endblock %}

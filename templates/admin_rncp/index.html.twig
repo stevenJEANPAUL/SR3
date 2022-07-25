@@ -3,19 +3,20 @@
 {% block title %}Rncp index{% endblock %}
 
 {% block body %}
-    <h1>Rncp index</h1>
-
+    <h1 class="text-center">Titres RNCP</h1>
+    <a href="{{ path('app_admin_rncp_new') }}" class="btn btn-dark my-3">Nouveau titre</a>
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Titre</th>
+                <th>Titre Page</th>
                 <th>Formation</th>
                 <th>Niveau</th>
-                <th>Descriptif</th>
-                <th>ImageName</th>
-                <th>UpdatedAt</th>
-                <th>actions</th>
+                {# <th>Sous titre</th> #}
+                {# <th>Descriptif</th> #}
+                <th>Photo</th>
+                {# <th>UpdatedAt</th> #}
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -25,21 +26,32 @@
                 <td>{{ rncp.titre }}</td>
                 <td>{{ rncp.formation }}</td>
                 <td>{{ rncp.niveau }}</td>
-                <td>{{ rncp.descriptif }}</td>
-                <td>{{ rncp.imageName }}</td>
-                <td>{{ rncp.updatedAt ? rncp.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                {# <td>{{ rncp.descriptif }}</td>
+                <td>{{ rncp.texte|raw }}</td> #}
                 <td>
-                    <a href="{{ path('app_admin_rncp_show', {'id': rncp.id}) }}">show</a>
-                    <a href="{{ path('app_admin_rncp_edit', {'id': rncp.id}) }}">edit</a>
+                    {% if rncp.imageName is defined and rncp.imageName is not null  %}
+                        <img src="{{ asset('images/rncp/' ~ rncp.imageName) }}" alt="{{rncp.imageName}}" class="img-list">
+                    {% else %}
+                        N/A
+                    {% endif %}
+                </td class="text-end">
+                {# <td>{{ rncp.updatedAt ? rncp.updatedAt|date('d-m-Y H:i:s') : '' }}</td> #}
+                <td>
+                    <a href="{{ path('app_admin_rncp_show', {'id': rncp.id}) }}"title="Voir" class="btn btn-dark">
+                        <i class="align-middle" data-feather="eye"></i>
+                    </a>
+                    <a href="{{ path('app_admin_rncp_edit', {'id': rncp.id}) }}"title="Modifier" class="btn btn-success ms-2">
+                        <i class="align-middle" data-feather="edit"></i>
+                    </a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="8">no records found</td>
+                <td colspan="5">Pas de titre trouvé</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_rncp_new') }}">Create new</a>
+    
 {% endblock %}
