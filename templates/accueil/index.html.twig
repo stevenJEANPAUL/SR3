@@ -1,47 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Accueil index{% endblock %}
+{% block title %}Hello AdminAccueilController!{% endblock %}
 
 {% block body %}
-    <h1>Accueil index</h1>
+<h1>GROUPE SR3</h1>
+    <img src="{{ asset("images/accueilformation.jpg") }}" alt="" class="img-fluid">
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>ImageName</th>
-                <th>UpdatedAt</th>
-                <th>Description</th>
-                <th>Titre</th>
-                <th>Nom</th>
-                <th>Commentaire</th>
-                <th>Texte</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for accueil in accueils %}
-            <tr>
-                <td>{{ accueil.id }}</td>
-                <td>{{ accueil.imageName }}</td>
-                <td>{{ accueil.UpdatedAt ? accueil.UpdatedAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ accueil.description }}</td>
-                <td>{{ accueil.titre }}</td>
-                <td>{{ accueil.nom }}</td>
-                <td>{{ accueil.commentaire }}</td>
-                <td>{{ accueil.texte }}</td>
-                <td>
-                    <a href="{{ path('app_accueil_show', {'id': accueil.id}) }}">show</a>
-                    <a href="{{ path('app_accueil_edit', {'id': accueil.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="9">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_accueil_new') }}">Create new</a>
 {% endblock %}
