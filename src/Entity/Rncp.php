@@ -60,6 +60,11 @@ class Rncp
      */
     private $updatedAt;
 
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $texte;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -149,6 +154,18 @@ class Rncp
     public function setUpdatedAt(?\DateTimeImmutable $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getTexte(): ?string
+    {
+        return $this->texte;
+    }
+
+    public function setTexte(?string $texte): self
+    {
+        $this->texte = $texte;
 
         return $this;
     }

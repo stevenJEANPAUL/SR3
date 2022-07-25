@@ -149,6 +149,6 @@ class __TwigTemplate_d647451a930a6c0734bacff82b1dd90019bb6439d8214dd0b85ab9df989
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: profiler_url }) }}
 {% endblock %}
-", "@WebProfiler/Profiler/cancel.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/cancel.html.twig");
+", "@WebProfiler/Profiler/cancel.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/cancel.html.twig");
     }
 }

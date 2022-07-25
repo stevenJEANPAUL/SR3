@@ -194,6 +194,6 @@ class __TwigTemplate_4751fae73379beddf06a6a378cea2e0c7ad9cd0edc022ae602222f2dd9c
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/Applications/MAMP/htdocs/stage/SR3/templates/base.html.twig");
+", "base.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/templates/base.html.twig");
     }
 }

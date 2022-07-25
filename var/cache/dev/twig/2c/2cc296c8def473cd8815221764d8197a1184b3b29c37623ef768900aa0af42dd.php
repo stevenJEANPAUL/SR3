@@ -171,6 +171,6 @@ class __TwigTemplate_05edeb7020fc31ab1ac461e5533699772d346b685807961f6b7b6335388
         {%- endfor -%}
     </pre>
 {% endif %}
-", "@Doctrine/Collector/explain.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
     }
 }

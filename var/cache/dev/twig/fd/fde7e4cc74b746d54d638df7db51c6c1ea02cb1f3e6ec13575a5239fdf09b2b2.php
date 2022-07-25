@@ -691,6 +691,6 @@ class __TwigTemplate_7445eae48ab89b3d84c03ef932eac9bd7548dc04bd928ae6d73ea58a741
 {% block form_group_class -%}
     col-sm-10
 {%- endblock form_group_class %}
-", "bootstrap_5_horizontal_layout.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/twig-bridge/Resources/views/Form/bootstrap_5_horizontal_layout.html.twig");
+", "bootstrap_5_horizontal_layout.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/twig-bridge/Resources/views/Form/bootstrap_5_horizontal_layout.html.twig");
     }
 }
