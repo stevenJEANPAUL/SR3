@@ -8,6 +8,7 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
+        '/' => [[['_route' => 'app_admin_dashboard', '_controller' => 'App\\Controller\\AdminDashboardController::index'], null, null, null, false, false, null]],
         '/admin/rncp' => [[['_route' => 'app_admin_rncp_index', '_controller' => 'App\\Controller\\AdminRncpController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/rncp/new' => [[['_route' => 'app_admin_rncp_new', '_controller' => 'App\\Controller\\AdminRncpController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/_profiler' => [[['_route' => '_profiler_home', '_controller' => 'web_profiler.controller.profiler::homeAction'], null, null, null, true, false, null]],
