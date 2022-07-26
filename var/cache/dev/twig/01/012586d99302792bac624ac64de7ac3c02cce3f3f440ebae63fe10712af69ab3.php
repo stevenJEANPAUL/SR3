@@ -63,6 +63,10 @@ class __TwigTemplate_3705fd4d440521b11be2e69158fa9b89ae4dbcbbeb7624b5629cea45ea3
     public function getSourceContext()
     {
         return new Source("<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path fill=\"#AAA\" d=\"M21.1 18.3c.8.8.8 2 0 2.8-.4.4-.9.6-1.4.6s-1-.2-1.4-.6L12 14.8l-6.3 6.3c-.4.4-.9.6-1.4.6s-1-.2-1.4-.6a2 2 0 0 1 0-2.8L9.2 12 2.9 5.7a2 2 0 0 1 0-2.8 2 2 0 0 1 2.8 0L12 9.2l6.3-6.3a2 2 0 0 1 2.8 0c.8.8.8 2 0 2.8L14.8 12l6.3 6.3z\"/></svg>
-", "@WebProfiler/Icon/close.svg", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Icon/close.svg");
+<<<<<<< HEAD:var/cache/dev/twig/35/35ba136247398afbe583b4aa95581c9e345c93248189133a49e5ae55e0dc7417.php
+", "@WebProfiler/Icon/close.svg", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\close.svg");
+=======
+", "@WebProfiler/Icon/close.svg", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Icon/close.svg");
+>>>>>>> main:var/cache/dev/twig/01/012586d99302792bac624ac64de7ac3c02cce3f3f440ebae63fe10712af69ab3.php
     }
 }

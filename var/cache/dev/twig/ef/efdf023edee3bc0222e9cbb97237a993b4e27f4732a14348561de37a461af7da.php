@@ -471,6 +471,10 @@ class __TwigTemplate_d4bfe6d0b47d7a71ce00460637a44529ede38c623b9e43759837a6173b2
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/twig.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/twig.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/79/7983f935e4435a64cc2ee51cec2b2f00b059818c4618a91f4619b9ebd8a22fd1.php
+", "@WebProfiler/Collector/twig.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
+=======
+", "@WebProfiler/Collector/twig.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/twig.html.twig");
+>>>>>>> main:var/cache/dev/twig/ef/efdf023edee3bc0222e9cbb97237a993b4e27f4732a14348561de37a461af7da.php
     }
 }

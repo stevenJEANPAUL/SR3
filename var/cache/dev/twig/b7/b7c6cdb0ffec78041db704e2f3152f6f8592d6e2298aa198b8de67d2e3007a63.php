@@ -2080,6 +2080,10 @@ class __TwigTemplate_4949820a2cedf0109d37dde85a74fb5f33514ead11ea52a65af967155ba
         {{ tree.form_tree_details(childName, childData, forms_by_hash) }}
     {% endfor %}
 {% endmacro %}
-", "@WebProfiler/Collector/form.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/61/6154b75ee84ea2f0f42f365cd65408ac4fd2e467117c12a1cb759b7a9b3b2bca.php
+", "@WebProfiler/Collector/form.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\form.html.twig");
+=======
+", "@WebProfiler/Collector/form.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
+>>>>>>> main:var/cache/dev/twig/b7/b7c6cdb0ffec78041db704e2f3152f6f8592d6e2298aa198b8de67d2e3007a63.php
     }
 }

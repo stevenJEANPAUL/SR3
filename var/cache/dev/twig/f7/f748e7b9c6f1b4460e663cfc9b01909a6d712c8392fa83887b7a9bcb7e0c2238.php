@@ -63,6 +63,10 @@ class __TwigTemplate_0005616c1f3a81b74c6fc96b26773b915281a693f5aba102c8e12c54200
     public function getSourceContext()
     {
         return new Source("<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path fill=\"#AAA\" d=\"M15.1 4.3a13 13 0 0 0-6.2 0c-.3 0-.7-.2-.7-.5v-.4c0-1.2 1-2.3 2.3-2.3h3c1.2 0 2.3 1 2.3 2.3v.3c0 .4-.4.6-.7.6zm5.8 9.7a9 9 0 0 1-17.8 0 9 9 0 0 1 17.8 0zm-4.2 1c0-.6-.4-1-1-1H13V8.4c0-.6-.4-1-1-1s-1 .4-1 1v6.2c0 .6.4 1.3 1 1.3h3.7c.5.1 1-.3 1-.9z\"/></svg>
-", "@WebProfiler/Icon/time.svg", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Icon/time.svg");
+<<<<<<< HEAD:var/cache/dev/twig/de/defc21a09b4d763c8927646ad388352a0fae7ac9d707188f09af5637d31b8bc2.php
+", "@WebProfiler/Icon/time.svg", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\time.svg");
+=======
+", "@WebProfiler/Icon/time.svg", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Icon/time.svg");
+>>>>>>> main:var/cache/dev/twig/f7/f748e7b9c6f1b4460e663cfc9b01909a6d712c8392fa83887b7a9bcb7e0c2238.php
     }
 }

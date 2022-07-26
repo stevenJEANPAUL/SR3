@@ -803,6 +803,10 @@ class __TwigTemplate_cbebdb0e8de70d87058e49eba725deed799078d713db728654528babd3f
         </table>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/config.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/config.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/2b/2b043d00738c6bb69bd7fe724187ae115a0addb2af93088dab506adaa0e3c868.php
+", "@WebProfiler/Collector/config.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\config.html.twig");
+=======
+", "@WebProfiler/Collector/config.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/config.html.twig");
+>>>>>>> main:var/cache/dev/twig/73/739a7bd8a0ca5d80c739735933b82dcaf142d0845b5df9c356606961da927385.php
     }
 }

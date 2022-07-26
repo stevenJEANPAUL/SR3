@@ -1671,6 +1671,10 @@ class __TwigTemplate_b0486d8c5d255df8850fe9b33bfdd2eeb4613608331b13eb99be5f85ced
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/a5/a574663469c881a66ac690cc40aa9d865c554392aa13967255522c3c4abe3695.php
+", "@Doctrine/Collector/db.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
+=======
+", "@Doctrine/Collector/db.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
+>>>>>>> main:var/cache/dev/twig/92/9274ab96600718e153f92dff3168bf4b3201d8218658742589e470267e9057c9.php
     }
 }

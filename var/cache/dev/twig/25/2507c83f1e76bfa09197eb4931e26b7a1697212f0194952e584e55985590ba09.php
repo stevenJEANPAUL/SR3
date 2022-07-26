@@ -222,6 +222,10 @@ class __TwigTemplate_b622ad785d55eff8ef1e0df48fc3c15d1c92b44eb2e5107f7ad4f9e9ef2
         {% block body '' %}
     </body>
 </html>
-", "@WebProfiler/Profiler/base.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/48/48d513ae89effcb29c2e6858fb8758003cd1bd626290992ec5567516b589f701.php
+", "@WebProfiler/Profiler/base.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\base.html.twig");
+=======
+", "@WebProfiler/Profiler/base.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
+>>>>>>> main:var/cache/dev/twig/25/2507c83f1e76bfa09197eb4931e26b7a1697212f0194952e584e55985590ba09.php
     }
 }

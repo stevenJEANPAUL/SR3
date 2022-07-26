@@ -843,6 +843,10 @@ class __TwigTemplate_d8b6a73ebb016803578d76a43dbd7731252eb920c7b228b92bac2c34ec9
     </table>
     {% endfor %}
 {% endmacro %}
-", "@WebProfiler/Collector/messenger.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/messenger.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/f2/f22ab3b02e300b83933145e66869ebff2d7ad535f60d69a58991189a465dddf8.php
+", "@WebProfiler/Collector/messenger.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\messenger.html.twig");
+=======
+", "@WebProfiler/Collector/messenger.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/messenger.html.twig");
+>>>>>>> main:var/cache/dev/twig/23/2336456fcad31292bc9585b5dfabe31e7f1524f07a894925642f2035f5ee7e0a.php
     }
 }

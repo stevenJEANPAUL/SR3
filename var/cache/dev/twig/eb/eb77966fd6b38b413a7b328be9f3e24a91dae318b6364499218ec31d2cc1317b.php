@@ -233,6 +233,10 @@ $context["name"], "profiler_markup_version" =>                 // line 17
     </button>
 </div>
 <!-- END of Symfony Web Debug Toolbar -->
-", "@WebProfiler/Profiler/toolbar.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/a0/a08bfe342d10216e3272c688f59c7606905002dd4a19b4b0f2bc1672d6fa0736.php
+", "@WebProfiler/Profiler/toolbar.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\toolbar.html.twig");
+=======
+", "@WebProfiler/Profiler/toolbar.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar.html.twig");
+>>>>>>> main:var/cache/dev/twig/eb/eb77966fd6b38b413a7b328be9f3e24a91dae318b6364499218ec31d2cc1317b.php
     }
 }

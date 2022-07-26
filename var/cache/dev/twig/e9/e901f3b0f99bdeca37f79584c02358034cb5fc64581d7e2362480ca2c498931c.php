@@ -240,6 +240,6 @@ class __TwigTemplate_a45198c39899d7bbeba3a021d413e62a88e2d59aa8a6733288a745ace0e
 
     <a href=\"{{ path('app_admin_rncp_new') }}\">Create new</a>
 {% endblock %}
-", "admin_rncp/index.html.twig", "/Applications/MAMP/htdocs/stage/SR3/templates/admin_rncp/index.html.twig");
+", "admin_rncp/index.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/templates/admin_rncp/index.html.twig");
     }
 }

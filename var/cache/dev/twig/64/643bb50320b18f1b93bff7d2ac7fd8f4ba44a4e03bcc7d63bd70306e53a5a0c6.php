@@ -149,6 +149,10 @@ class __TwigTemplate_d647451a930a6c0734bacff82b1dd90019bb6439d8214dd0b85ab9df989
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: profiler_url }) }}
 {% endblock %}
-", "@WebProfiler/Profiler/cancel.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/cancel.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/88/88fdf26c0fd714ca7429acd45c5f550218de9081b9b8e2a2fce1d3ef92929d6e.php
+", "@WebProfiler/Profiler/cancel.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\cancel.html.twig");
+=======
+", "@WebProfiler/Profiler/cancel.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/cancel.html.twig");
+>>>>>>> main:var/cache/dev/twig/64/643bb50320b18f1b93bff7d2ac7fd8f4ba44a4e03bcc7d63bd70306e53a5a0c6.php
     }
 }

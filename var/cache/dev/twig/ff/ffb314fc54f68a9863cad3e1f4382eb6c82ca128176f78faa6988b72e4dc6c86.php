@@ -1092,6 +1092,10 @@ $context["log"], "type", [], "any", false, false, false, 142)))) ? ("silenced") 
         {% endif %}
     </div>
 {% endmacro %}
-", "@WebProfiler/Collector/logger.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/logger.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/03/03e890742c623e6d004dd78789580a6398ca490b5be953b386463351fef73db0.php
+", "@WebProfiler/Collector/logger.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\logger.html.twig");
+=======
+", "@WebProfiler/Collector/logger.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/logger.html.twig");
+>>>>>>> main:var/cache/dev/twig/ff/ffb314fc54f68a9863cad3e1f4382eb6c82ca128176f78faa6988b72e4dc6c86.php
     }
 }

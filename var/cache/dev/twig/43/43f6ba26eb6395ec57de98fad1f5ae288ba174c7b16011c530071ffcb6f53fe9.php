@@ -760,6 +760,10 @@ class __TwigTemplate_3b53fa54da79fda2b4d6d342cefa29254db79c34390f5b9653b1cd07cf5
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/mailer.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/mailer.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/c7/c75a8b819d14c7db139b4e93bc268dbaac56df6334c3c5c07c48537f32767b1b.php
+", "@WebProfiler/Collector/mailer.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\mailer.html.twig");
+=======
+", "@WebProfiler/Collector/mailer.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/mailer.html.twig");
+>>>>>>> main:var/cache/dev/twig/43/43f6ba26eb6395ec57de98fad1f5ae288ba174c7b16011c530071ffcb6f53fe9.php
     }
 }

@@ -479,6 +479,10 @@ class __TwigTemplate_839f59543682380b896a2b48e3a8a34a51f33b494958c9525f983e6f67a
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/validator.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/validator.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/08/08fff185e5fea04d41a4713f83e5f07b5c38918691fa53228dde9cd0cff227cd.php
+", "@WebProfiler/Collector/validator.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\validator.html.twig");
+=======
+", "@WebProfiler/Collector/validator.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/validator.html.twig");
+>>>>>>> main:var/cache/dev/twig/f2/f28caa2b30463dd0759b9023d73f83efc49a962f0f34d18b76d2947d2953b4e2.php
     }
 }

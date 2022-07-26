@@ -644,6 +644,10 @@ class __TwigTemplate_753adad9520b33cd2216bdb9bcf7f878e900245d9002498a64f9fe5073e
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/notifier.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/notifier.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/17/17babde86d8f121e40b47880719a46a65e8241ca64732dc00430a4100d8daac9.php
+", "@WebProfiler/Collector/notifier.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\notifier.html.twig");
+=======
+", "@WebProfiler/Collector/notifier.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/notifier.html.twig");
+>>>>>>> main:var/cache/dev/twig/89/8999425783a5ff0474bb96658710f34742c846504dc9e0eab0153e37a2cb47d0.php
     }
 }

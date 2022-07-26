@@ -186,6 +186,21 @@ class __TwigTemplate_4751fae73379beddf06a6a378cea2e0c7ad9cd0edc022ae602222f2dd9c
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
+<<<<<<< HEAD:var/cache/dev/twig/de/debd41ee13e364835b0e8a72631028808be8ed2917f3514b882962f57eb3de46.php
+{% block toolbar %}{% endblock %}
+
+{% block menu %}
+<span class=\"label\">
+    <span class=\"icon\">{{ include('@WebProfiler/Icon/router.svg') }}</span>
+    <strong>Routing</strong>
+</span>
+{% endblock %}
+
+{% block panel %}
+    {{ render(controller('web_profiler.controller.router::panelAction', { token: token })) }}
+{% endblock %}
+", "@WebProfiler/Collector/router.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\router.html.twig");
+=======
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
@@ -194,6 +209,7 @@ class __TwigTemplate_4751fae73379beddf06a6a378cea2e0c7ad9cd0edc022ae602222f2dd9c
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/Applications/MAMP/htdocs/stage/SR3/templates/base.html.twig");
+", "base.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/templates/base.html.twig");
+>>>>>>> main:var/cache/dev/twig/f5/f5513f731b79695ec883281947b48e44d46cc79b69a7c15142348f745c199792.php
     }
 }

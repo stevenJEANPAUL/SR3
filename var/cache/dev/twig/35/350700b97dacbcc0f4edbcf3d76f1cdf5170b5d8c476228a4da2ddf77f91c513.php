@@ -63,6 +63,10 @@ class __TwigTemplate_20a76c14fa6873e5d7edb12bc177013a0d52e83fcf776aa0e29d7b32cef
     public function getSourceContext()
     {
         return new Source("<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path fill=\"#AAA\" d=\"M2.3 6l9-4.6a1.5 1.5 0 0 1 1.4 0l9 4.7a1.5 1.5 0 0 1 0 2.6l-9 4.7a1.5 1.5 0 0 1-1.4 0l-9-4.7a1.5 1.5 0 0 1 0-2.6zm18.3 5L12 15.4 3.4 11a1.4 1.4 0 0 0-1.2 2.4l9.2 4.8a1.4 1.4 0 0 0 1.2 0l9.2-4.8a1.4 1.4 0 0 0-1.3-2.4zm0 4.5L12 19.9l-8.6-4.4a1.4 1.4 0 0 0-1.2 2.4l9.2 4.7a1.4 1.4 0 0 0 1.2 0l9.2-4.7a1.4 1.4 0 0 0-1.3-2.5z\"/></svg>
-", "@WebProfiler/Icon/cache.svg", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Icon/cache.svg");
+<<<<<<< HEAD:var/cache/dev/twig/cb/cbca171a3344221ad0fa81c4920b3999bb3e9afadae58b48def7fcbcdcdc2f3b.php
+", "@WebProfiler/Icon/cache.svg", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\cache.svg");
+=======
+", "@WebProfiler/Icon/cache.svg", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Icon/cache.svg");
+>>>>>>> main:var/cache/dev/twig/35/350700b97dacbcc0f4edbcf3d76f1cdf5170b5d8c476228a4da2ddf77f91c513.php
     }
 }

@@ -1846,6 +1846,10 @@ if (typeof Sfjs === 'undefined' || typeof Sfjs.loadToolbar === 'undefined') {
     });
 }
 /*]]>*/</script>
-", "@WebProfiler/Profiler/base_js.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base_js.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/37/37ce4c4c35408c67274c29c75c48239cc7aeb5e42a824cd4cdb644013ac26a4e.php
+", "@WebProfiler/Profiler/base_js.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\base_js.html.twig");
+=======
+", "@WebProfiler/Profiler/base_js.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base_js.html.twig");
+>>>>>>> main:var/cache/dev/twig/98/9813e8312fd2b3aaeb1580901e032672362cf8a912ba7767a1b95f63973aafad.php
     }
 }

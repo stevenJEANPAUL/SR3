@@ -291,6 +291,6 @@ class __TwigTemplate_34839144191533966048bf737ba80565e62edc609a53f332be79531d3af
         </tbody>
     </table>
 {% endblock %}
-", "@VichUploader/Collector/mapping_collector.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/vich/uploader-bundle/templates/Collector/mapping_collector.html.twig");
+", "@VichUploader/Collector/mapping_collector.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/vich/uploader-bundle/templates/Collector/mapping_collector.html.twig");
     }
 }

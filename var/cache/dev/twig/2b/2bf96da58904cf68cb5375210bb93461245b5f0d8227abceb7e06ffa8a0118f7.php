@@ -1208,6 +1208,10 @@ div.sf-toolbar .sf-toolbar-block a:hover {
         display: none !important;
     }
 }
-", "@WebProfiler/Profiler/toolbar.css.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar.css.twig");
+<<<<<<< HEAD:var/cache/dev/twig/21/2145284bcc1dee381cc6ff16546e977af0f1f80f6e6b7b7a0ad0c91c1501182f.php
+", "@WebProfiler/Profiler/toolbar.css.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\toolbar.css.twig");
+=======
+", "@WebProfiler/Profiler/toolbar.css.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar.css.twig");
+>>>>>>> main:var/cache/dev/twig/2b/2bf96da58904cf68cb5375210bb93461245b5f0d8227abceb7e06ffa8a0118f7.php
     }
 }

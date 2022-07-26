@@ -130,6 +130,10 @@ class __TwigTemplate_9638913597b3c53d0e3280ffd1d7faadb44adb32f7981ef9ae2b35bd2f7
         Sfjs.loadToolbar('{{ token }}');
     })();
 /*]]>*/</script>
-", "@WebProfiler/Profiler/toolbar_js.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar_js.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/78/78d5ea5895e4da12d979608d3e9f5dc2388b4f93216d0bac41fd11c305d1f113.php
+", "@WebProfiler/Profiler/toolbar_js.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\toolbar_js.html.twig");
+=======
+", "@WebProfiler/Profiler/toolbar_js.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar_js.html.twig");
+>>>>>>> main:var/cache/dev/twig/e7/e7997cb2956590ea25318242d67dcba353c4ae366c7989f433c87ea4e649c95d.php
     }
 }

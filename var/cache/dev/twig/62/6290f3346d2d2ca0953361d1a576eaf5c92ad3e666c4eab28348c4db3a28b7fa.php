@@ -900,6 +900,10 @@ class __TwigTemplate_14bcffb6501f3a8d2d1a46aa7521a327dc08d99363741538542b7d11aab
         {% endautoescape %}</script>
     </div>
 {% endmacro %}
-", "@WebProfiler/Collector/time.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/time.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/d3/d3a70e22259233d65e380266a1fa0141c90d71b3dc4c8d6e0fbfb2730e0045ce.php
+", "@WebProfiler/Collector/time.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\time.html.twig");
+=======
+", "@WebProfiler/Collector/time.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/time.html.twig");
+>>>>>>> main:var/cache/dev/twig/62/6290f3346d2d2ca0953361d1a576eaf5c92ad3e666c4eab28348c4db3a28b7fa.php
     }
 }

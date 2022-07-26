@@ -1526,6 +1526,10 @@ $context["voter_detail"], "vote", [], "array", false, false, false, 418), twig_c
         </div>
     {% endif %}
 {% endblock %}
-", "@Security/Collector/security.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/security-bundle/Resources/views/Collector/security.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/32/32eaffece851c5c0b5d3fe090d54b9806d62e3ceaace3077a863e0e4b79059ff.php
+", "@Security/Collector/security.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\security-bundle\\Resources\\views\\Collector\\security.html.twig");
+=======
+", "@Security/Collector/security.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/security-bundle/Resources/views/Collector/security.html.twig");
+>>>>>>> main:var/cache/dev/twig/5d/5d2c68393b0b289abd2fa1c946ad697d93e6ddb546e131ab1ba494756814338a.php
     }
 }

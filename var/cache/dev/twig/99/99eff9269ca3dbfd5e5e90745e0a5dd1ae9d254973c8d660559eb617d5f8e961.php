@@ -607,6 +607,10 @@ $context["key"], "hit_read_ratio"))) {
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/cache.html.twig", "/Applications/MAMP/htdocs/stage/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/cache.html.twig");
+<<<<<<< HEAD:var/cache/dev/twig/dd/dd731e39a93c660587a77a4a4ecbf402e3a3eafe692ee966786216abe3eb4eb8.php
+", "@WebProfiler/Collector/cache.html.twig", "C:\\xampp\\htdocs\\SR3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\cache.html.twig");
+=======
+", "@WebProfiler/Collector/cache.html.twig", "/Applications/MAMP/htdocs/symfony/SR3/vendor/symfony/web-profiler-bundle/Resources/views/Collector/cache.html.twig");
+>>>>>>> main:var/cache/dev/twig/99/99eff9269ca3dbfd5e5e90745e0a5dd1ae9d254973c8d660559eb617d5f8e961.php
     }
 }
