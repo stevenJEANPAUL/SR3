@@ -1,0 +1,122 @@
+{% extends 'base-backend.html.twig' %}
+
+{% block title %}Formation{% endblock %}
+
+{% block body %}
+    <h1>Formation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ formation.id }}</td>
+            </tr>
+            <tr>
+                <th>ImageName</th>
+                <td>{{ formation.imageName }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ formation.updatedAt ? formation.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Texte1</th>
+                <td>{{ formation.texte1 }}</td>
+            </tr>
+            <tr>
+                <th>ImageName2</th>
+                <td>{{ formation.imageName2 }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt2</th>
+                <td>{{ formation.updatedAt2 ? formation.updatedAt2|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>ImageName3</th>
+                <td>{{ formation.imageName3 }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt3</th>
+                <td>{{ formation.updatedAt3 ? formation.updatedAt3|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>ImageName4</th>
+                <td>{{ formation.imageName4 }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt4</th>
+                <td>{{ formation.updatedAt4 ? formation.updatedAt4|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>ImageName5</th>
+                <td>{{ formation.imageName5 }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt5</th>
+                <td>{{ formation.updatedAt5 ? formation.updatedAt5|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>ImageName6</th>
+                <td>{{ formation.imageName6 }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt6</th>
+                <td>{{ formation.updatedAt6 ? formation.updatedAt6|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>ImageName7</th>
+                <td>{{ formation.imageName7 }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt7</th>
+                <td>{{ formation.updatedAt7 ? formation.updatedAt7|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ formation.titre }}</td>
+            </tr>
+            <tr>
+                <th>ImageName8</th>
+                <td>{{ formation.imageName8 }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt8</th>
+                <td>{{ formation.updatedAt8 ? formation.updatedAt8|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Texte2</th>
+                <td>{{ formation.texte2 }}</td>
+            </tr>
+            <tr>
+                <th>Titre2</th>
+                <td>{{ formation.titre2 }}</td>
+            </tr>
+            <tr>
+                <th>ImageName9</th>
+                <td>{{ formation.imageName9 }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt9</th>
+                <td>{{ formation.updatedAt9 ? formation.updatedAt9|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Theme</th>
+                <td>{{ formation.theme }}</td>
+            </tr>
+            <tr>
+                <th>Formation</th>
+                <td>{{ formation.formation }}</td>
+            </tr>
+            <tr>
+                <th>Texte3</th>
+                <td>{{ formation.texte3 }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_formation_index') }}">back to list</a>
+
+    <a href="{{ path('app_admin_formation_edit', {'id': formation.id}) }}">edit</a>
+
+    {{ include('admin_formation/_delete_form.html.twig') }}
+{% endblock %}
