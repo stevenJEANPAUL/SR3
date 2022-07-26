@@ -4,6 +4,11 @@
 
 return [
     'app_admin_dashboard' => [[], ['_controller' => 'App\\Controller\\AdminDashboardController::index'], [], [['text', '/']], [], [], []],
+    'app_admin_formation_index' => [[], ['_controller' => 'App\\Controller\\AdminFormationController::index'], [], [['text', '/admin/formation/']], [], [], []],
+    'app_admin_formation_new' => [[], ['_controller' => 'App\\Controller\\AdminFormationController::new'], [], [['text', '/admin/formation/new']], [], [], []],
+    'app_admin_formation_show' => [['id'], ['_controller' => 'App\\Controller\\AdminFormationController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/formation']], [], [], []],
+    'app_admin_formation_edit' => [['id'], ['_controller' => 'App\\Controller\\AdminFormationController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/admin/formation']], [], [], []],
+    'app_admin_formation_delete' => [['id'], ['_controller' => 'App\\Controller\\AdminFormationController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/formation']], [], [], []],
     'app_admin_rncp_index' => [[], ['_controller' => 'App\\Controller\\AdminRncpController::index'], [], [['text', '/admin/rncp/']], [], [], []],
     'app_admin_rncp_new' => [[], ['_controller' => 'App\\Controller\\AdminRncpController::new'], [], [['text', '/admin/rncp/new']], [], [], []],
     'app_admin_rncp_show' => [['id'], ['_controller' => 'App\\Controller\\AdminRncpController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/rncp']], [], [], []],
