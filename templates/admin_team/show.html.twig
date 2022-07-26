@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Team{% endblock %}
+
+{% block body %}
+    <h1>Team</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ team.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ team.titre }}</td>
+            </tr>
+            <tr>
+                <th>ImageName</th>
+                <td>{{ team.imageName }}</td>
+            </tr>
+            <tr>
+                <th>Presentation</th>
+                <td>{{ team.presentation }}</td>
+            </tr>
+            <tr>
+                <th>ImageName2</th>
+                <td>{{ team.imageName2 }}</td>
+            </tr>
+            <tr>
+                <th>ImageName3</th>
+                <td>{{ team.imageName3 }}</td>
+            </tr>
+            <tr>
+                <th>Photo</th>
+                <td>{{ team.photo }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ team.nom }}</td>
+            </tr>
+            <tr>
+                <th>Titre2</th>
+                <td>{{ team.titre2 }}</td>
+            </tr>
+            <tr>
+                <th>Poste</th>
+                <td>{{ team.poste }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ team.UpdatedAt ? team.UpdatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Titre3</th>
+                <td>{{ team.titre3 }}</td>
+            </tr>
+            <tr>
+                <th>Presentation2</th>
+                <td>{{ team.presentation2 }}</td>
+            </tr>
+            <tr>
+                <th>ImageName4</th>
+                <td>{{ team.imageName4 }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_team_index') }}">back to list</a>
+
+    <a href="{{ path('app_admin_team_edit', {'id': team.id}) }}">edit</a>
+
+    {{ include('admin_team/_delete_form.html.twig') }}
+{% endblock %}
