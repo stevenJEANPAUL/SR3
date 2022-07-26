@@ -8,7 +8,7 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Bundle\FixturesBundle\FixtureGroupInterface;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
-class UserFixtures extends Fixture implements FixtureGroupInterface
+class UserFixtures extends Fixture implements FixtureGroupInterface  
 {
     private $encoder;
 
@@ -19,9 +19,10 @@ class UserFixtures extends Fixture implements FixtureGroupInterface
     public function load(ObjectManager $manager): void
     {
         $user = new User();
-        $user->setNom('Diandy');
-        $user->setPrenom('Thierry');
+        $user->setNom('Thierry');
+        $user->setPrenom('DIANDY');
         $user->setEmail('tdiandy@hotmail.com');
+        $user->setRoles(["ROLE_USER", "ROLE_ADMIN"]);
         $user->setPassword($this->encoder->hashPassword($user, "pass"));
         $manager->persist($user);
         // $product = new Product();
