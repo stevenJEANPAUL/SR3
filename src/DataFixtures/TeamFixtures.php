@@ -3,8 +3,9 @@
 namespace App\DataFixtures;
 
 use App\Entity\Team;
-use Doctrine\Bundle\FixturesBundle\Fixture;
+use App\DataFixtures\TeamFixtures;
 use Doctrine\Persistence\ObjectManager;
+use Doctrine\Bundle\FixturesBundle\Fixture;
 
 class TeamFixtures extends Fixture
 {

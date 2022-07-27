@@ -1,0 +1,13 @@
+{% extends 'base-backend.html.twig' %}
+
+{% block title %}Edit NosActus{% endblock %}
+
+{% block body %}
+    <h1>Edit NosActus</h1>
+
+    {{ include('admin_nos_actus/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_admin_nos_actus_index') }}">back to list</a>
+
+    {{ include('admin_nos_actus/_delete_form.html.twig') }}
+{% endblock %}

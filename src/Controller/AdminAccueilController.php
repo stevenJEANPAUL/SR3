@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 
 namespace App\Controller;
 
@@ -90,24 +89,3 @@ class AdminAccueilController extends AbstractController
         return $this->redirectToRoute('app_admin_accueil_index', [], Response::HTTP_SEE_OTHER);
     }
 }
-=======
-
-namespace App\Controller;
-
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
-
-class AdminAccueilController extends AbstractController
-{
-    /**
-     * @Route("/admin/accueil", name="app_admin_accueil")
-     */
-    public function index(): Response
-    {
-        return $this->render('admin_accueil/index.html.twig', [
-            'controller_name' => 'AdminAccueilController',
-        ]);
-    }
-}
->>>>>>> main
