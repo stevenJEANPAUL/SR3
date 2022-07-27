@@ -2,19 +2,20 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\RncpRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class FrontRncpController extends AbstractController
 {
     /**
-     * @Route("/front/rncp", name="app_front_rncp")
+     * @Route("/rncp", name="app_front_rncp")
      */
-    public function index(): Response
+    public function index(RncpRepository $rncpRepository): Response
     {
         return $this->render('front_rncp/index.html.twig', [
-            'controller_name' => 'FrontRncpController',
+            'rncps' => $rncpRepository->findAll(),
         ]);
     }
 }
