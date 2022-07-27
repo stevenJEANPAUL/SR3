@@ -8,15 +8,18 @@
 
         <h2 class="text-center titre-page fs-4 my-5">{{ rncp.titre }}</h2>
 
-    <div class="row">
-        <div class="col-12">
+    <div class="row py-5">
         
-    <h6 class="">{{ rncp.formation }}</h6>
+        <div class="col-md-8 ">
+            <h6>{{ rncp.formation }}</h6>
             {{ rncp.niveau }}
             <div class="fw-bold py-3">{{ rncp.descriptif }}</div>
             <div class="lh-1">{{ rncp.texte|raw }}</div>
-            <img class="img-fluid" src="{{ asset ('images/rncp/') ~ rncp.imageName }}">
-        </div>    
+        </div>
+                <div class="col-md-4">
+                    <img class="img-fluid" src="{{ asset ('images/rncp/') ~ rncp.imageName }}">
+                </div>
+            
     </div>
 
     {% endfor %}
