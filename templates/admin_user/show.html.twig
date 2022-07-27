@@ -35,12 +35,22 @@
                 <th>IsVerified</th>
                 <td>{{ user.isVerified ? 'Yes' : 'No' }}</td>
             </tr>
+            <tr>
+            <th>UpdatedAt</th>
+            <td>{{ user.updatedAt ? user.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+        </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_user_index') }}">back to list</a>
+<a href="{{ path('app_admin_user_index') }}">back to list</a>
 
-    <a href="{{ path('app_admin_user_edit', {'id': user.id}) }}">edit</a>
+<a href="{{ path('app_admin_user_edit', {'id': editeur.id}) }}" class="btn btn-success ms-2"><i class="align-middle" data-feather="edit-2"></i></a>
 
-    {{ include('admin_user/_delete_form.html.twig') }}
+{{ include('admin_user/_delete_form.html.twig') }}
+{% endblock %}
+{% block javascripts %}
+<script>
+
+$(".select2").select2();
+</script>
 {% endblock %}
