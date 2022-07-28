@@ -2,8 +2,9 @@
 
 namespace App\Entity;
 
-use App\Repository\TeamRepository;
+use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\TeamRepository;
 
 /**
  * @ORM\Entity(repositoryClass=TeamRepository::class)
@@ -63,9 +64,11 @@ class Team
     private $poste;
 
     /**
-     * @ORM\Column(type="datetime_immutable")
+     * @ORM\Column(type="datetime")
+     *
+     * @var DateTimeInterface|null
      */
-    private $UpdatedAt;
+    private $updatedAt;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -195,17 +198,7 @@ class Team
         return $this;
     }
 
-    public function getUpdatedAt(): ?\DateTimeImmutable
-    {
-        return $this->UpdatedAt;
-    }
 
-    public function setUpdatedAt(\DateTimeImmutable $UpdatedAt): self
-    {
-        $this->UpdatedAt = $UpdatedAt;
-
-        return $this;
-    }
 
     public function getTitre3(): ?string
     {
@@ -239,6 +232,30 @@ class Team
     public function setImageName4(?string $imageName4): self
     {
         $this->imageName4 = $imageName4;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of updatedAt
+     *
+     * @return  DateTimeInterface|null
+     */ 
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * Set the value of updatedAt
+     *
+     * @param  DateTimeInterface|null  $updatedAt
+     *
+     * @return  self
+     */ 
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
 
         return $this;
     }

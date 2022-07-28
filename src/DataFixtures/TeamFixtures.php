@@ -3,6 +3,7 @@
 namespace App\DataFixtures;
 
 use App\Entity\Team;
+use DateTimeImmutable;
 use App\DataFixtures\TeamFixtures;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -21,7 +22,7 @@ class TeamFixtures extends Fixture
         $team->setNom('');
         $team->setTitre2('');
         $team->setPoste('');
-        //$team->setUpdatedAt('');
+        $team->setUpdatedAt(new DateTimeImmutable());
         $team->setTitre3('');
         $team->setPresentation2('');
         $team->setImageName4('');
