@@ -5,19 +5,18 @@
 {% block body %}
 
 {% for formation in formations %}
-
-<div class="row text-bg-white">
-    <img class="" src="{{ asset ('images/formation/') ~ formation.imageName }}">
-    <div class="card-img-overlay text-center text-white text1">
-        <div class="d-none d-sm-block d-sm-none d-md-block">
-            {{ formation.texte1|raw }}
-        </div>    
-        <div class="ms-3 d-md-none d-lg-block d-lg-none d-xl-block d-xl-none d-xxl-none d-xxl-block ">Une équipe de formateurs adaptée à vos besoins dans le domaine de la formation, de l’information et de la bureautique</div>
-    </div>
-</div>
-
 <main class="container">
-    <div class="text-center container row py-5">
+    <div class="row text-bg-white">
+        <img class="img-fluid" src="{{ asset ('images/formation/') ~ formation.imageName }}">
+        <div class="card-img-overlay text-center text-white text1">
+            <div class="d-none d-sm-block d-sm-none d-md-block">
+                {{ formation.texte1|raw }}
+            </div>    
+            <div class="ms-3 d-md-none d-lg-block d-lg-none d-xl-block d-xl-none d-xxl-none d-xxl-block ">Une équipe de formateurs adaptée à vos besoins dans le domaine de la formation, de l’information et de la bureautique</div>
+        </div>
+    </div>
+
+    <div class="row text-center py-5">
         <div class="col">
             <img class="img-fluid pe-5" src="{{ asset ('images/formation/') ~ formation.imageName2}}">
             <img class="img-fluid pe-5" src="{{ asset ('images/formation/') ~ formation.imageName3}}">
@@ -26,12 +25,29 @@
             <img class="img-fluid pe-2" src="{{ asset ('images/formation/') ~ formation.imageName6}}">
             <img class="img-fluid pe-2" src="{{ asset ('images/formation/') ~ formation.imageName7}}">
         </div>
-        <div class="">
-            <div class="col-lg-8 py-5">
-                {{ formation.titre|raw }}
-            </div>
+    </div>
+    <div class="row text-center">
+        <div class="col"></div>
+        <div class="col-6 py-5">
+            {{ formation.titre|raw }}
         </div>
+        <div class="col"></div>
+    </div>
+        
+    <div class="col">
+        <img class="img-fluid pe-5" src="{{ asset ('images/formation/') ~ formation.imageName8}}">
+    </div>
+
+    <h4 class="text-center pt-5">{{ formation.titre2|raw }}</h4>
+    <div class=" card border border-3 border-danger" style="width: 12rem;">
+    <div class="card-body">
+        <img style="width: 3rem;" class="ms-5 mb-2" src="{{ asset ('images/formation/') ~ formation.imageName9}}">
+        <h6 class="text-center" >{{formation.theme|raw}}</h6>
+        {{formation.formation|raw}}
+    </div>
+
 </div>
+
 
 
 
