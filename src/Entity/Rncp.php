@@ -67,15 +67,7 @@ class Rncp
      */
     private $texte;
 
-    /**
-     * @ORM\ManyToMany(targetEntity=Image::class, mappedBy="page")
-     */
-    private $images;
-
-    public function __construct()
-    {
-        $this->images = new ArrayCollection();
-    }
+    
 
     public function getId(): ?int
     {
@@ -182,30 +174,4 @@ class Rncp
         return $this;
     }
 
-    /**
-     * @return Collection<int, Image>
-     */
-    public function getImages(): Collection
-    {
-        return $this->images;
-    }
-
-    public function addImage(Image $image): self
-    {
-        if (!$this->images->contains($image)) {
-            $this->images[] = $image;
-            $image->addPage($this);
-        }
-
-        return $this;
-    }
-
-    public function removeImage(Image $image): self
-    {
-        if ($this->images->removeElement($image)) {
-            $image->removePage($this);
-        }
-
-        return $this;
-    }
 }

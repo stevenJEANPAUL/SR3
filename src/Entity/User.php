@@ -93,7 +93,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    /**
+
      * A visual identifier that represents this user.
      *
      * @see UserInterface
@@ -165,6 +165,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
+
     public function isVerified(): bool
     {
         return $this->isVerified;
@@ -176,4 +177,5 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
+
 }

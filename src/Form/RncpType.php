@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Rncp;
+use App\Entity\Image;
 use Symfony\Component\Form\AbstractType;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
