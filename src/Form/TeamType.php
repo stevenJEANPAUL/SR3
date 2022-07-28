@@ -21,7 +21,7 @@ class TeamType extends AbstractType
             ->add('nom')
             ->add('titre2')
             ->add('poste')
-            ->add('UpdatedAt')
+            ->remove('UpdatedAt')
             ->add('titre3')
             ->add('presentation2')
             ->add('imageName4')

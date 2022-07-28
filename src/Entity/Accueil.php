@@ -23,7 +23,7 @@ class Accueil
     private $imageName;
 
     /**
-     * @ORM\Column(type="datetime_immutable")
+     * @ORM\Column(type="datetime_immutable", nullable=true)
      */
     private $UpdatedAt;
 

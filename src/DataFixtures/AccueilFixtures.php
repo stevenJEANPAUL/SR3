@@ -3,7 +3,6 @@
 namespace App\DataFixtures;
 
 use App\Entity\Accueil;
-use App\DataFixtures\AccueilFixtures;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 

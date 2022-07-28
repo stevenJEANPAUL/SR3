@@ -63,7 +63,7 @@ class Team
     private $poste;
 
     /**
-     * @ORM\Column(type="datetime_immutable")
+     * @ORM\Column(type="datetime_immutable", nullable=true)
      */
     private $UpdatedAt;
 
