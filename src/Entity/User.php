@@ -5,10 +5,12 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\UserRepository;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
+ * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
  */
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -20,7 +22,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $nom;
 
@@ -30,14 +32,25 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $prenom;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string",  length=180, unique=true, nullable=true)
      */
     private $email;
 
+        /**
+     * @ORM\Column(type="json")
+     */
+    private $roles = [];
+
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string The hashed password
+     * @ORM\Column(type="string")
      */
     private $password;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isVerified = false;
 
     public function getId(): ?int
     {
@@ -80,18 +93,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    // public function getPassword(): ?string
-    // {
-    //     return $this->password;
-    // }
 
-    // public function setPassword(string $password): self
-    // {
-    //     $this->password = $password;
-
-    //     return $this;
-    // }
-        /**
      * A visual identifier that represents this user.
      *
      * @see UserInterface
@@ -162,4 +164,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
     }
+
+
+    public function isVerified(): bool
+    {
+        return $this->isVerified;
+    }
+
+    public function setIsVerified(bool $isVerified): self
+    {
+        $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
 }

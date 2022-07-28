@@ -1,0 +1,41 @@
+{% extends 'base-backend.html.twig' %}
+
+{% block title %}NosActus index{% endblock %}
+
+{% block body %}
+    <h1>NosActus index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>ImageName</th>
+                <th>Description</th>
+                <th>Commentaire</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for nos_actu in nos_actuses %}
+            <tr>
+                <td>{{ nos_actu.id }}</td>
+                <td>{{ nos_actu.titre }}</td>
+                <td>{{ nos_actu.imageName }}</td>
+                <td>{{ nos_actu.description }}</td>
+                <td>{{ nos_actu.commentaire }}</td>
+                <td>
+                    <a href="{{ path('app_admin_nos_actus_show', {'id': nos_actu.id}) }}">show</a>
+                    <a href="{{ path('app_admin_nos_actus_edit', {'id': nos_actu.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_nos_actus_new') }}">Create new</a>
+{% endblock %}
