@@ -178,7 +178,7 @@ class Formation
     private $updatedAt8;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $texte2;
 

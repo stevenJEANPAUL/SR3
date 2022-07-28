@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Formation;
 use Symfony\Component\Form\AbstractType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -14,7 +15,7 @@ class FormationType extends AbstractType
         $builder
             ->add('imageName')
             ->add('updatedAt')
-            ->add('texte1')
+            ->add('texte1', CKEditorType::class)
             ->add('imageName2')
             ->add('updatedAt2')
             ->add('imageName3')
@@ -27,16 +28,16 @@ class FormationType extends AbstractType
             ->add('updatedAt6')
             ->add('imageName7')
             ->add('updatedAt7')
-            ->add('titre')
+            ->add('titre', CKEditorType::class)
             ->add('imageName8')
             ->add('updatedAt8')
-            ->add('texte2')
-            ->add('titre2')
+            ->add('texte2', CKEditorType::class)
+            ->add('titre2', CKEditorType::class)
             ->add('imageName9')
             ->add('updatedAt9')
-            ->add('theme')
-            ->add('formation')
-            ->add('texte3')
+            ->add('theme', CKEditorType::class)
+            ->add('formation', CKEditorType::class)
+            ->add('texte3', CKEditorType::class)
         ;
     }
 
