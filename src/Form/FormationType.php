@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class FormationType extends AbstractType
 {
@@ -14,27 +15,28 @@ class FormationType extends AbstractType
     {
         $builder
             ->add('imageName')
-            ->add('updatedAt')
+            ->remove('updatedAt')
             ->add('texte1', CKEditorType::class)
             ->add('imageName2')
-            ->add('updatedAt2')
+            ->remove('updatedAt2')
             ->add('imageName3')
-            ->add('updatedAt3')
+            ->remove('updatedAt3')
             ->add('imageName4')
-            ->add('updatedAt4')
+            ->remove('updatedAt4')
             ->add('imageName5')
-            ->add('updatedAt5')
+            ->remove('updatedAt5')
             ->add('imageName6')
-            ->add('updatedAt6')
+            ->remove('updatedAt6')
             ->add('imageName7')
-            ->add('updatedAt7')
+            ->remove('updatedAt7')
             ->add('titre', CKEditorType::class)
             ->add('imageName8')
-            ->add('updatedAt8')
+            ->remove('updatedAt8')
             ->add('texte2', CKEditorType::class)
             ->add('titre2', CKEditorType::class)
             ->add('imageName9')
-            ->add('updatedAt9')
+            ->add('imageName9', FileType::class)
+            ->remove('updatedAt9')
             ->add('theme', CKEditorType::class)
             ->add('formation', CKEditorType::class)
             ->add('texte3', CKEditorType::class)
