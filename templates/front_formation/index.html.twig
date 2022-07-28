@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos Formations{% endblock %}
+
+{% block body %}
+<div class="main bg-white">
+{% for formation in formations %}
+
+    <img class="img-fluid" src="{{ asset ('images/formation/') ~ formation.imageName }}">
+
+
+
+{% endfor %}
+
+</div>
+{% endblock %}
