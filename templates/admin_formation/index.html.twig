@@ -10,27 +10,27 @@
             <tr>
                 <th>Id</th>
                 <th>ImageName</th>
-                <th>UpdatedAt</th>
+                {# <th>UpdatedAt</th> #}
                 <th>Texte1</th>
-                <th>ImageName2</th>
-                <th>UpdatedAt2</th>
-                <th>ImageName3</th>
-                <th>UpdatedAt3</th>
-                <th>ImageName4</th>
-                <th>UpdatedAt4</th>
-                <th>ImageName5</th>
-                <th>UpdatedAt5</th>
-                <th>ImageName6</th>
-                <th>UpdatedAt6</th>
-                <th>ImageName7</th>
-                <th>UpdatedAt7</th>
+                {# <th>ImageName2</th> #}
+                {# <th>UpdatedAt2</th> #}
+                {# <th>ImageName3</th> #}
+                {# <th>UpdatedAt3</th> #}
+                {# <th>ImageName4</th> #}
+                {# <th>UpdatedAt4</th> #}
+                {# <th>ImageName5</th> #}
+                {# <th>UpdatedAt5</th> #}
+                {# <th>ImageName6</th> #}
+                {# <th>UpdatedAt6</th> #}
+                {# <th>ImageName7</th> #}
+                {# <th>UpdatedAt7</th> #}
                 <th>Titre</th>
-                <th>ImageName8</th>
-                <th>UpdatedAt8</th>
+                {# <th>ImageName8</th> #}
+                {# <th>UpdatedAt8</th> #}
                 <th>Texte2</th>
                 <th>Titre2</th>
-                <th>ImageName9</th>
-                <th>UpdatedAt9</th>
+                {# <th>ImageName9</th> #}
+                {# <th>UpdatedAt9</th> #}
                 <th>Theme</th>
                 <th>Formation</th>
                 <th>Texte3</th>
@@ -42,30 +42,30 @@
             <tr>
                 <td>{{ formation.id }}</td>
                 <td>{{ formation.imageName }}</td>
-                <td>{{ formation.updatedAt ? formation.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ formation.texte1 }}</td>
-                <td>{{ formation.imageName2 }}</td>
-                <td>{{ formation.updatedAt2 ? formation.updatedAt2|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ formation.imageName3 }}</td>
-                <td>{{ formation.updatedAt3 ? formation.updatedAt3|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ formation.imageName4 }}</td>
-                <td>{{ formation.updatedAt4 ? formation.updatedAt4|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ formation.imageName5 }}</td>
-                <td>{{ formation.updatedAt5 ? formation.updatedAt5|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ formation.imageName6 }}</td>
-                <td>{{ formation.updatedAt6 ? formation.updatedAt6|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ formation.imageName7 }}</td>
-                <td>{{ formation.updatedAt7 ? formation.updatedAt7|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ formation.titre }}</td>
+                {# <td>{{ formation.updatedAt ? formation.updatedAt|date('Y-m-d H:i:s') : '' }}</td> #}
+                <td>{{ formation.texte1|raw }}</td>
+                {# <td>{{ formation.imageName2 }}</td> #}
+                {# <td>{{ formation.updatedAt2 ? formation.updatedAt2|date('Y-m-d H:i:s') : '' }}</td> #}
+                {# <td>{{ formation.imageName3 }}</td> #}
+                {# <td>{{ formation.updatedAt3 ? formation.updatedAt3|date('Y-m-d H:i:s') : '' }}</td> #}
+                {# <td>{{ formation.imageName4 }}</td> #}
+                {# <td>{{ formation.updatedAt4 ? formation.updatedAt4|date('Y-m-d H:i:s') : '' }}</td> #}
+                {# <td>{{ formation.imageName5 }}</td> #}
+                {# <td>{{ formation.updatedAt5 ? formation.updatedAt5|date('Y-m-d H:i:s') : '' }}</td> #}
+                {# <td>{{ formation.imageName6 }}</td> #}
+                {# <td>{{ formation.updatedAt6 ? formation.updatedAt6|date('Y-m-d H:i:s') : '' }}</td> #}
+                {# <td>{{ formation.imageName7 }}</td> #}
+                {# <td>{{ formation.updatedAt7 ? formation.updatedAt7|date('Y-m-d H:i:s') : '' }}</td> #}
+                <td>{{ formation.titre|raw }}</td>
                 <td>{{ formation.imageName8 }}</td>
-                <td>{{ formation.updatedAt8 ? formation.updatedAt8|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ formation.texte2 }}</td>
-                <td>{{ formation.titre2 }}</td>
+                {# <td>{{ formation.updatedAt8 ? formation.updatedAt8|date('Y-m-d H:i:s') : '' }}</td> #}
+                <td>{{ formation.texte2|raw }}</td>
+                <td>{{ formation.titre2|raw }}</td>
                 <td>{{ formation.imageName9 }}</td>
-                <td>{{ formation.updatedAt9 ? formation.updatedAt9|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ formation.theme }}</td>
-                <td>{{ formation.formation }}</td>
-                <td>{{ formation.texte3 }}</td>
+                {# <td>{{ formation.updatedAt9 ? formation.updatedAt9|date('Y-m-d H:i:s') : '' }}</td> #}
+                <td>{{ formation.theme|raw }}</td>
+                <td>{{ formation.formation|raw }}</td>
+                <td>{{ formation.texte3|raw }}</td>
                 <td>
                     <a href="{{ path('app_admin_formation_show', {'id': formation.id}) }}">show</a>
                     <a href="{{ path('app_admin_formation_edit', {'id': formation.id}) }}">edit</a>
