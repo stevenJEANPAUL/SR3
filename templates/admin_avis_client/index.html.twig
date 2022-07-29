@@ -1,0 +1,43 @@
+{% extends 'base-backend.html.twig' %}
+
+{% block title %}AvisClient index{% endblock %}
+
+{% block body %}
+    <h1>Avis du Client</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>ImageName</th>
+                <th>UpdatedAt</th>
+                <th>Nom</th>
+                <th>Poste</th>
+                <th>Commentaire</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for avis_client in avis_clients %}
+            <tr>
+                <td>{{ avis_client.id }}</td>
+                <td>{{ avis_client.imageName }}</td>
+                <td>{{ avis_client.updatedAt ? avis_client.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ avis_client.nom }}</td>
+                <td>{{ avis_client.poste }}</td>
+                <td>{{ avis_client.commentaire }}</td>
+                <td>
+                    <a href="{{ path('app_admin_avis_client_show', {'id': avis_client.id}) }}">show</a>
+                    <a href="{{ path('app_admin_avis_client_edit', {'id': avis_client.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_avis_client_new') }}">Create new</a>
+{% endblock %}

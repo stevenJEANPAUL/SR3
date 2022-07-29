@@ -26,6 +26,7 @@ class TeamFixtures extends Fixture
         $team->setTitre3('');
         $team->setPresentation2('');
         $team->setImageName4('');
+        $team->setIsActive(1);
         $manager->persist($team);
         $manager->flush();
     }
