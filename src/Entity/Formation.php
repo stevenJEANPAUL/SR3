@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\FormationRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -219,6 +221,16 @@ class Formation
      * @ORM\Column(type="text", nullable=true)
      */
     private $texte3;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Cours::class, mappedBy="formations")
+     */
+    private $cours;
+
+    public function __construct()
+    {
+        $this->cours = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -657,6 +669,37 @@ class Formation
     public function setUpdatedAt9(?\DateTimeImmutable $updatedAt9): self
     {
         $this->updatedAt9 = $updatedAt9;
+
+        return $this;
+    }
+    public function __toString()
+    {
+        return $this->theme;
+    }
+
+    /**
+     * @return Collection<int, Cours>
+     */
+    public function getCours(): Collection
+    {
+        return $this->cours;
+    }
+
+    public function addCour(Cours $cour): self
+    {
+        if (!$this->cours->contains($cour)) {
+            $this->cours[] = $cour;
+            $cour->addFormation($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCour(Cours $cour): self
+    {
+        if ($this->cours->removeElement($cour)) {
+            $cour->removeFormation($this);
+        }
 
         return $this;
     }
