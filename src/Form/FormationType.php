@@ -2,10 +2,12 @@
 
 namespace App\Form;
 
+use App\Entity\Cours;
 use App\Entity\Formation;
 use Symfony\Component\Form\AbstractType;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 
@@ -14,32 +16,43 @@ class FormationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('imageName')
+            
+            ->add('imageFile', FileType::class, ["label"=> "Photo de l'entête :", "required"=>false])
+            ->add('texte1', CKEditorType::class, ["label"=> 'Titre de la page :', "required"=>false])
+            ->add('imageFile2', FileType::class, ["label"=> 'Logo 1 :', "required"=>false])
+            ->add('imageFile3', FileType::class, ["label"=> 'Logo 2 :', "required"=>false])
+            ->add('imageFile4', FileType::class, ["label"=> 'Logo 3 :', "required"=>false])
+            ->add('imageFile5', FileType::class, ["label"=> 'Logo 4 :', "required"=>false])
+            ->add('imageFile6', FileType::class, ["label"=> 'Logo 5 :', "required"=>false])
+            ->add('imageFile7', FileType::class, ["label"=> 'Logo 6 :', "required"=>false])
+            ->add('titre', CKEditorType::class, ["label"=> 'Texte de la page :', "required"=>false])
+            ->add('imageFile8', FileType::class, ["label"=> 'Photo milieu de page :', "required"=>false])
+            ->add('texte2', CKEditorType::class, ["label"=> 'Texte de la photo :', "required"=>false])
+            ->add('titre2', CKEditorType::class, ["label"=> 'Titre 2 :', "required"=>false])
+            ->add('texte3', CKEditorType::class, ["label"=> 'Texte pied de page :', "required"=>false])
+            ->remove('imageName')
             ->remove('updatedAt')
-            ->add('texte1', CKEditorType::class)
-            ->add('imageName2')
+            ->remove('imageName2')
             ->remove('updatedAt2')
-            ->add('imageName3')
+            ->remove('imageName3')
             ->remove('updatedAt3')
-            ->add('imageName4')
+            ->remove('imageName4')
             ->remove('updatedAt4')
-            ->add('imageName5')
+            ->remove('imageName5')
             ->remove('updatedAt5')
-            ->add('imageName6')
+            ->remove('imageName6')
             ->remove('updatedAt6')
-            ->add('imageName7')
+            ->remove('imageName7')
             ->remove('updatedAt7')
-            ->add('titre', CKEditorType::class)
-            ->add('imageName8')
+            ->remove('imageName8')
             ->remove('updatedAt8')
-            ->add('texte2', CKEditorType::class)
-            ->add('titre2', CKEditorType::class)
-            ->add('imageName9')
-            ->add('imageName9', FileType::class)
+            ->remove('imageName9')
+            ->remove('imageName9')
             ->remove('updatedAt9')
-            ->add('theme', CKEditorType::class)
-            ->add('formation', CKEditorType::class)
-            ->add('texte3', CKEditorType::class)
+            ->remove('theme')
+            ->remove('formation')
+            
+        
         ;
     }
 
