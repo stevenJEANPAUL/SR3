@@ -1,83 +1,134 @@
 {% extends 'base-backend.html.twig' %}
 
-{% block title %}Formation index{% endblock %}
+{% block title %}Formation{% endblock %}
 
 {% block body %}
-    <h1>Formation index</h1>
+    <h1 class="text-center">Page Formation</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>ImageName</th>
-                {# <th>UpdatedAt</th> #}
-                <th>Texte1</th>
-                {# <th>ImageName2</th> #}
-                {# <th>UpdatedAt2</th> #}
-                {# <th>ImageName3</th> #}
-                {# <th>UpdatedAt3</th> #}
-                {# <th>ImageName4</th> #}
-                {# <th>UpdatedAt4</th> #}
-                {# <th>ImageName5</th> #}
-                {# <th>UpdatedAt5</th> #}
-                {# <th>ImageName6</th> #}
-                {# <th>UpdatedAt6</th> #}
-                {# <th>ImageName7</th> #}
-                {# <th>UpdatedAt7</th> #}
-                <th>Titre</th>
-                {# <th>ImageName8</th> #}
-                {# <th>UpdatedAt8</th> #}
-                <th>Texte2</th>
-                <th>Titre2</th>
-                {# <th>ImageName9</th> #}
-                {# <th>UpdatedAt9</th> #}
-                <th>Theme</th>
-                <th>Formation</th>
-                <th>Texte3</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for formation in formations %}
-            <tr>
-                <td>{{ formation.id }}</td>
-                <td>{{ formation.imageName }}</td>
-                {# <td>{{ formation.updatedAt ? formation.updatedAt|date('Y-m-d H:i:s') : '' }}</td> #}
-                <td>{{ formation.texte1|raw }}</td>
-                {# <td>{{ formation.imageName2 }}</td> #}
-                {# <td>{{ formation.updatedAt2 ? formation.updatedAt2|date('Y-m-d H:i:s') : '' }}</td> #}
-                {# <td>{{ formation.imageName3 }}</td> #}
-                {# <td>{{ formation.updatedAt3 ? formation.updatedAt3|date('Y-m-d H:i:s') : '' }}</td> #}
-                {# <td>{{ formation.imageName4 }}</td> #}
-                {# <td>{{ formation.updatedAt4 ? formation.updatedAt4|date('Y-m-d H:i:s') : '' }}</td> #}
-                {# <td>{{ formation.imageName5 }}</td> #}
-                {# <td>{{ formation.updatedAt5 ? formation.updatedAt5|date('Y-m-d H:i:s') : '' }}</td> #}
-                {# <td>{{ formation.imageName6 }}</td> #}
-                {# <td>{{ formation.updatedAt6 ? formation.updatedAt6|date('Y-m-d H:i:s') : '' }}</td> #}
-                {# <td>{{ formation.imageName7 }}</td> #}
-                {# <td>{{ formation.updatedAt7 ? formation.updatedAt7|date('Y-m-d H:i:s') : '' }}</td> #}
-                <td>{{ formation.titre|raw }}</td>
-                <td>{{ formation.imageName8 }}</td>
-                {# <td>{{ formation.updatedAt8 ? formation.updatedAt8|date('Y-m-d H:i:s') : '' }}</td> #}
-                <td>{{ formation.texte2|raw }}</td>
-                <td>{{ formation.titre2|raw }}</td>
-                <td>{{ formation.imageName9 }}</td>
-                {# <td>{{ formation.updatedAt9 ? formation.updatedAt9|date('Y-m-d H:i:s') : '' }}</td> #}
-                <td>{{ formation.theme|raw }}</td>
-                <td>{{ formation.formation|raw }}</td>
-                <td>{{ formation.texte3|raw }}</td>
-                <td>
-                    <a href="{{ path('app_admin_formation_show', {'id': formation.id}) }}">show</a>
-                    <a href="{{ path('app_admin_formation_edit', {'id': formation.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="27">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 
-    <a href="{{ path('app_admin_formation_new') }}">Create new</a>
+
+<table class="table">
+    <tbody>
+    
+    {% for formation in formations %}
+    <td>
+        <a href="{{ path('app_admin_formation_edit', {'id': formation.id}) }}"title="Modifier" class="btn btn-success my-2">
+            Modifier
+        </a>
+    </td>
+
+    <tr>
+        <th scope="row">Id</th>
+        <td>{{ formation.id }}</td>
+    </tr>
+    <tr>
+        <th scope="row">Photo Entête</th>
+        <td>
+            {% if formation.imageName is defined and formation.imageName is not null %}
+                <img class="img-list" src="{{ asset('images/formation/' ~ formation.imageName) }}"> 
+            {% else %}
+                N/A                    
+            {% endif %}
+        </td>
+    <tr>
+        <th scope="row">Titre de la page</th> 
+        <td>{{ formation.Texte1|raw }}</td>
+    </tr>
+    <tr>
+        <th scope="row">Logo 1 :</th> 
+        <td>
+            {% if formation.imageName2 is defined and formation.imageName2 is not null %}
+                <img class="img-list" src="{{ asset('images/formation/' ~ formation.imageName2) }}"> 
+            {% else %}
+                N/A                    
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">Logo 2 :</th> 
+        <td>
+            {% if formation.imageName3 is defined and formation.imageName3 is not null %}
+                <img class="img-list" src="{{ asset('images/formation/' ~ formation.imageName3) }}"> 
+            {% else %}
+                N/A                    
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">Logo 3 :</th> 
+        <td>
+            {% if formation.imageName4 is defined and formation.imageName4 is not null %}
+                <img class="img-list" src="{{ asset('images/formation/' ~ formation.imageName4) }}"> 
+            {% else %}
+                N/A                    
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">Logo 4 :</th> 
+        <td>
+            {% if formation.imageName5 is defined and formation.imageName5 is not null %}
+                <img class="img-list" src="{{ asset('images/formation/' ~ formation.imageName5) }}"> 
+            {% else %}
+                N/A                    
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">Logo 5 :</th> 
+        <td>
+            {% if formation.imageName6 is defined and formation.imageName6 is not null %}
+                <img class="img-list" src="{{ asset('images/formation/' ~ formation.imageName6) }}"> 
+            {% else %}
+                N/A                    
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">Logo 6 :</th> 
+        <td>
+            {% if formation.imageName7 is defined and formation.imageName7 is not null %}
+                <img class="img-list" src="{{ asset('images/formation/' ~ formation.imageName7) }}"> 
+            {% else %}
+                N/A                    
+            {% endif %}
+        </td>
+    </tr>
+
+    <tr>
+        <th scope="row">Texte de la page</th> 
+        <td>{{ formation.Titre|raw }}</td>
+    </tr> 
+    <tr>
+        <th scope="row">Photo Milieu de page :</th> 
+        <td>
+            {% if formation.imageName8 is defined and formation.imageName8 is not null %}
+                <img class="img-list" src="{{ asset('images/formation/' ~ formation.imageName8) }}"> 
+            {% else %}
+                N/A                    
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">Texte de la photo</th> 
+        <td>{{ formation.Texte2|raw }}</td>
+    </tr>  
+    <tr>
+        <th scope="row">Titre 2 :</th> 
+        <td>{{ formation.Titre2|raw }}</td>
+    </tr>
+    <tr>
+        <th scope="row">Texte Pied de page</th> 
+        <td>{{ formation.Texte3|raw }}</td>
+    </tr>
+    {% else %}
+        <tr>
+            <td colspan="7">Aucune Page trouvée</td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+    
+
 {% endblock %}

@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="{{ asset('css/backend.css') }}">
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('css/backend.css') }}">
     {% block stylesheets %}{% endblock %}    
 </head>
 
@@ -38,7 +39,7 @@
                         <a class="sidebar-link" href="{{ path('app_admin_accueil_index') }}">
                             <i class="align-middle" data-feather="home"></i>
                             <span class="align-middle">
-                                Accueil
+                                Accueil - Onglet
                             </span>
                         </a>
                     </li>
@@ -46,31 +47,47 @@
                         <a class="sidebar-link" href="{{ path('app_admin_team_index') }}">
                             <i class="align-middle" data-feather="home"></i>
                             <span class="align-middle">
-                                Qui sommes nous ?
+                                Qui sommes nous ? - Onglet
                             </span>
                         </a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{ path('app_admin_formation_index') }}">
-                            <i class="align-middle" data-feather="home"></i>
+                            <i class="align-middle" data-feather="book"></i>
                             <span class="align-middle">
-                                Formations
+                                Formations - Onglet
+                            </span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ path('app_admin_cours_index') }}">
+                            <i class="align-middle" data-feather="edit-2"></i>
+                            <span class="align-middle">
+                                CRUD Cours
                             </span>
                         </a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{ path('app_admin_rncp_index') }}">
-                            <i class="align-middle" data-feather="home"></i>
+                            <i class="align-middle" data-feather="award"></i>
                             <span class="align-middle">
-                                Titres RNCP
+                                Titres RNCP - Onglet
                             </span>
                         </a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{ path('app_admin_nos_actus_index') }}">
-                            <i class="align-middle" data-feather="home"></i>
+                            <i class="align-middle" data-feather="book-open"></i>
                             <span class="align-middle">
-                                Nos Actus
+                                Nos Actus - Onglet
+                            </span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ path('app_admin_user_index') }}">
+                            <i class="align-middle" data-feather=""></i>
+                            <span class="align-middle">
+                                Utilisateur
                             </span>
                         </a>
                     </li>
