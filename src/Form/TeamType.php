@@ -6,6 +6,7 @@ use App\Entity\Team;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class TeamType extends AbstractType
 {
@@ -25,6 +26,7 @@ class TeamType extends AbstractType
             ->add('titre3')
             ->add('presentation2')
             ->add('imageName4')
+            ->add('isActive', CheckboxType::class, ["label"=>"Active"])
         ;
     }
 
