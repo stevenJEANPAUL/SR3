@@ -10,113 +10,107 @@
 
 {% block body %}
   <main class="container">
-    <img src="{{ asset("images/accueil/accueilformation.jpg") }}" alt="" class="presentaion">
-    <h2>Nos domaines de formations</h2>
-
-    <div class="menu_carousel container bg-white sadow">
-
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <img id ="pho5" src="{{ asset("images/accueil/gestion et communication.jpg") }}" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
-        </div>
-      </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img id ="pho4" src="{{ asset("images/accueil/bureautique.jpg") }}" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img id ="pho3" src="{{ asset("images/accueil/web.jpg") }}" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
-        </div>
-      </div>
-  <div class="carousel-item">
-        <img id ="pho2" src="{{ asset("images/accueil/Marketing.jpg") }}" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
-        </div>
-      </div>
-  <div class="carousel-item">
-        <img id ="pho1" src="{{ asset("images/accueil/systeme.jpg") }}" class="d-block w-100-pho" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    
+  <div class="presentaion">
+    <img src="{{ asset("images/accueil/" ~ monAccueil.imageName) }}" alt="" class="presentaion">
+  <p class="text-over">{{ monAccueil.description}}</p> 
   </div>
-    </div>
 
-  <h2>Nos domaines de formations</h2>
-  <div class="avis">
 
-      <div class="client">
-        <img src="{{ asset("images/accueil/systeme.jpg") }}"
-      </div>
+<h2>{{ monAccueil.titre}}</h2>
+  <div class="carou">
+  {% if monAccueil.carousels|length > 0 %}
 
-    <div class="comment">
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  
+  <div class="carousel-indicators">
+  {% for carousel in monAccueil.carousels  %}
+  {% if loop.index0 == 0 %}
+  {% set active = "active" %}
+  {% else %}
+  {% set active = "" %}
+  {% endif %}
+<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{ loop.index0 }}" class="{{ active }}" aria-current="true" aria-label="Slide {{ loop.index }}"></button>
+{% endfor %}
 
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-      <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner clientav">
-      <div class="carousel-item active">
-        <img id="clie" src="{{ asset("images/accueil/photo.jpg") }}" class="d-block w-100" alt="...">
+  </div>
+  <div class="carousel-inner">
+  {% for carousel in monAccueil.carousels  %}
+  {% if loop.index0 == 0 %}
+  {% set active = "active" %}
+  {% else %}
+  {% set active = "" %}
+  {% endif %}
+    <div class="carousel-item {{ active }}" data-bs-interval="7000">
+      <img id="pho1" src="{{ asset('images/carousels/' ~ carousel.imageName) }}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
+          <h5>
+            {{ carousel.texte}}
+          </h5>
         </div>
       </div>
-        <div class="carousel-item">
-          <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
+    {% endfor %}
           </div>
         </div>
-        <div class="carousel-item">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
-        </div>
-      </div>
-        </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-      </div>
-
-  </div>
+{% endif %}
 </div>
+
+{# ----- #}
+
+                <h2>{{ monAccueil.nom}}</h2>
+<div class="avis">
+{% if monAccueil.avisClients|length > 0 %}
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide " data-bs-ride="carousel">
+  <div class="carousel-indicators">
+  {% for avisClient in monAccueil.avisClients  %}
+  {% if loop.index0 == 0 %}
+  {% set active = "active" %}
+  {% else %}
+  {% set active = "" %}
+  {% endif %}
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{ loop.index0 }}" class="{{ active }}" aria-current="true" aria-label="Slide {{ loop.index }}"></button>
+  {% endfor %}
+  </div>
+  <div class="carousel-inner">
+  {% for avisClient in monAccueil.avisClients  %}
+  {% if loop.index0 == 0 %}
+  {% set active = "active" %}
+  {% else %}
+  {% set active = "" %}
+  {% endif %}
+<div class="carousel-item {{ active }}" data-bs-interval="2000" id="juste">
+  <div class="card " style="width: 15rem;">
+    <img src="{{ asset('images/avisClient/' ~ avisClient.imageName) }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h6 class="card-title">
+        {{ avisClient.nom}}
+        </h6>
+        <p class="card-text">
+        {{ avisClient.poste}}
+        </p>
+      </div>
+    </div>
+
+    <div class="avcli">
+      <p>
+        {{ avisClient.commentaire}}
+      </p>
+    </div>
+  </div>
+{% endfor %}</div>
+{% endif %}
+</div>
+{# ------ #}
+
+  {# <div>{{monAccueil.carousels}}</div> #}
+
+{# <dv class="avis"> #}
+  {# {{ monAccueil.nom}}, #}
+  {# {{ monAccueil.commentaire}} #}
+  </dv>
+
+{# <div>{{ monAccueil.texte}}</div> #}
 
 
 </main>
