@@ -8,3 +8,12 @@ vich_uploader:
         formation:
             uri_prefix: /images/formation
             upload_destination: '%kernel.project_dir%/public/images/formation'
+        carousels:
+            uri_prefix: /images/carousels
+            upload_destination: '%kernel.project_dir%/public/images/carousels'
+        accueil:
+            uri_prefix: /images/accueil
+            upload_destination: '%kernel.project_dir%/public/images/accueil'
+        avisClient:
+            uri_prefix: /images/avisClient
+            upload_destination: '%kernel.project_dir%/public/images/avisClient'
