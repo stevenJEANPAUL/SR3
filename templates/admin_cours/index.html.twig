@@ -1,0 +1,51 @@
+{% extends 'base-backend.html.twig' %}
+
+{% block title %}Cours{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Cours</h1>
+    <a href="{{ path('app_admin_cours_new') }}"class="btn btn-dark my-3">Nouveau</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Icône</th>
+                <th>Catégorie</th>
+                <th>Cours</th>
+                <th>Mise à jour</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cour in cours %}
+            <tr>
+                <td>{{ cour.id }}</td>
+                <td>
+                    {% if cour.imageName is defined and cour.imageName is not null %}
+                        <img class="img-list" src="{{ asset('images/formation/' ~ cour.imageName) }}"> 
+                    {% else %}
+                        N/A                    
+                    {% endif %}
+                </td>
+                <td>{{ cour.nom|raw }}</td>
+                <td>{{ cour.theme|raw }}</td>
+                <td>{{ cour.updatedAt ? cour.updatedAt|date('d-m-Y H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_admin_cours_show', {'id': cour.id}) }}"title="Voir" class="btn btn-dark">
+                        <i class="align-middle" data-feather="eye"></i>
+                    </a>
+                    <a href="{{ path('app_admin_cours_edit', {'id': cour.id}) }}"title="Modifier" class="btn btn-success ms-2">
+                        <i class="align-middle" data-feather="edit"></i>
+                    </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">Aucun cours</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}
