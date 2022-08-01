@@ -5,7 +5,7 @@
 {% block body %}
 
 {% for formation in formations %}
-<main class="container-fluid">
+<main class="container">
     <div class="row text-bg-white">
         <img class="img-fluid pe-0 me-0" src="{{ asset ('images/formation/') ~ formation.imageName }}">
         <div class="card-img-overlay text-center text-white text1">
@@ -16,19 +16,18 @@
         </div>
     </div>
 
-    <div class="row text-center py-5">
-        <div class="col">
+    <div class="row d-flex text-center">
+        <div class="col-9 col-sm-8 col-md-12 border border-danger">
             <img class="img-fluid pe-5" src="{{ asset ('images/formation/') ~ formation.imageName2}}">
             <img class="img-fluid pe-5" src="{{ asset ('images/formation/') ~ formation.imageName3}}">
             <img class="img-fluid pe-5" src="{{ asset ('images/formation/') ~ formation.imageName4}}">
             <img class="img-fluid pe-5" src="{{ asset ('images/formation/') ~ formation.imageName5}}">
-            <img class="img-fluid pe-2" src="{{ asset ('images/formation/') ~ formation.imageName6}}">
-            <img class="img-fluid pe-2" src="{{ asset ('images/formation/') ~ formation.imageName7}}">
+            <img class="img-fluid pe-5" src="{{ asset ('images/formation/') ~ formation.imageName6}}">
+            <img class="img-fluid pe-5" src="{{ asset ('images/formation/') ~ formation.imageName7}}">
         </div>
-    </div>
-    <div class="row text-center">
         <div class="col align-self-center">{{ formation.titre|raw }}</div>   
-    </div>
+        
+    </div>    
         
     <div class="row card d-none d-sm-block d-sm-none d-md-block">
         <img class="img-fluid" src="{{ asset ('images/formation/') ~ formation.imageName8}}">
@@ -40,7 +39,7 @@
     </div>
     <h4 class="text-center pt-5">{{ formation.titre2|raw }}</h4>
 
-    <div class="row my-5 container mx-auto cours">
+    <div class="row my-5 justify-content-center">
         {% for cours in formation.cours %}
         <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex flex-wrap mb-3 border rounded border-3 border-danger me-5" style="width: 12rem;">
             <div class="card align-items-center">
