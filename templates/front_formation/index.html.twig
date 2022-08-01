@@ -5,28 +5,27 @@
 {% block body %}
 
 {% for formation in formations %}
-<main class="container">
+<main class="container-fluid">
     <div class="row text-bg-white">
-        <img class="img-fluid pe-0 me-0" src="{{ asset ('images/formation/') ~ formation.imageName }}">
+        <img class="img-fluid m-0 p-0" src="{{ asset ('images/formation/') ~ formation.imageName }}">
         <div class="card-img-overlay text-center text-white text1">
             <div class="d-none d-sm-block d-sm-none d-md-block">
                 {{ formation.texte1|raw }}
             </div>    
-            <div class="ms-3 d-md-none d-lg-block d-lg-none d-xl-block d-xl-none d-xxl-none d-xxl-block ">Une équipe de formateurs adaptée à vos besoins dans le domaine de la formation, de l’information et de la bureautique</div>
+            <div class="d-md-none d-lg-block d-lg-none d-xl-block d-xl-none d-xxl-none d-xxl-block text-center formation-text1">Une équipe de formateurs adaptée à vos besoins dans le domaine de la formation, de l’information et de la bureautique</div>
         </div>
     </div>
-
-    <div class="row d-flex text-center">
-        <div class="col-9 col-sm-8 col-md-12 border border-danger">
-            <img class="img-fluid pe-5" src="{{ asset ('images/formation/') ~ formation.imageName2}}">
-            <img class="img-fluid pe-5" src="{{ asset ('images/formation/') ~ formation.imageName3}}">
-            <img class="img-fluid pe-5" src="{{ asset ('images/formation/') ~ formation.imageName4}}">
-            <img class="img-fluid pe-5" src="{{ asset ('images/formation/') ~ formation.imageName5}}">
-            <img class="img-fluid pe-5" src="{{ asset ('images/formation/') ~ formation.imageName6}}">
-            <img class="img-fluid pe-5" src="{{ asset ('images/formation/') ~ formation.imageName7}}">
+    {#  #}
+    <div class="row d-flex flex-wrap text-center my-3 formation">
+        <div class="col-5 col-sm-8 col-md-12 pb-3 img-form-order">
+            <img class="img-fluid img-form" style="width:4rem;" src="{{ asset ('images/formation/') ~ formation.imageName2}}">
+            <img class="img-flui img-form" style="width:4rem;" src="{{ asset ('images/formation/') ~ formation.imageName3}}">
+            <img class="img-fluid img-form" style="width:4rem;" src="{{ asset ('images/formation/') ~ formation.imageName4}}">
+            <img class="img-fluid img-form" style="width:4rem;" src="{{ asset ('images/formation/') ~ formation.imageName5}}">
+            <img class="img-fluid img-form" style="width:4rem;" src="{{ asset ('images/formation/') ~ formation.imageName6}}">
+            <img class="img-fluid img-form" style="width:4rem;" src="{{ asset ('images/formation/') ~ formation.imageName7}}">
         </div>
-        <div class="col align-self-center">{{ formation.titre|raw }}</div>   
-        
+        <div class="col-7 col-sm-4 col-md-12 align-self-center formation-titre">{{ formation.titre|raw }}</div>           
     </div>    
         
     <div class="row card d-none d-sm-block d-sm-none d-md-block">
@@ -37,9 +36,10 @@
             </div>    
         </div>
     </div>
-    <h4 class="text-center pt-5">{{ formation.titre2|raw }}</h4>
+    <h4 class="text-center pt-3 d-none d-sm-block d-sm-none d-md-block">{{ formation.titre2|raw }}</h4>
+    <h4 class="d-md-none d-lg-block d-lg-none d-xl-block d-xl-none d-xxl-none d-xxl-block text-center formation-text1-1">NOS COMPETENCES</h4>
 
-    <div class="row my-5 justify-content-center">
+    <div class="row my-5 justify-content-center cours mx-auto">
         {% for cours in formation.cours %}
         <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex flex-wrap mb-3 border rounded border-3 border-danger me-5" style="width: 12rem;">
             <div class="card align-items-center">

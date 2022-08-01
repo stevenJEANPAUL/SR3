@@ -1,45 +1,78 @@
 /* ====================================================== */
 /* ===================== GENERAL ======================== */
 /* ====================================================== */
-ul
-{
-	padding:0;
+ul {
+	padding: 0;
 }
-body, nav
-{
+
+body, nav {
 	font-family: 'Montserrat', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6
-{
+h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: bold;
 }
+
 /* ====================================================== */
 /* ===================== PAGE TITRE ===================== */
 /* ====================================================== */
 
-.titre-page{
-	color: #c00000;	
+.titre-page {
+	color: #c00000;
 }
-.card{
+
+.card {
 	border: 0px;
 }
+
 /* ====================================================== */
 /* ===================== PAGE FORMATION ================= */
 /* ====================================================== */
-.text1{
+
+.text1 {
 	padding-top: 100px;
 }
-.text2{
+
+.text2 {
 	width: 40%;
 	position: absolute;
-	left:52%;
-	top:45%;
+	left: 52%;
+	top: 45%;
 }
-.cours{
-	max-width:1000px;
+
+.cours {
+	max-width: 1000px;
 }
-.carre{
-	background : #c00000;
+
+.carre {
+	background: #c00000;
+}
+
+@media screen and (max-width: 576px) {
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.formation{
+		margin : 15px 0;
+	}
+	.formation-text1 {
+		font-size: .8rem;
+	}
+	.formation-text1-1{
+		font-size: 1rem;
+	}
+	.formation-titre {
+		font-size: .8rem;
+		text-align: left;
+		
+	}
+	.img-form {
+		opacity: 0.33;
+		max-width: 40px;
+	}
+	.img-form-order{
+		order: 2;
+	}
 }
