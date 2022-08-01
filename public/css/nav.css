@@ -31,6 +31,15 @@ h1, h2, h3, h4, h5, h6
 .text1{
 	padding-top: 100px;
 }
-.img-8{
-	width:100%;
+.text2{
+	width: 40%;
+	position: absolute;
+	left:52%;
+	top:45%;
+}
+.cours{
+	max-width:1000px;
+}
+.carre{
+	background : #c00000;
 }
