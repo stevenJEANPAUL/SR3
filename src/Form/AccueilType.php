@@ -3,9 +3,15 @@
 namespace App\Form;
 
 use App\Entity\Accueil;
+use App\Entity\AvisClient;
+use App\Entity\Carousel;
 use Symfony\Component\Form\AbstractType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class AccueilType extends AbstractType
 {
@@ -13,12 +19,15 @@ class AccueilType extends AbstractType
     {
         $builder
             ->add('imageName')
-            ->add('UpdatedAt')
+            ->remove('UpdatedAt')
             ->add('description')
-            ->add('titre')
-            ->add('nom')
+            ->add('titre', TextType::class, ["label"=>"Titre :"])
+            ->add('carousels', EntityType::class, [ "class"=> Carousel::class, "multiple"=>true, "label"=>"carousel"])
+            ->add('nom', TextType::class, ["label"=>"Nom :"])
+            ->add('avisClients', EntityType::class,["class"=>AvisClient::class, "multiple"=>true, "label"=>"avisClient"])
             ->add('commentaire')
-            ->add('texte')
+            ->add('texte', CKEditorType::class, ["label"=>"Texte :", "required"=>false])
+            ->add('isActive', CheckboxType::class, ["label"=>"Active"])
         ;
     }
 

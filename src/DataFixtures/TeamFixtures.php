@@ -3,7 +3,6 @@
 namespace App\DataFixtures;
 
 use App\Entity\Team;
-use App\DataFixtures\TeamFixtures;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 

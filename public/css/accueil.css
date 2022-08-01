@@ -5,3 +5,19 @@ body{
     height: 40vh;
     width: 100%;
 }
+
+#pho1, #pho2, #pho3, #pho4, #pho5{
+width: 1400px;
+height: 300px;
+}
+h2{
+    text-align: center;
+    margin: 15px;
+}
+
+.avis{
+    display: flex;
+    flex-direction: row;
+width: 30px;
+height: 30%;
+}
