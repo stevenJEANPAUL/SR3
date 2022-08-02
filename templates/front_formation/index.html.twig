@@ -1,21 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Nos Formations{% endblock %}
+{% block title %}Hello FrontFormationController!{% endblock %}
 
 {% block body %}
-
 {% for formation in formations %}
 <main class="container-fluid">
-    <div class="row text-bg-white">
-        <img class="img-fluid m-0 p-0" src="{{ asset ('images/formation/') ~ formation.imageName }}">
-        <div class="card-img-overlay text-center text-white text1">
+    <div class="row"></div>
+    <div class="card">
+        <img class="img-fluid m-0 p-0" src="{{ asset ('images/formation/') ~ formation.imageName }}">    
+        <div class="card-img-overlay text-center text-white">
             <div class="d-none d-sm-block d-sm-none d-md-block">
-                {{ formation.texte1|raw }}
-            </div>    
+            {{ formation.texte1|raw }}
+            </div>
             <div class="d-md-none d-lg-block d-lg-none d-xl-block d-xl-none d-xxl-none d-xxl-block text-center formation-text1">Une équipe de formateurs adaptée à vos besoins dans le domaine de la formation, de l’information et de la bureautique</div>
+            </div>
         </div>
     </div>
-    {#  #}
     <div class="row d-flex flex-wrap text-center my-3 formation">
         <div class="col-5 col-sm-8 col-md-12 pb-3 img-form-order">
             <img class="img-fluid img-form" style="width:4rem;" src="{{ asset ('images/formation/') ~ formation.imageName2}}">
@@ -39,21 +39,40 @@
     <h4 class="text-center pt-3 d-none d-sm-block d-sm-none d-md-block">{{ formation.titre2|raw }}</h4>
     <h4 class="d-md-none d-lg-block d-lg-none d-xl-block d-xl-none d-xxl-none d-xxl-block text-center formation-text1-1">NOS COMPETENCES</h4>
 
-    <div class="row my-5 justify-content-center cours mx-auto">
+{# SECTION COMPETENCE EN MODE DESKTOP #}
+    <div class="row my-5 justify-content-center cours mx-auto d-none d-sm-block d-sm-none d-md-flex">
         {% for cours in formation.cours %}
         <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex flex-wrap mb-3 border rounded border-3 border-danger me-5" style="width: 12rem;">
             <div class="card align-items-center">
                 <img style="width: 3rem;" class="pt-2 " src="{{ asset ('images/formation/') ~ cours.imageName}}">
                 <div class="card-body flex-wrap justify-content-center">
                     <h6 class="text-center" style="height: 39px;" >{{cours.nom|raw}}</h6>
-                    <div class="my-3">{{cours.theme|raw}}</div>
+                    <div class="mb-5 text-center">{{cours.theme|raw}}</div>
                 </div>
             </div> 
         </div>
         {% endfor %}
     </div>
+    
+
+
+
+
+{# SECTION COMPETENCE EN MODE MOBILE #}
+    <div class="row m-2 mt-4 d-md-none d-lg-block d-lg-none d-xl-block d-xl-none d-xxl-none d-xxl-block">
+        {% for cours in formation.cours %}
+            <div class="col-12 d-flex justify-content-between align-items-center">
+                <img style="max-width: 3rem;" class="img-fluid" src="{{ asset ('images/formation/') ~ cours.imageName}}">
+                <h6 class="fw-light text-center formation-mobile" >{{cours.nom|raw}} </h6>
+            <a class="nav-link" href="{{ path('app_cours_show', {'id': cours.id}) }}"><img style="width: 1rem;" src="images/down.png"></a>          
+            </div>
+        <hr class="color-dark">
+        {% endfor %}
+    </div>
+    
     <div class="row carre">
         <div class="col text-center py-3 text-white">{{ formation.texte3|raw }}</div>
+        
     </div>
 
     <div class="col text-center my-3">
@@ -66,3 +85,7 @@
 
 
 {% endblock %}
+
+
+
+
