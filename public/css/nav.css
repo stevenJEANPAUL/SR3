@@ -30,10 +30,6 @@ h1, h2, h3, h4, h5, h6 {
 /* ===================== PAGE FORMATION ================= */
 /* ====================================================== */
 
-.text1 {
-	padding-top: 100px;
-}
-
 .text2 {
 	width: 40%;
 	position: absolute;
@@ -48,6 +44,17 @@ h1, h2, h3, h4, h5, h6 {
 .carre {
 	background: #c00000;
 }
+.card-mobile
+{
+	position: absolute;
+	top: 18%;
+	left: 24%;
+	
+}
+.body{
+	background:no-repeat url(../images/formation/bg.png);
+	
+}
 
 @media screen and (max-width: 576px) {
 	*{
@@ -59,6 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	.formation-text1 {
 		font-size: .8rem;
+		padding-top: 20px;
 	}
 	.formation-text1-1{
 		font-size: 1rem;
@@ -75,4 +83,14 @@ h1, h2, h3, h4, h5, h6 {
 	.img-form-order{
 		order: 2;
 	}
+	.formation-mobile{
+		font-size: .8rem;
+	}
+	.carre{
+		font-size: .7rem;
+		max-height: 180px;
+		line-height: 16px;
+		padding: 0 3px;
+	}
+
 }
