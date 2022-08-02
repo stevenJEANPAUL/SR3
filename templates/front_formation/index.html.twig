@@ -64,7 +64,7 @@
             <div class="col-12 d-flex justify-content-between align-items-center">
                 <img style="max-width: 3rem;" class="img-fluid" src="{{ asset ('images/formation/') ~ cours.imageName}}">
                 <h6 class="fw-light text-center formation-mobile" >{{cours.nom|raw}} </h6>
-            <a class="nav-link" href="{{ path('app_cours_show', {'id': cours.id}) }}"><img style="width: 1rem;" src="images/down.png"></a>          
+            <a class="nav-link" href="{{ path('app_cours_show', {'id': cours.id}) }}"><img style="width: 1rem;" src="images/formation/down.png"></a>          
             </div>
         <hr class="color-dark">
         {% endfor %}
