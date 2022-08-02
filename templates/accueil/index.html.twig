@@ -9,111 +9,130 @@
 {% endblock %}
 
 {% block body %}
-  <main class="container">
-    
+<main class="container">
+
   <div class="presentaion">
-    <img src="{{ asset("images/accueil/" ~ monAccueil.imageName) }}" alt="" class="presentaion">
-  <p class="text-over">{{ monAccueil.description}}</p> 
+    <img src="{{ asset("images/accueil/" ~ monAccueil.imageName) }}" alt="" class="presentation">
+    <p class="text-over">{{ monAccueil.description}}</p> 
   </div>
 
 
-<h2>{{ monAccueil.titre}}</h2>
+  <h2>{{ monAccueil.titre}}</h2>
   <div class="carou">
-  {% if monAccueil.carousels|length > 0 %}
+    {% if monAccueil.carousels|length > 0 %}
 
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-  
-  <div class="carousel-indicators">
-  {% for carousel in monAccueil.carousels  %}
-  {% if loop.index0 == 0 %}
-  {% set active = "active" %}
-  {% else %}
-  {% set active = "" %}
-  {% endif %}
-<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{ loop.index0 }}" class="{{ active }}" aria-current="true" aria-label="Slide {{ loop.index }}"></button>
-{% endfor %}
-
-  </div>
-  <div class="carousel-inner">
-  {% for carousel in monAccueil.carousels  %}
-  {% if loop.index0 == 0 %}
-  {% set active = "active" %}
-  {% else %}
-  {% set active = "" %}
-  {% endif %}
-    <div class="carousel-item {{ active }}" data-bs-interval="7000">
-      <img id="pho1" src="{{ asset('images/carousels/' ~ carousel.imageName) }}" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>
-            {{ carousel.texte}}
-          </h5>
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    
+        <div class="carousel-indicators">
+          {% for carousel in monAccueil.carousels  %}
+          {% if loop.index0 == 0 %}
+          {% set active = "active" %}
+          {% else %}
+          {% set active = "" %}
+          {% endif %}
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{ loop.index0 }}" class="{{ active }}" aria-current="true" aria-label="Slide {{ loop.index }}"></button>
+          {% endfor %}
         </div>
-      </div>
-    {% endfor %}
+
+        <div class="carousel-inner">
+          {% for carousel in monAccueil.carousels  %}
+          {% if loop.index0 == 0 %}
+          {% set active = "active" %}
+          {% else %}
+          {% set active = "" %}
+          {% endif %}
+          <div class="carousel-item {{ active }}" data-bs-interval="7000">
+            <img id="pho1" src="{{ asset('images/carousels/' ~ carousel.imageName) }}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>
+                {{ carousel.texte}}
+              </h5>
           </div>
         </div>
-{% endif %}
-</div>
+
+        {% endfor %}
+      </div>
+  </div>
+    {% endif %}
+
 
 {# ----- #}
 
                 <h2>{{ monAccueil.nom}}</h2>
-<div class="avis">
-{% if monAccueil.avisClients|length > 0 %}
+    <div class="avis">
 
-<div id="carouselExampleDark" class="carousel carousel-dark slide " data-bs-ride="carousel">
-  <div class="carousel-indicators">
-  {% for avisClient in monAccueil.avisClients  %}
-  {% if loop.index0 == 0 %}
-  {% set active = "active" %}
-  {% else %}
-  {% set active = "" %}
-  {% endif %}
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{ loop.index0 }}" class="{{ active }}" aria-current="true" aria-label="Slide {{ loop.index }}"></button>
-  {% endfor %}
-  </div>
-  <div class="carousel-inner">
-  {% for avisClient in monAccueil.avisClients  %}
-  {% if loop.index0 == 0 %}
-  {% set active = "active" %}
-  {% else %}
-  {% set active = "" %}
-  {% endif %}
-<div class="carousel-item {{ active }}" data-bs-interval="2000" id="juste">
-  <div class="card " style="width: 15rem;">
-    <img src="{{ asset('images/avisClient/' ~ avisClient.imageName) }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h6 class="card-title">
-        {{ avisClient.nom}}
-        </h6>
-        <p class="card-text">
-        {{ avisClient.poste}}
-        </p>
+      {% if monAccueil.avisClients|length > 0 %}
+      <div id="carouselExampleDark" class="carousel carousel-dark slide " data-bs-ride="carousel">
+
+          <div class="carousel-indicators">
+            {% for avisClient in monAccueil.avisClients  %}
+            {% if loop.index0 == 0 %}
+            {% set active = "active" %}
+            {% else %}
+            {% set active = "" %}
+            {% endif %}
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{ loop.index0 }}" class="{{ active }}" aria-current="true" aria-label="Slide {{ loop.index }}"></button>
+            {% endfor %}
+          </div>
+
+          <div class="carousel-inner">
+            {% for avisClient in monAccueil.avisClients  %}
+            {% if loop.index0 == 0 %}
+            {% set active = "active" %}
+            {% else %}
+            {% set active = "" %}
+            {% endif %}
+            <div class="carousel-item {{ active }}" data-bs-interval="2000" id="juste">
+              <div class="card " style="width: 15rem;">
+                <img src="{{ asset('images/avisClient/' ~ avisClient.imageName) }}" class="card-img-top" alt="...">
+
+                <div class="card-body">
+                  <h6 class="card-title">
+                    {{ avisClient.nom}}
+                  </h6>
+                  <p class="card-text">
+                    {{ avisClient.poste}}
+                  </p>
+                </div>
+
+              </div>
+
+              <div class="avcli">
+                <p>
+                  {{ avisClient.commentaire}}
+                </p>
+              </div>
+
+          </div>
+
+            {% endfor %}
       </div>
+      
+      {% endif %}
     </div>
-
-    <div class="avcli">
-      <p>
-        {{ avisClient.commentaire}}
-      </p>
-    </div>
-  </div>
-{% endfor %}</div>
-{% endif %}
-</div>
 {# ------ #}
 
-  {# <div>{{monAccueil.carousels}}</div> #}
+<h2>{{ monAccueil.commentaire}}</h2>
+  <div>{{ monAccueil.texte}}</div>
 
-{# <dv class="avis"> #}
-  {# {{ monAccueil.nom}}, #}
-  {# {{ monAccueil.commentaire}} #}
-  </dv>
+    <div class="row mt-4" id="partena">
+    
+      {% for partenaire in monAccueil.partenaires %}
 
-{# <div>{{ monAccueil.texte}}</div> #}
+      <div class="col-12 col-md-6 col-lg-4 col -xl-3 my-2">
+
+        <div class="align-self-end">
+          <img src="{{ asset('images/partenaires/' ~ partenaire.imageName) }}" alt="img-fluid" class="" id="parte">
+        </div>
+
+      </div>
+
+      {% endfor %}
+    </div
 
 
-</main>
+</main> 
+
 {% block javascripts %}
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
