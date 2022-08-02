@@ -11,8 +11,8 @@ body, main{
 }
 .text-over{
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 60%;
+    top: 30%;
     color: white;
 }
 .avis{
