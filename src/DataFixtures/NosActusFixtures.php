@@ -12,9 +12,10 @@ class NosActusFixtures extends Fixture
     {
         $NosActus = new NosActus();
         $NosActus->setTitre('Bienvenue nouveau membre');
-        $NosActus->setImageName('rien que pour vous');
-        $NosActus->setDescription('soyez la/la bienvenu(e)');
+        $NosActus->setImageName('ASRC.jpg');
+        $NosActus->setDescription('soyez la bienvenu(e)');
         $NosActus->setCommentaire('tout va bien');
+        $NosActus->setIsActive(1);
         $manager->persist($NosActus);
 
         $manager->flush();
