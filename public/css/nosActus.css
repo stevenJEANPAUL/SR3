@@ -1,0 +1,20 @@
+body, main{
+    /* background-color: blueviolet; */
+    margin: 0%;
+    padding: 0%;
+}
+
+h2{
+    text-align: center;
+    margin: 15px;
+}
+.presentation{
+    height: 40vh;
+    width: 100%;
+    position: relative;
+}
+#newl{
+    background-color: blueviolet;
+margin: 2%;
+}
+
