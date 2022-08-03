@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-use App\Repository\AvisClientRepository;
+use App\Repository\NewletterRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -10,10 +10,10 @@ use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * @ORM\Entity(repositoryClass=AvisClientRepository::class)
+ * @ORM\Entity(repositoryClass=NewletterRepository::class)
  * @Vich\Uploadable
  */
-class AvisClient
+class Newletter
 {
     /**
      * @ORM\Id
@@ -23,54 +23,49 @@ class AvisClient
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $imageName;
 
-        /**
+    /**
      * @ORM\Column(type="datetime_immutable", nullable=true)
      */
     private $updatedAt;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
-    private $nom;
+    private $titre;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $poste;
+    private $text;
 
-        /**
+    /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="avisClient", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="newletter", fileNameProperty="imageName")
      * 
      * @var File|null
      */
     private $imageFile;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
+     * @ORM\ManyToMany(targetEntity=NosActus::class, mappedBy="newletters")
      */
-    private $commentaire;
-
-    /**
-     * @ORM\ManyToMany(targetEntity=Accueil::class, mappedBy="avisClients")
-     */
-    private $accueils;
+    private $nosActuses;
 
     public function __construct()
     {
-        $this->accueils = new ArrayCollection();
+        $this->nosActuses = new ArrayCollection();
     }
 
     public function __toString()
     {
         return $this->imageName;
     }
-
+    
     public function getId(): ?int
     {
         return $this->id;
@@ -84,30 +79,6 @@ class AvisClient
     public function setImageName(?string $imageName): self
     {
         $this->imageName = $imageName;
-
-        return $this;
-    }
-
-    public function getNom(): ?string
-    {
-        return $this->nom;
-    }
-
-    public function setNom(?string $nom): self
-    {
-        $this->nom = $nom;
-
-        return $this;
-    }
-
-    public function getPoste(): ?string
-    {
-        return $this->poste;
-    }
-
-    public function setPoste(?string $poste): self
-    {
-        $this->poste = $poste;
 
         return $this;
     }
@@ -149,40 +120,52 @@ class AvisClient
         return $this->imageFile;
     }
 
-    public function getCommentaire(): ?string
+    public function getTitre(): ?string
     {
-        return $this->commentaire;
+        return $this->titre;
     }
 
-    public function setCommentaire(?string $commentaire): self
+    public function setTitre(string $titre): self
     {
-        $this->commentaire = $commentaire;
+        $this->titre = $titre;
+
+        return $this;
+    }
+
+    public function getText(): ?string
+    {
+        return $this->text;
+    }
+
+    public function setText(?string $text): self
+    {
+        $this->text = $text;
 
         return $this;
     }
 
     /**
-     * @return Collection<int, Accueil>
+     * @return Collection<int, NosActus>
      */
-    public function getAccueils(): Collection
+    public function getNosActuses(): Collection
     {
-        return $this->accueils;
+        return $this->nosActuses;
     }
 
-    public function addAccueil(Accueil $accueil): self
+    public function addNosActus(NosActus $nosActus): self
     {
-        if (!$this->accueils->contains($accueil)) {
-            $this->accueils[] = $accueil;
-            $accueil->addAvisClient($this);
+        if (!$this->nosActuses->contains($nosActus)) {
+            $this->nosActuses[] = $nosActus;
+            $nosActus->addNewletter($this);
         }
 
         return $this;
     }
 
-    public function removeAccueil(Accueil $accueil): self
+    public function removeNosActus(NosActus $nosActus): self
     {
-        if ($this->accueils->removeElement($accueil)) {
-            $accueil->removeAvisClient($this);
+        if ($this->nosActuses->removeElement($nosActus)) {
+            $nosActus->removeNewletter($this);
         }
 
         return $this;

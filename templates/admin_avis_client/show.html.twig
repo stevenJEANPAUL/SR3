@@ -1,0 +1,42 @@
+{% extends 'base-backend.html.twig' %}
+
+{% block title %}AvisClient{% endblock %}
+
+{% block body %}
+    <h1>AvisClient</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ avis_client.id }}</td>
+            </tr>
+            <tr>
+                <th>ImageName</th>
+                <td>{{ avis_client.imageName }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ avis_client.updatedAt ? avis_client.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ avis_client.nom }}</td>
+            </tr>
+            <tr>
+                <th>Poste</th>
+                <td>{{ avis_client.poste }}</td>
+            </tr>
+            <tr>
+                <th>Commentaire</th>
+                <td>{{ avis_client.commentaire }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_avis_client_index') }}">back to list</a>
+
+    <a href="{{ path('app_admin_avis_client_edit', {'id': avis_client.id}) }}">edit</a>
+
+    {{ include('admin_avis_client/_delete_form.html.twig') }}
+{% endblock %}

@@ -83,10 +83,16 @@ class Accueil
      */
     private $avisClients;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Partenaire::class, inversedBy="accueils")
+     */
+    private $partenaires;
+
     public function __construct()
     {
         $this->carousels = new ArrayCollection();
         $this->avisClients = new ArrayCollection();
+        $this->partenaires = new ArrayCollection();
     }
 
     public function __toString()
@@ -264,6 +270,30 @@ class Accueil
     public function removeAvisClient(AvisClient $avisClient): self
     {
         $this->avisClients->removeElement($avisClient);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Partenaire>
+     */
+    public function getPartenaires(): Collection
+    {
+        return $this->partenaires;
+    }
+
+    public function addPartenaire(Partenaire $partenaire): self
+    {
+        if (!$this->partenaires->contains($partenaire)) {
+            $this->partenaires[] = $partenaire;
+        }
+
+        return $this;
+    }
+
+    public function removePartenaire(Partenaire $partenaire): self
+    {
+        $this->partenaires->removeElement($partenaire);
 
         return $this;
     }
