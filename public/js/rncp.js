@@ -2,10 +2,12 @@
 // console.log('rncp:', rncp)
 
 // const reversed = rncp.reverse();
-// console.log('reversed:', reversed);
 
-let titre = rncp;
 
-titre = document.getElementById('rncp', 'diplo');
+// // console.log('reversed:', reversed);
 
-const reversed = titre.reverse('rncp', 'diplo')
+// let titre = rncp;
+
+// titre = document.getElementById('rncp', 'diplo');
+
+// const reversed = titre.reverse('rncp', 'diplo')
