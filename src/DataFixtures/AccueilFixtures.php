@@ -4,9 +4,9 @@ namespace App\DataFixtures;
 
 use DateTimeImmutable;
 use App\Entity\Accueil;
-use App\DataFixtures\AccueilFixtures;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use phpDocumentor\Reflection\PseudoTypes\True_;
 
 class AccueilFixtures extends Fixture
 {
@@ -15,12 +15,14 @@ class AccueilFixtures extends Fixture
 
         $Accueil = new Accueil();
         $Accueil->setImageName('accueilformation.jpg');
-        $Accueil->setDescription('lorem papati patata on bosse encore et encore');
+        $Accueil->setDescription("Nous proposons des solutions adaptées à vos besoin, à vos envies.
+        Nous sommes présents dans de nombreux domaines, nos formations, peuvent vous aider, vous ou vos équipes. 
+        Notre esprit familiale favorise l’échange et l’entraide entre nos formateurs");
         $Accueil->setTitre('Nos domaines de formations');
         $Accueil->setNom('top');
         $Accueil->setCommentaire('bonjou bonjour');
         $Accueil->setTexte('bien joué');
-        $Accueil->setIsActive(1);
+        $Accueil->setIsActive(True);
         $Accueil->setUpdatedAt(new DateTimeImmutable());
         $manager->persist($Accueil);
 

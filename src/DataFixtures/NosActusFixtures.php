@@ -15,7 +15,7 @@ class NosActusFixtures extends Fixture
         $NosActus->setImageName('ASRC.jpg');
         $NosActus->setDescription('soyez la bienvenu(e)');
         $NosActus->setCommentaire('tout va bien');
-        $NosActus->setIsActive(1);
+        $NosActus->setIsActive(true);
         $manager->persist($NosActus);
 
         $manager->flush();

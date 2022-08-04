@@ -11,19 +11,20 @@ class TeamFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $team = new Team();
-        $team->setTitre('');
-        $team->setImageName('');
-        $team->setPresentation('');
-        $team->setImageName2('');
-        $team->setImageName3('');
-        $team->setPhoto('');
-        $team->setNom('');
-        $team->setTitre2('');
-        $team->setPoste('');
-        //$team->setUpdatedAt('');
-        $team->setTitre3('');
-        $team->setPresentation2('');
-        $team->setImageName4('');
+        $team->setTitre('test');
+        $team->setImageName('Bureautique.jpg');
+        $team->setPresentation('test');
+        $team->setImageName2('Bureautique.jpg');
+        $team->setImageName3('Bureautique.jpg');
+        $team->setPhoto('test.jpg');
+        $team->setNom('test');
+        $team->setTitre2('Bureautique.jpg');
+        $team->setPoste('test');
+        // $team->setUpdatedAt();
+        $team->setTitre3('test');
+        $team->setPresentation2('test');
+        $team->setImageName4('Bureautique.jpg');
+        $team->setIsActive('true');
         $manager->persist($team);
         $manager->flush();
     }
