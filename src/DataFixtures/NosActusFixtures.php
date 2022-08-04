@@ -8,7 +8,7 @@ use Doctrine\Persistence\ObjectManager;
 
 class NosActusFixtures extends Fixture
 {
-    public const nouveaute = "detail";
+
     public function load(ObjectManager $manager): void
     {
         
