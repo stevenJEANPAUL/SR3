@@ -18,7 +18,8 @@ class NosActusFixtures extends Fixture
         $NosActus->setDescription('soyez la bienvenu(e)');
         $NosActus->setCommentaire('tout va bien');
         $NosActus->setSlug('plus de détaille');
-        $NosActus->setIsActive(1);
+        $NosActus->setIsActive(true);
+
         $manager->persist($NosActus);
 
         $manager->flush();
