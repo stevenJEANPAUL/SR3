@@ -68,9 +68,11 @@ h1, h2, h3, h4, h5, h6 {
 /* ===================== MEDIA QUERIES ================== */
 /* ====================================================== */
 
-
-
 @media screen and (max-width: 576px) {
+
+/* ====================================================== */
+/* ===================== PAGE FORMATION ================= */
+/* ====================================================== */
 	*{
 		padding: 0;
 		margin: 0;
@@ -79,17 +81,18 @@ h1, h2, h3, h4, h5, h6 {
 		margin : 15px 0;
 	}
 	.formation-text1 {
-		font-size: .8rem;
-		padding-top: 20px;
-	}
-	.formation-text1-1{
-		font-size: 1rem;
-	}
-	.formation-titre {
-		font-size: .8rem;
-		text-align: left;
+		font-size: .9rem;
 		
 	}
+	.formation-titre {
+		font-size: .9rem;
+		text-align: left;		
+	}
+	.formation-text1-1{
+		font-size: 1.2rem;
+		margin: 0 40px;
+	}
+
 	.img-form {
 		opacity: 0.33;
 		max-width: 40px;
@@ -98,25 +101,38 @@ h1, h2, h3, h4, h5, h6 {
 		order: 2;
 	}
 	.formation-mobile{
-		font-size: .8rem;
+		font-size: 1rem;
 	}
 	.carre{
-		font-size: .7rem;
-		max-height: 180px;
+		font-size: 1rem;
+		max-height: 220px;
 		line-height: 16px;
 		padding: 0 3px;
+		margin-bottom: 40px;
 	}
 /* ====================================================== */
 /* ===================== PAGE TITRE RNCP ================ */
 /* ====================================================== */
 	.titre-page{
 		font-size: 0.5rem;
-		margin: 0;
-		
+		margin: 0;	
 	}
 	.diplome{
 		margin-left: 30px;
 		text-align:left;
+	}
+/* ====================================================== */
+/* ===================== PAGE CONTACT =================== */
+/* ====================================================== */
+	.bandeau-contact{
+		background-color: #c00000;
+		margin-bottom: 40px;
+	}
+	.message-contact{
+		margin-top: 40px;
+		border-radius: 5px;
+		border: solid 1px lightgray;
+		background:rgba(211, 211, 211, 0.40)
 	}
 
 }

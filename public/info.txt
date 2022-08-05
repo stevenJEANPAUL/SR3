@@ -1,0 +1,2 @@
+Si problème avec Vendor, installer le bundle du captcha via la commande :
+	composer require karser/karser-recaptcha3-bundle
