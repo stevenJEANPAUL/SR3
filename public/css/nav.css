@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 		max-height: 220px;
 		line-height: 16px;
 		padding: 0 3px;
-		margin-bottom: 40px;
+		
 	}
 /* ====================================================== */
 /* ===================== PAGE TITRE RNCP ================ */
@@ -126,13 +126,16 @@ h1, h2, h3, h4, h5, h6 {
 /* ====================================================== */
 	.bandeau-contact{
 		background-color: #c00000;
-		margin-bottom: 40px;
+		
 	}
 	.message-contact{
-		margin-top: 40px;
+		
 		border-radius: 5px;
 		border: solid 1px lightgray;
 		background:rgba(211, 211, 211, 0.40)
+	}
+	.captcha-text{
+		text-align: center;
 	}
 
 }
