@@ -16,6 +16,7 @@ class ContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+
             ->add('nom', TextType::class, 
                 array(
                     'label'=>' ',
@@ -34,6 +35,8 @@ class ContactType extends AbstractType
                     'attr'=>array('placeholder'=>'Message')))
             ->add('captcha', CaptchaType::class, ['invalid_message'=>'Incorrect','label'=>' ']);
                 
+
+          
     }
 
     public function configureOptions(OptionsResolver $resolver): void
