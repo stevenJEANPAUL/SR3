@@ -38,7 +38,7 @@ class Newletter
     private $titre;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text")
      */
     private $text;
 
@@ -55,6 +55,11 @@ class Newletter
      * @ORM\ManyToMany(targetEntity=NosActus::class, mappedBy="newletters")
      */
     private $nosActuses;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $presentation;
 
     public function __construct()
     {
@@ -167,6 +172,18 @@ class Newletter
         if ($this->nosActuses->removeElement($nosActus)) {
             $nosActus->removeNewletter($this);
         }
+
+        return $this;
+    }
+
+    public function getPresentation(): ?string
+    {
+        return $this->presentation;
+    }
+
+    public function setPresentation(?string $presentation): self
+    {
+        $this->presentation = $presentation;
 
         return $this;
     }

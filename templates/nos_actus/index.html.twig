@@ -25,8 +25,8 @@
     <div class="card col-12 col-md-3 col-lg-3d-flex flex-wrap" id="newl">
     <div class="aling-self-end">
         <img src="{{ asset('images/newletter/' ~ newletter.imageName)}}" alt="{{newletter.titre}}" class="img-fluid">
-        <p>{{newletter.titre}}</p>
-            <p>{{newletter.text}}</p>
+        <h6>{{newletter.titre}}</h6>
+            <p>{{newletter.presentation}}</p>
     {# {% for nos_actu in nos_actuses %} #}
 <a href="{{ path('app_newletter_show',{'id': newletter.id})}}" class="btn btn-dark my-4">Lire plus</a>
 {# {% endfor %} #}
