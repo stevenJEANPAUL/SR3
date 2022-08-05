@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{newletter.titre}}{% endblock %}
+
+{% block body %}
+<main class="container bg-white shadow">
+<h2>{{newletter.titre}}</h2>
+<div>nos actu(s)</div>
+
+<div class="row">
+
+{% for newletter in nos_actuses.newletters %}
+<a href="">
+    {% if newletter.titre is not null %}
+    {{newletter.titre}}
+    {% else %}
+    {{newletter.text}}
+    {% endif %}
+</a>
+{% endfor %}
+</div>
+<div class=" row mt-4">
+<div class="col-12 col-md-6 col-lg-4 col -xl-3">
+<img src="{{ asset('images/newletter/' ~ newletter.imageName)}}" alt="" class="img-fluid">
+</div>
+
+<div class="col-12 col-md-6 col-lg-8 col-xl-9">
+    <div>{{newletter.text}}</div>
+</div>
+</div>
+
+</main>
+{% endblock %}

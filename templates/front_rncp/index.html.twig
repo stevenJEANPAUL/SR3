@@ -7,20 +7,21 @@
     <div class="row">
         {% for rncp in rncps %}
             <h2 class="text-center titre-page fs-4 my-5">{{ rncp.titre }}</h2>
-            <div class="col-md-4 ">
+            <div class="col-md-4 " id="rncp">
                 <img class="img-fluid img-rncp my-3" src="{{ asset ('images/rncp/') ~ rncp.imageName }}">
             </div>
-                <div class="col-md-8 diplome">
+                <div class="col-md-8 diplome" id="diplo">
                     <h6>{{ rncp.formation }}</h6>
                     <div class="col">{{ rncp.niveau }}</div>
                     <div class="fw-bold py-3">{{ rncp.descriptif }}</div>
                     <div class="lh-2 w-75">{{ rncp.texte|raw }}</div>                    
                 </div>
-
+{# ------------------------------------------ #}
                 
         {% endfor %}
     </div>
 </main>
-
-
+{% block javascripts %}
+<script src="../../public/js/rncp.js"></script>
+{% endblock %}
 {% endblock %}
