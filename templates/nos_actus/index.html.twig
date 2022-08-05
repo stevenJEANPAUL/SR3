@@ -28,7 +28,7 @@
         <p>{{newletter.titre}}</p>
             <p>{{newletter.text}}</p>
     {# {% for nos_actu in nos_actuses %} #}
-<a href="{#{{ path('app_nos_actus_show', {'slug': nos_actuses.slug })}}#}" class="btn btn-dark my-4">Lire plus</a>
+<a href="{{ path('app_newletter_show',{'id': newletter.id})}}" class="btn btn-dark my-4">Lire plus</a>
 {# {% endfor %} #}
     </div>
     </div>

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block tittle %} {#{{ categorie.nom }} #} {% endblock %} 
+
+{% block body %}
+<body class="body">
+    <a class="nav-link m-3" href="{{ path('app_nos_actus') }}">Retour</a>
+
+    <div{# class="card-mobile mb-3 border rounded border-3 border-danger me-5" style="width: 12rem;"#}>
+        <div class="card align-items-center">
+        <img src="  {{ asset('images/newletter/' ~ newletter.imageName) }}" alt="{{newletter.titre}}" class="img-fluid">
+            <div class="card-body flex-wrap justify-content-center">
+                <h6{#  class="text-center" style="height: 39px;"  #}>{{newletter.titre}}</h6>
+                <div {# class="mb-5" #}>{{newletter.text}}</div>
+            </div>
+        </div> 
+    </div>
+</body>
+{% endblock %}
