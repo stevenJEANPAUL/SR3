@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block tittle %} {#{{ categorie.nom }} #} {% endblock %} 
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/newletter.css')}}">
+{% endblock %}
+
+{% block body %}
+<body class="container bg-white shadow" id="newcorps">
+    <a class="nav-link m-3" href="{{ path('app_nos_actus') }}">Retour</a>
+
+    <div class="col-12 col-md-12 col-lg-12 d-flex flex-wrap justify-content-center">
+        <div class="card align-items-center">
+        <img src="{{ asset('images/newletter/' ~ newletter.imageName) }}" alt="{{newletter.titre}}" class="img-fluid col-lg-4" id="newimg">
+            <div class="card-body flex-wrap">
+                <h6{#  class="text-center" style="height: 39px;"  #}><strong>{{newletter.titre}}</strong></h6>
+                <div {# class="mb-5" #}>{{newletter.text}}</div>
+            </div>
+        </div> 
+    </div>
+</body>
+{% endblock %}
