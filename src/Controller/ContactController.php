@@ -24,21 +24,21 @@ class ContactController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()){
             $data = $form->getData();
 
-            $address = $data['email'];
+            $couriel = $data['email'];
             $message = $data['message'];
-            
+            $sujet = $data['sujet'];  
+
             $email = (new Email())
-            ->from($address)
-            ->to('admin@admin.com')
-            ->subject('Contact')
-            ->text($message)     
-            ->embed(fopen('images/logosr3.png', 'r'), 'logo');                     
+                ->from($couriel)
+                ->to('admin@admin.com')
+                ->subject($sujet)           
+                ->text($message);
 
         $mailer->send($email);
-            
-        }
-
-
+        
+        return $this->redirectToRoute('app_accueil');
+        
+    }
 
         return $this->renderForm('contact/index.html.twig', [           
             'formulaire'=>$form
