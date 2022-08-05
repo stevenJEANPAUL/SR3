@@ -36,27 +36,24 @@
             </div>    
         </div>
     </div>
-    <h4 class="text-center pt-3 d-none d-sm-block d-sm-none d-md-block">{{ formation.titre2|raw }}</h4>
+    <h4 class="text-center pt-5 d-none d-sm-block d-sm-none d-md-block">{{ formation.titre2|raw }}</h4>
     <h4 class="d-md-none d-lg-block d-lg-none d-xl-block d-xl-none d-xxl-none d-xxl-block text-center formation-text1-1">NOS COMPETENCES</h4>
 
 {# SECTION COMPETENCE EN MODE DESKTOP #}
     <div class="row my-5 justify-content-center cours mx-auto d-none d-sm-block d-sm-none d-md-flex">
         {% for cours in formation.cours %}
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex flex-wrap mb-3 border rounded border-3 border-danger me-5" style="width: 12rem;">
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex flex-wrap mb-3 border rounded border-3 border-danger me-5" style="width: 13rem;">
             <div class="card align-items-center">
                 <img style="width: 3rem;" class="pt-2 " src="{{ asset ('images/formation/') ~ cours.imageName}}">
                 <div class="card-body flex-wrap justify-content-center">
                     <h6 class="text-center" style="height: 39px;" >{{cours.nom|raw}}</h6>
-                    <div class="mb-5 text-center">{{cours.theme|raw}}</div>
+                    <div class="mb-5 text-start">{{cours.theme|raw}}</div>
                 </div>
             </div> 
         </div>
         {% endfor %}
     </div>
     
-
-
-
 
 {# SECTION COMPETENCE EN MODE MOBILE #}
     <div class="row m-2 mt-4 d-md-none d-lg-block d-lg-none d-xl-block d-xl-none d-xxl-none d-xxl-block">
@@ -71,11 +68,10 @@
     </div>
     
     <div class="row carre">
-        <div class="col text-center py-3 text-white">{{ formation.texte3|raw }}</div>
-        
+        <div class="col text-center my-2 text-white">{{ formation.texte3|raw }}</div>        
     </div>
 
-    <div class="col text-center my-3">
+    <div class="col text-center my-4">
     <button type="button" class="btn btn-danger">
         <a class="nav-link " href="{{ path('app_front_rncp')}}">En savoir plus</a>
     </button>

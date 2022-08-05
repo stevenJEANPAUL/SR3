@@ -20,7 +20,7 @@ class ContactType extends AbstractType
             ->add('nom', TextType::class, 
                 array(
                     'label'=>' ',
-                    'attr'=>array('placeholder'=>'Nom')))
+                    'attr'=>array('placeholder'=>'Nom, prénom')))
             ->add('email', EmailType::class,
                 array(
                     'label'=>' ',
