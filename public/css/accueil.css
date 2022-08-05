@@ -8,12 +8,15 @@ body, main{
     height: 40vh;
     width: 100%;
     position: relative;
+
 }
 .text-over{
     position: absolute;
-    left: 60%;
-    top: 30%;
+    top: 25%;
     color: white;
+    width: 50%;
+    right: 10%;
+
 }
 .avis{
     text-align: center;
