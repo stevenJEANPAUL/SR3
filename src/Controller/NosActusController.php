@@ -24,18 +24,18 @@ class NosActusController extends AbstractController
 
 
 
-        /**
-     * @Route("/nos/actus/{slug}", name="app_nos_actus_show",)
-     */
-    public function show(NosActusRepository $nosActusRepository, string $slug): Response
-    {
-        return $this->render('nos_actus/show.html.twig', [
-            'nos_actuses' => $nosActusRepository->findOneBy(['slug' => $slug]),
-        ]);
-    }
+    //     /**
+    //  * @Route("/nos/actus/{slug}", name="app_nos_actus_show",)
+    //  */
+    // public function show(NosActusRepository $nosActusRepository, string $slug): Response
+    // {
+    //     return $this->render('nos_actus/show.html.twig', [
+    //         'nos_actuses' => $nosActusRepository->findOneBy(['slug' => $slug]),
+    //     ]);
+    // }
 
     
-        /**
+    /**
      * @Route("/nos/actus/{slug}/{id}", name="app_nos_actus_show_newletter")
      */
     public function show_newletter(NewletterRepository $newletterRepository, string $slug, int $id): Response
