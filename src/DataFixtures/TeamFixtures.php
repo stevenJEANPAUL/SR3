@@ -3,29 +3,36 @@
 namespace App\DataFixtures;
 
 use App\Entity\Team;
+use DateTimeImmutable;
+use App\DataFixtures\EquipeFixtures;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 
-class TeamFixtures extends Fixture
+
+class TeamFixtures extends Fixture 
 {
+
+
+
     public function load(ObjectManager $manager): void
     {
         $team = new Team();
-        $team->setTitre('test');
-        $team->setImageName('Bureautique.jpg');
+        $team->setTitre('Qui somme nous ?');
+        $team->setImageName('artificial-intelligence.jpg');
         $team->setPresentation('test');
-        $team->setImageName2('Bureautique.jpg');
-        $team->setImageName3('Bureautique.jpg');
-        $team->setPhoto('test.jpg');
+        $team->setImageName2('communication.png');
+        $team->setImageName3('Logo_SR3_TEAM.jpg');
+        $team->setPhoto('equipe.jpg');
         $team->setNom('test');
-        $team->setTitre2('Bureautique.jpg');
-        $team->setPoste('test');
-        // $team->setUpdatedAt();
-        $team->setTitre3('test');
-        $team->setPresentation2('test');
-        $team->setImageName4('Bureautique.jpg');
+        $team->setTitre2('formations.jpg');
+        $team->setPoste('formateur');
         $team->setIsActive('true');
+        $team->setUpdatedAt(new DateTimeImmutable());
+        $team->setTitre3('Notre Equipe');
+        $team->setPresentation2('test');
+        $team->setImageName4('business_info.webp');
         $manager->persist($team);
         $manager->flush();
     }
+    
 }
