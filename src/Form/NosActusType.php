@@ -21,7 +21,6 @@ class NosActusType extends AbstractType
             ->add('newletters', EntityType::class,["class"=>Newletter::class, "multiple"=>true, "label"=>"newletter"])
             ->add('description')
             ->add('commentaire')
-            ->remove('slug')
             ->add('isActive', CheckboxType::class, ["label"=>"Active"])
             
         ;
