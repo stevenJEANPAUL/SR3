@@ -20,10 +20,10 @@ class ComposerStaticInit9ba4a6c21da1a84dcd6e3eb0a56cb1c5
         'c2aad8997a98dfc4771bdbffea3d62b7' => __DIR__ . '/..' . '/laminas/laminas-code/polyfill/ReflectionEnumPolyfill.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '53c7be3308b5aa229d03a4dfcf6ca18d' => __DIR__ . '/..' . '/symfony/intl/Resources/functions.php',
         '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
-        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -122,6 +122,10 @@ class ComposerStaticInit9ba4a6c21da1a84dcd6e3eb0a56cb1c5
             'Symfony\\Bridge\\Doctrine\\' => 24,
             'Sensio\\Bundle\\FrameworkExtraBundle\\' => 35,
         ),
+        'R' => 
+        array (
+            'ReCaptcha\\' => 10,
+        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
@@ -142,6 +146,15 @@ class ComposerStaticInit9ba4a6c21da1a84dcd6e3eb0a56cb1c5
         'L' => 
         array (
             'Laminas\\Code\\' => 13,
+        ),
+        'K' => 
+        array (
+            'Karser\\Recaptcha3Bundle\\' => 24,
+        ),
+        'G' => 
+        array (
+            'Gregwar\\CaptchaBundle\\' => 22,
+            'Gregwar\\' => 8,
         ),
         'F' => 
         array (
@@ -502,6 +515,10 @@ class ComposerStaticInit9ba4a6c21da1a84dcd6e3eb0a56cb1c5
         array (
             0 => __DIR__ . '/..' . '/sensio/framework-extra-bundle/src',
         ),
+        'ReCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -549,6 +566,18 @@ class ComposerStaticInit9ba4a6c21da1a84dcd6e3eb0a56cb1c5
         'Laminas\\Code\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-code/src',
+        ),
+        'Karser\\Recaptcha3Bundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle',
+        ),
+        'Gregwar\\CaptchaBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gregwar/captcha-bundle',
+        ),
+        'Gregwar\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar',
         ),
         'FOS\\CKEditorBundle\\' => 
         array (
@@ -644,24 +673,73 @@ class ComposerStaticInit9ba4a6c21da1a84dcd6e3eb0a56cb1c5
     public static $classMap = array (
         'App\\Controller\\AccueilController' => __DIR__ . '/../..' . '/src/Controller/AccueilController.php',
         'App\\Controller\\AdminAccueilController' => __DIR__ . '/../..' . '/src/Controller/AdminAccueilController.php',
+        'App\\Controller\\AdminAvisClientController' => __DIR__ . '/../..' . '/src/Controller/AdminAvisClientController.php',
+        'App\\Controller\\AdminCarouselController' => __DIR__ . '/../..' . '/src/Controller/AdminCarouselController.php',
+        'App\\Controller\\AdminCoursController' => __DIR__ . '/../..' . '/src/Controller/AdminCoursController.php',
         'App\\Controller\\AdminDashboardController' => __DIR__ . '/../..' . '/src/Controller/AdminDashboardController.php',
+        'App\\Controller\\AdminEquipeController' => __DIR__ . '/../..' . '/src/Controller/AdminEquipeController.php',
+        'App\\Controller\\AdminFormationController' => __DIR__ . '/../..' . '/src/Controller/AdminFormationController.php',
+        'App\\Controller\\AdminNewletterController' => __DIR__ . '/../..' . '/src/Controller/AdminNewletterController.php',
+        'App\\Controller\\AdminNosActusController' => __DIR__ . '/../..' . '/src/Controller/AdminNosActusController.php',
+        'App\\Controller\\AdminPartenaireController' => __DIR__ . '/../..' . '/src/Controller/AdminPartenaireController.php',
         'App\\Controller\\AdminRncpController' => __DIR__ . '/../..' . '/src/Controller/AdminRncpController.php',
         'App\\Controller\\AdminTeamController' => __DIR__ . '/../..' . '/src/Controller/AdminTeamController.php',
+        'App\\Controller\\AdminUserController' => __DIR__ . '/../..' . '/src/Controller/AdminUserController.php',
+        'App\\Controller\\ContactController' => __DIR__ . '/../..' . '/src/Controller/ContactController.php',
+        'App\\Controller\\CoursController' => __DIR__ . '/../..' . '/src/Controller/CoursController.php',
+        'App\\Controller\\FrontFormationController' => __DIR__ . '/../..' . '/src/Controller/FrontFormationController.php',
+        'App\\Controller\\FrontRncpController' => __DIR__ . '/../..' . '/src/Controller/FrontRncpController.php',
+        'App\\Controller\\NewletterController' => __DIR__ . '/../..' . '/src/Controller/NewletterController.php',
+        'App\\Controller\\NosActusController' => __DIR__ . '/../..' . '/src/Controller/NosActusController.php',
         'App\\Controller\\TeamController' => __DIR__ . '/../..' . '/src/Controller/TeamController.php',
         'App\\DataFixtures\\AccueilFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/AccueilFixtures.php',
+        'App\\DataFixtures\\CoursFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/CoursFixtures.php',
+        'App\\DataFixtures\\EquipeFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/EquipeFixtures.php',
         'App\\DataFixtures\\FormationFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/FormationFixtures.php',
+        'App\\DataFixtures\\NewletterFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/NewletterFixtures.php',
+        'App\\DataFixtures\\Newletters' => __DIR__ . '/../..' . '/src/DataFixtures/Newletters.php',
+        'App\\DataFixtures\\NosActusFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/NosActusFixtures.php',
         'App\\DataFixtures\\RncpFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/RncpFixtures.php',
         'App\\DataFixtures\\TeamFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/TeamFixtures.php',
+        'App\\DataFixtures\\UserFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/UserFixtures.php',
         'App\\Entity\\Accueil' => __DIR__ . '/../..' . '/src/Entity/Accueil.php',
+        'App\\Entity\\AvisClient' => __DIR__ . '/../..' . '/src/Entity/AvisClient.php',
+        'App\\Entity\\Carousel' => __DIR__ . '/../..' . '/src/Entity/Carousel.php',
+        'App\\Entity\\Cours' => __DIR__ . '/../..' . '/src/Entity/Cours.php',
+        'App\\Entity\\Equipe' => __DIR__ . '/../..' . '/src/Entity/Equipe.php',
         'App\\Entity\\Formation' => __DIR__ . '/../..' . '/src/Entity/Formation.php',
+        'App\\Entity\\Image' => __DIR__ . '/../..' . '/src/Entity/Image.php',
+        'App\\Entity\\Newletter' => __DIR__ . '/../..' . '/src/Entity/Newletter.php',
+        'App\\Entity\\NosActus' => __DIR__ . '/../..' . '/src/Entity/NosActus.php',
+        'App\\Entity\\Partenaire' => __DIR__ . '/../..' . '/src/Entity/Partenaire.php',
         'App\\Entity\\Rncp' => __DIR__ . '/../..' . '/src/Entity/Rncp.php',
         'App\\Entity\\Team' => __DIR__ . '/../..' . '/src/Entity/Team.php',
         'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
         'App\\Form\\AccueilType' => __DIR__ . '/../..' . '/src/Form/AccueilType.php',
+        'App\\Form\\AvisClientType' => __DIR__ . '/../..' . '/src/Form/AvisClientType.php',
+        'App\\Form\\CarouselType' => __DIR__ . '/../..' . '/src/Form/CarouselType.php',
+        'App\\Form\\ContactType' => __DIR__ . '/../..' . '/src/Form/ContactType.php',
+        'App\\Form\\CoursType' => __DIR__ . '/../..' . '/src/Form/CoursType.php',
+        'App\\Form\\EquipeType' => __DIR__ . '/../..' . '/src/Form/EquipeType.php',
+        'App\\Form\\FormationType' => __DIR__ . '/../..' . '/src/Form/FormationType.php',
+        'App\\Form\\Newletter1Type' => __DIR__ . '/../..' . '/src/Form/Newletter1Type.php',
+        'App\\Form\\NewletterType' => __DIR__ . '/../..' . '/src/Form/NewletterType.php',
+        'App\\Form\\NosActusType' => __DIR__ . '/../..' . '/src/Form/NosActusType.php',
+        'App\\Form\\PartenaireType' => __DIR__ . '/../..' . '/src/Form/PartenaireType.php',
         'App\\Form\\RncpType' => __DIR__ . '/../..' . '/src/Form/RncpType.php',
+        'App\\Form\\TeamType' => __DIR__ . '/../..' . '/src/Form/TeamType.php',
+        'App\\Form\\UserType' => __DIR__ . '/../..' . '/src/Form/UserType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\AccueilRepository' => __DIR__ . '/../..' . '/src/Repository/AccueilRepository.php',
+        'App\\Repository\\AvisClientRepository' => __DIR__ . '/../..' . '/src/Repository/AvisClientRepository.php',
+        'App\\Repository\\CarouselRepository' => __DIR__ . '/../..' . '/src/Repository/CarouselRepository.php',
+        'App\\Repository\\ContactRepository' => __DIR__ . '/../..' . '/src/Repository/ContactRepository.php',
+        'App\\Repository\\CoursRepository' => __DIR__ . '/../..' . '/src/Repository/CoursRepository.php',
+        'App\\Repository\\EquipeRepository' => __DIR__ . '/../..' . '/src/Repository/EquipeRepository.php',
         'App\\Repository\\FormationRepository' => __DIR__ . '/../..' . '/src/Repository/FormationRepository.php',
+        'App\\Repository\\NewletterRepository' => __DIR__ . '/../..' . '/src/Repository/NewletterRepository.php',
+        'App\\Repository\\NosActusRepository' => __DIR__ . '/../..' . '/src/Repository/NosActusRepository.php',
+        'App\\Repository\\PartenaireRepository' => __DIR__ . '/../..' . '/src/Repository/PartenaireRepository.php',
         'App\\Repository\\RncpRepository' => __DIR__ . '/../..' . '/src/Repository/RncpRepository.php',
         'App\\Repository\\TeamRepository' => __DIR__ . '/../..' . '/src/Repository/TeamRepository.php',
         'App\\Repository\\UserRepository' => __DIR__ . '/../..' . '/src/Repository/UserRepository.php',
@@ -1937,8 +2015,38 @@ class ComposerStaticInit9ba4a6c21da1a84dcd6e3eb0a56cb1c5
         'FOS\\CKEditorBundle\\Renderer\\CKEditorRenderer' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/Renderer/CKEditorRenderer.php',
         'FOS\\CKEditorBundle\\Renderer\\CKEditorRendererInterface' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/Renderer/CKEditorRendererInterface.php',
         'FOS\\CKEditorBundle\\Twig\\CKEditorExtension' => __DIR__ . '/..' . '/friendsofsymfony/ckeditor-bundle/src/Twig/CKEditorExtension.php',
+        'Gregwar\\CaptchaBundle\\Controller\\CaptchaController' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Controller/CaptchaController.php',
+        'Gregwar\\CaptchaBundle\\DependencyInjection\\Configuration' => __DIR__ . '/..' . '/gregwar/captcha-bundle/DependencyInjection/Configuration.php',
+        'Gregwar\\CaptchaBundle\\DependencyInjection\\GregwarCaptchaExtension' => __DIR__ . '/..' . '/gregwar/captcha-bundle/DependencyInjection/GregwarCaptchaExtension.php',
+        'Gregwar\\CaptchaBundle\\Generator\\CaptchaGenerator' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Generator/CaptchaGenerator.php',
+        'Gregwar\\CaptchaBundle\\Generator\\ImageFileHandler' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Generator/ImageFileHandler.php',
+        'Gregwar\\CaptchaBundle\\GregwarCaptchaBundle' => __DIR__ . '/..' . '/gregwar/captcha-bundle/GregwarCaptchaBundle.php',
+        'Gregwar\\CaptchaBundle\\Type\\CaptchaType' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Type/CaptchaType.php',
+        'Gregwar\\CaptchaBundle\\Validator\\CaptchaValidator' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Validator/CaptchaValidator.php',
+        'Gregwar\\Captcha\\CaptchaBuilder' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/CaptchaBuilder.php',
+        'Gregwar\\Captcha\\CaptchaBuilderInterface' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/CaptchaBuilderInterface.php',
+        'Gregwar\\Captcha\\ImageFileHandler' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/ImageFileHandler.php',
+        'Gregwar\\Captcha\\PhraseBuilder' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/PhraseBuilder.php',
+        'Gregwar\\Captcha\\PhraseBuilderInterface' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/PhraseBuilderInterface.php',
         'IntlDateFormatter' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/IntlDateFormatter.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+        'Karser\\Recaptcha3Bundle\\DependencyInjection\\Configuration' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/DependencyInjection/Configuration.php',
+        'Karser\\Recaptcha3Bundle\\DependencyInjection\\KarserRecaptcha3Extension' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/DependencyInjection/KarserRecaptcha3Extension.php',
+        'Karser\\Recaptcha3Bundle\\Form\\Recaptcha3Type' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/Form/Recaptcha3Type.php',
+        'Karser\\Recaptcha3Bundle\\KarserRecaptcha3Bundle' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/KarserRecaptcha3Bundle.php',
+        'Karser\\Recaptcha3Bundle\\Services\\HostProvider' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/Services/HostProvider.php',
+        'Karser\\Recaptcha3Bundle\\Services\\HostProviderInterface' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/Services/HostProviderInterface.php',
+        'Karser\\Recaptcha3Bundle\\Services\\IpResolver' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/Services/IpResolver.php',
+        'Karser\\Recaptcha3Bundle\\Services\\IpResolverInterface' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/Services/IpResolverInterface.php',
+        'Karser\\Recaptcha3Bundle\\Tests\\DependencyInjection\\ConfigurationTest' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/Tests/DependencyInjection/ConfigurationTest.php',
+        'Karser\\Recaptcha3Bundle\\Tests\\Form\\Recaptcha3TypeTest' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/Tests/Form/Recaptcha3TypeTest.php',
+        'Karser\\Recaptcha3Bundle\\Tests\\FunctionalTest' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/Tests/FunctionalTest.php',
+        'Karser\\Recaptcha3Bundle\\Tests\\Services\\IpResolverTest' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/Tests/Services/IpResolverTest.php',
+        'Karser\\Recaptcha3Bundle\\Tests\\TestKernel' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/Tests/TestKernel.php',
+        'Karser\\Recaptcha3Bundle\\Tests\\Validator\\Constraints\\Recaptcha3ValidatorTest' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/Tests/Validator/Constraints/Recaptcha3ValidatorTest.php',
+        'Karser\\Recaptcha3Bundle\\Tests\\fixtures\\RecaptchaMock' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/Tests/fixtures/RecaptchaMock.php',
+        'Karser\\Recaptcha3Bundle\\Validator\\Constraints\\Recaptcha3' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/Validator/Constraints/Recaptcha3.php',
+        'Karser\\Recaptcha3Bundle\\Validator\\Constraints\\Recaptcha3Validator' => __DIR__ . '/..' . '/karser/karser-recaptcha3-bundle/Validator/Constraints/Recaptcha3Validator.php',
         'Laminas\\Code\\DeclareStatement' => __DIR__ . '/..' . '/laminas/laminas-code/src/DeclareStatement.php',
         'Laminas\\Code\\Exception\\BadMethodCallException' => __DIR__ . '/..' . '/laminas/laminas-code/src/Exception/BadMethodCallException.php',
         'Laminas\\Code\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/laminas/laminas-code/src/Exception/ExceptionInterface.php',
@@ -3139,6 +3247,15 @@ class ComposerStaticInit9ba4a6c21da1a84dcd6e3eb0a56cb1c5
         'Psr\\Log\\Test\\DummyTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/DummyTest.php',
         'Psr\\Log\\Test\\LoggerInterfaceTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
         'Psr\\Log\\Test\\TestLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/TestLogger.php',
+        'ReCaptcha\\ReCaptcha' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/ReCaptcha.php',
+        'ReCaptcha\\RequestMethod' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod.php',
+        'ReCaptcha\\RequestMethod\\Curl' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/Curl.php',
+        'ReCaptcha\\RequestMethod\\CurlPost' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/CurlPost.php',
+        'ReCaptcha\\RequestMethod\\Post' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/Post.php',
+        'ReCaptcha\\RequestMethod\\Socket' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/Socket.php',
+        'ReCaptcha\\RequestMethod\\SocketPost' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/SocketPost.php',
+        'ReCaptcha\\RequestParameters' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestParameters.php',
+        'ReCaptcha\\Response' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/Response.php',
         'ReturnTypeWillChange' => __DIR__ . '/..' . '/symfony/polyfill-php81/Resources/stubs/ReturnTypeWillChange.php',
         'SebastianBergmann\\CliParser\\AmbiguousOptionException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/AmbiguousOptionException.php',
         'SebastianBergmann\\CliParser\\Exception' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/Exception.php',
