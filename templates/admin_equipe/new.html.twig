@@ -1,11 +1,17 @@
 {% extends 'base-backend.html.twig' %}
 
-{% block title %}New Equipe{% endblock %}
+{% block title %}Créer Equipe{% endblock %}
 
 {% block body %}
-    <h1>Create new Equipe</h1>
+<a href="{{ path('app_admin_equipe_index') }}"class="btn btn-dark">Retour à la liste</a>
+    <h1 class="text-center">Créer Equipe</h1>
 
     {{ include('admin_equipe/_form.html.twig') }}
 
-    <a href="{{ path('app_admin_equipe_index') }}"class="btn btn-dark">Retour à la liste</a>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $(".select2").select2();
+    </script>
 {% endblock %}

@@ -12,8 +12,8 @@
                 <th>Icône</th>
                 <th>Catégorie</th>
                 <th>Cours</th>
-                <th>Mise à jour</th>
-                <th>Actions</th>
+                {# <th>Mise à jour</th> #}
+                <th class="text-end">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -29,9 +29,9 @@
                 </td>
                 <td>{{ cour.nom|raw }}</td>
                 <td>{{ cour.theme|raw }}</td>
-                <td>{{ cour.updatedAt ? cour.updatedAt|date('d-m-Y H:i:s') : '' }}</td>
-                <td>
-                    <a href="{{ path('app_admin_cours_show', {'id': cour.id}) }}"title="Voir" class="btn btn-dark">
+                {# <td>{{ cour.updatedAt ? cour.updatedAt|date('d-m-Y H:i:s') : '' }}</td> #}
+                <td class="text-end">
+                    <a href="{{ path('app_admin_cours_show', {'id': cour.id}) }}"title="Voir" class="btn btn-dark mb-2">
                         <i class="align-middle" data-feather="eye"></i>
                     </a>
                     <a href="{{ path('app_admin_cours_edit', {'id': cour.id}) }}"title="Modifier" class="btn btn-success ms-2">
@@ -41,7 +41,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">Aucun cours</td>
+                <td colspan="7">Aucun cours</td>
             </tr>
         {% endfor %}
         </tbody>

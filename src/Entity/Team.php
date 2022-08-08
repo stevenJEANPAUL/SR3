@@ -41,7 +41,7 @@ class Team
         /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="carousels", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="team", fileNameProperty="imageName")
      * 
      * @var File|null
      */
@@ -57,30 +57,38 @@ class Team
      */
     private $imageName2;
 
+            /**
+     * NOTE: This is not a mapped field of entity metadata, just a simple property.
+     * 
+     * @Vich\UploadableField(mapping="team", fileNameProperty="imageName")
+     * 
+     * @var File|null
+     */
+    private $imageFile2;
+
+        /**
+     * @ORM\Column(type="datetime_immutable", nullable=true)
+     */
+    private $updatedAt2;
+
     /**
      * @ORM\Column(type="string", length=255)
      */
     private $imageName3;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+                /**
+     * NOTE: This is not a mapped field of entity metadata, just a simple property.
+     * 
+     * @Vich\UploadableField(mapping="team", fileNameProperty="imageName")
+     * 
+     * @var File|null
      */
-    private $photo;
+    private $imageFile3;
 
-    /**
-     * @ORM\Column(type="string", length=255)
+        /**
+     * @ORM\Column(type="datetime_immutable", nullable=true)
      */
-    private $nom;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $titre2;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $poste;
+    private $updatedAt3;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -96,6 +104,20 @@ class Team
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $imageName4;
+
+                /**
+     * NOTE: This is not a mapped field of entity metadata, just a simple property.
+     * 
+     * @Vich\UploadableField(mapping="team", fileNameProperty="imageName")
+     * 
+     * @var File|null
+     */
+    private $imageFile4;
+
+        /**
+     * @ORM\Column(type="datetime_immutable", nullable=true)
+     */
+    private $updatedAt4;
 
     /**
      * @ORM\Column(type="boolean")
@@ -188,56 +210,6 @@ class Team
 
         return $this;
     }
-
-    public function getPhoto(): ?string
-    {
-        return $this->photo;
-    }
-
-    public function setPhoto(string $photo): self
-    {
-        $this->photo = $photo;
-
-        return $this;
-    }
-
-    public function getNom(): ?string
-    {
-        return $this->nom;
-    }
-
-    public function setNom(string $nom): self
-    {
-        $this->nom = $nom;
-
-        return $this;
-    }
-
-    public function getTitre2(): ?string
-    {
-        return $this->titre2;
-    }
-
-    public function setTitre2(string $titre2): self
-    {
-        $this->titre2 = $titre2;
-
-        return $this;
-    }
-
-    public function getPoste(): ?string
-    {
-        return $this->poste;
-    }
-
-    public function setPoste(string $poste): self
-    {
-        $this->poste = $poste;
-
-        return $this;
-    }
-
-
 
     public function getTitre3(): ?string
     {
@@ -337,6 +309,138 @@ class Team
     public function removeEquipe(Equipe $equipe): self
     {
         $this->equipe->removeElement($equipe);
+
+        return $this;
+    }
+
+    /**
+     * Get nOTE: This is not a mapped field of entity metadata, just a simple property.
+     *
+     * @return  File|null
+     */ 
+    public function getImageFile2()
+    {
+        return $this->imageFile2;
+    }
+
+    /**
+     * Set nOTE: This is not a mapped field of entity metadata, just a simple property.
+     *
+     * @param  File|null  $imageFile2  NOTE: This is not a mapped field of entity metadata, just a simple property.
+     *
+     * @return  self
+     */ 
+    public function setImageFile2($imageFile2)
+    {
+        $this->imageFile2 = $imageFile2;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of updatedAt2
+     */ 
+    public function getUpdatedAt2()
+    {
+        return $this->updatedAt2;
+    }
+
+    /**
+     * Set the value of updatedAt2
+     *
+     * @return  self
+     */ 
+    public function setUpdatedAt2($updatedAt2)
+    {
+        $this->updatedAt2 = $updatedAt2;
+
+        return $this;
+    }
+
+    /**
+     * Get nOTE: This is not a mapped field of entity metadata, just a simple property.
+     *
+     * @return  File|null
+     */ 
+    public function getImageFile3()
+    {
+        return $this->imageFile3;
+    }
+
+    /**
+     * Set nOTE: This is not a mapped field of entity metadata, just a simple property.
+     *
+     * @param  File|null  $imageFile3  NOTE: This is not a mapped field of entity metadata, just a simple property.
+     *
+     * @return  self
+     */ 
+    public function setImageFile3($imageFile3)
+    {
+        $this->imageFile3 = $imageFile3;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of updatedAt3
+     */ 
+    public function getUpdatedAt3()
+    {
+        return $this->updatedAt3;
+    }
+
+    /**
+     * Set the value of updatedAt3
+     *
+     * @return  self
+     */ 
+    public function setUpdatedAt3($updatedAt3)
+    {
+        $this->updatedAt3 = $updatedAt3;
+
+        return $this;
+    }
+
+    /**
+     * Get nOTE: This is not a mapped field of entity metadata, just a simple property.
+     *
+     * @return  File|null
+     */ 
+    public function getImageFile4()
+    {
+        return $this->imageFile4;
+    }
+
+    /**
+     * Set nOTE: This is not a mapped field of entity metadata, just a simple property.
+     *
+     * @param  File|null  $imageFile4  NOTE: This is not a mapped field of entity metadata, just a simple property.
+     *
+     * @return  self
+     */ 
+    public function setImageFile4($imageFile4)
+    {
+        $this->imageFile4 = $imageFile4;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of updatedAt4
+     */ 
+    public function getUpdatedAt4()
+    {
+        return $this->updatedAt4;
+    }
+
+    /**
+     * Set the value of updatedAt4
+     *
+     * @return  self
+     */ 
+    public function setUpdatedAt4($updatedAt4)
+    {
+        $this->updatedAt4 = $updatedAt4;
 
         return $this;
     }

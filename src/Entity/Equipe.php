@@ -30,7 +30,7 @@ class Equipe
         /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="carousels", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="equipe", fileNameProperty="imageName")
      * 
      * @var File|null
      */

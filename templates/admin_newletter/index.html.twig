@@ -1,41 +1,49 @@
 {% extends 'base-backend.html.twig' %}
 
-{% block title %}Newletter index{% endblock %}
+{% block title %}Newletter{% endblock %}
 
 {% block body %}
-    <h1>Newletter index</h1>
+    <h1 class="text-center">Newletter </h1>
+
+    <a href="{{ path('app_admin_newletter_new') }}" class="btn btn-dark my-3">Nouveau</a>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>ImageName</th>
-                <th>UpdatedAt</th>
+                <th>Image</th>
+                {# <th>UpdatedAt</th> #}
                 <th>Titre</th>
-                <th>Text</th>
-                <th>actions</th>
+                <th>Texte</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for newletter in newletters %}
             <tr>
                 <td>{{ newletter.id }}</td>
-                <td>{{ newletter.imageName }}</td>
-                <td>{{ newletter.updatedAt ? newletter.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{% if newletter.imageName is defined and newletter.imageName is not null %}
+                <img class="img-list"style="width:20rem;" src="{{ asset('images/newletter/' ~ newletter.imageName) }}"> 
+            {% else %}
+                N/A                    
+            {% endif %}</td>
+                {# <td>{{ newletter.updatedAt ? newletter.updatedAt|date('Y-m-d H:i:s') : '' }}</td> #}
                 <td>{{ newletter.titre }}</td>
-                <td>{{ newletter.text }}</td>
+                <td>{{ newletter.text|raw }}</td>
                 <td>
-                    <a href="{{ path('app_admin_newletter_show', {'id': newletter.id}) }}">show</a>
-                    <a href="{{ path('app_admin_newletter_edit', {'id': newletter.id}) }}">edit</a>
+                    <a href="{{ path('app_admin_newletter_show', {'id': newletter.id}) }}"title="Voir" class="btn btn-dark">
+                <i class="align-middle" data-feather="eye"></i></a>
+                    <a href="{{ path('app_admin_newletter_edit', {'id': newletter.id}) }}"title="Modifier" class="btn btn-success ms-2">
+                <i class="align-middle" data-feather="edit"></i></a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">no records found</td>
+                <td colspan="6">Aucune newletter trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_newletter_new') }}">Create new</a>
+    
 {% endblock %}
