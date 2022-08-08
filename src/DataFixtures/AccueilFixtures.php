@@ -19,9 +19,9 @@ class AccueilFixtures extends Fixture
         Nous sommes présents dans de nombreux domaines, nos formations, peuvent vous aider, vous ou vos équipes. 
         Notre esprit familiale favorise l’échange et l’entraide entre nos formateurs");
         $Accueil->setTitre('Nos domaines de formations');
-        $Accueil->setNom('top');
-        $Accueil->setCommentaire('bonjou bonjour');
-        $Accueil->setTexte('bien joué');
+        $Accueil->setNom('Avis de nos clients');
+        $Accueil->setCommentaire('Nos Partenaires');
+        $Accueil->setTexte('Si ces entreprises nous font confiance alors peut-être que vous aussi ?');
         $Accueil->setIsActive(True);
         $Accueil->setUpdatedAt(new DateTimeImmutable());
         $manager->persist($Accueil);
