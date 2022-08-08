@@ -1,28 +1,26 @@
 {% extends 'base-backend.html.twig' %}
 
-{% block title %}Team index{% endblock %}
+{% block title %}Page Qui sommes nous ?{% endblock %}
 
 {% block body %}
-    <h1>Team index</h1>
+
+    <h1 class="text-center">Page Qui sommes nous ?</h1>
+    <a href="{{ path('app_admin_team_new') }}"class="btn btn-dark my-3">Nouveau</a>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Titre</th>
-                <th>ImageName</th>
+                <th>Image</th>
                 <th>Presentation</th>
-                <th>ImageName2</th>
-                <th>ImageName3</th>
-                <th>Photo</th>
-                <th>Nom</th>
-                <th>Titre2</th>
-                <th>Poste</th>
-                <th>UpdatedAt</th>
+                <th>Image2</th>
+                <th>Image3</th>
+                {# <th>UpdatedAt</th> #}
                 <th>Titre3</th>
                 <th>Presentation2</th>
-                <th>ImageName4</th>
-                <th>actions</th>
+                <th>Image4</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -30,15 +28,26 @@
             <tr>
                 <td>{{ team.id }}</td>
                 <td>{{ team.titre }}</td>
-                <td>{{ team.imageName }}</td>
+                <td>{% if team.imageName is defined and team.imageName is not null %}
+                    <img class="img-list" src="{{ asset('images/team/' ~ team.imageName) }}"> 
+                {% else %}
+                    N/A                    
+                {% endif %}</td>
                 <td>{{ team.presentation }}</td>
-                <td>{{ team.imageName2 }}</td>
-                <td>{{ team.imageName3 }}</td>
-                <td>{{ team.photo }}</td>
-                <td>{{ team.nom }}</td>
-                <td>{{ team.titre2 }}</td>
-                <td>{{ team.poste }}</td>
-                <td>{{ team.UpdatedAt ? team.UpdatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    {% if team.imageName2 is defined and team.imageName2 is not null %}
+                    <img class="img-list" src="{{ asset('images/team/' ~ team.imageName2) }}"> 
+                {% else %}
+                    N/A                    
+                {% endif %}</td>
+                <td>
+                    {% if team.imageName3 is defined and team.imageName3 is not null %}
+                    <img class="img-list" src="{{ asset('images/formation/' ~ team.imageName3) }}"> 
+                {% else %}
+                    N/A                    
+                {% endif %}</td>
+
+                {# <td>{{ team.UpdatedAt ? team.UpdatedAt|date('Y-m-d H:i:s') : '' }}</td> #}
                 <td>{{ team.titre3 }}</td>
                 <td>{{ team.presentation2 }}</td>
                 <td>{{ team.imageName4 }}</td>
@@ -49,11 +58,11 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="15">no records found</td>
+                <td colspan="15">Aucune page Qui sommes nous trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_team_new') }}">Create new</a>
+    
 {% endblock %}

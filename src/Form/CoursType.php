@@ -20,7 +20,7 @@ class CoursType extends AbstractType
             ->add('imageFile', FileType::class, ["label"=>"Icône de la formation :","required"=>false])
             ->add('nom', TextType::class, ["label"=>"Thème de la formation :", "required"=>false])
             ->add('theme', CKEditorType::class, ["label"=>"Cours de la formation :", "required"=>false])
-            ->add('formations', EntityType::class, ["class"=>Formation::class, "label"=>"Page :", "multiple"=>true])
+            ->add('formations', EntityType::class, ["class"=>Formation::class, "label"=>"Page :", "multiple"=>true, "required"=>false, "attr"=>["class"=>"select2"]])
             ->remove('ImageName')
             ->remove('updatedAt')
         ;

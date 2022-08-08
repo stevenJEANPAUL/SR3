@@ -3,7 +3,18 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-    <h1>Accueil</h1>
+    <a href="{{ path('app_admin_accueil_index') }}" class="btn btn-dark my-3">Retour à la liste</a>
+
+    <h1 class="text-center">Accueil</h1>
+        
+        <div class="d-flex justify-content-end align-items-end">
+            {{ include('admin_accueil/_delete_form.html.twig') }}
+            <a href="{{ path('app_admin_accueil_edit', {'id': accueil.id}) }}"title="Modifier" class="btn btn-success ms-2">
+                <i class="align-middle" data-feather="edit"></i>
+            </a>
+        </div>
+
+
 
     <table class="table">
         <tbody>
@@ -12,13 +23,17 @@
                 <td>{{ accueil.id }}</td>
             </tr>
             <tr>
-                <th>ImageName</th>
-                <td>{{ accueil.imageName }}</td>
+                <th>Image</th>
+                <td>{% if accueil.imageName is defined and accueil.imageName is not null %}
+                    <img src="{{ asset('images/accueil/' ~ accueil.imageName) }}" style="width:20rem;" alt="" class="img-fluid">
+                    {% else %}
+                        N/A
+                    {% endif %}</td>
             </tr>
-            <tr>
+            {# <tr>
                 <th>UpdatedAt</th>
                 <td>{{ accueil.UpdatedAt ? accueil.UpdatedAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
+            </tr> #}
             <tr>
                 <th>Description</th>
                 <td>{{ accueil.description }}</td>
@@ -37,14 +52,10 @@
             </tr>
             <tr>
                 <th>Texte</th>
-                <td>{{ accueil.texte }}</td>
+                <td>{{ accueil.texte|raw }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_accueil_index') }}">back to list</a>
 
-    <a href="{{ path('app_admin_accueil_edit', {'id': accueil.id}) }}">edit</a>
-
-    {{ include('admin_accueil/_delete_form.html.twig') }}
 {% endblock %}

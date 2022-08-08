@@ -20,12 +20,8 @@ class TeamFixtures extends Fixture
         $team->setTitre('Qui somme nous ?');
         $team->setImageName('artificial-intelligence.jpg');
         $team->setPresentation('test');
-        $team->setImageName2('communication.png');
-        $team->setImageName3('Logo_SR3_TEAM.jpg');
-        $team->setPhoto('equipe.jpg');
-        $team->setNom('test');
-        $team->setTitre2('formations.jpg');
-        $team->setPoste('formateur');
+        $team->setImageName2('communication.jpg');
+        $team->setImageName3('Logo_SR3_TEAM.png');
         $team->setIsActive('true');
         $team->setUpdatedAt(new DateTimeImmutable());
         $team->setTitre3('Notre Equipe');

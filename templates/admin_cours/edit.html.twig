@@ -6,8 +6,14 @@
 
     <a href="{{ path('app_admin_cours_index') }}" class="btn btn-dark my-3">Retour à la liste</a>
 
-    <h1>Modifier Cours</h1>
+    <h1 class="text-center">Modifier Cours</h1>
 
     {{ include('admin_cours/_form.html.twig', {'button_label': 'Modifier'}) }}
     {{ include('admin_cours/_delete_form.html.twig') }}
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $(".select2").select2();
+    </script>
 {% endblock %}

@@ -26,3 +26,10 @@ vich_uploader:
         nosActus:
             uri_prefix: /images/nosActus
             upload_destination: '%kernel.project_dir%/public/images/nosActus'
+        equipe:
+            uri_prefix: /images/equipe
+            upload_destination: '%kernel.project_dir%/public/images/equipe'
+        team:
+            uri_prefix: /images/team
+            upload_destination: '%kernel.project_dir%/public/images/team'
+

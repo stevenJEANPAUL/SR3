@@ -1,16 +1,17 @@
 {% extends 'base-backend.html.twig' %}
 
-{% block title %}AvisClient index{% endblock %}
+{% block title %}Avis Client {% endblock %}
 
 {% block body %}
-    <h1>Avis du Client</h1>
+    <h1 class="text-center">Avis du Client</h1>
+    <a href="{{ path('app_admin_avis_client_new') }}"class="btn btn-dark my-3">Nouveau</a>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>ImageName</th>
-                <th>UpdatedAt</th>
+                {# <th>UpdatedAt</th> #}
                 <th>Nom</th>
                 <th>Poste</th>
                 <th>Commentaire</th>
@@ -21,23 +22,29 @@
         {% for avis_client in avis_clients %}
             <tr>
                 <td>{{ avis_client.id }}</td>
-                <td>{{ avis_client.imageName }}</td>
-                <td>{{ avis_client.updatedAt ? avis_client.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{% if avis_client.imageName is defined and avis_client.imageName is not null %}
+                    <img src="{{ asset('images/avisClient/' ~ avis_client.imageName) }}" style="width:20rem;" alt="" class="img-fluid">
+                    {% else %}
+                        N/A
+                    {% endif %}</td>
+                {# <td>{{ avis_client.updatedAt ? avis_client.updatedAt|date('Y-m-d H:i:s') : '' }}</td> #}
                 <td>{{ avis_client.nom }}</td>
                 <td>{{ avis_client.poste }}</td>
                 <td>{{ avis_client.commentaire }}</td>
-                <td>
-                    <a href="{{ path('app_admin_avis_client_show', {'id': avis_client.id}) }}">show</a>
-                    <a href="{{ path('app_admin_avis_client_edit', {'id': avis_client.id}) }}">edit</a>
+                <td class="text-end">
+                    <a href="{{ path('app_admin_avis_client_show', {'id': avis_client.id}) }}"title="Voir" class="btn btn-dark mb-2">
+                <i class="align-middle" data-feather="eye"></i></a>
+                    <a href="{{ path('app_admin_avis_client_edit', {'id': avis_client.id}) }}"title="Modifier" class="btn btn-success ms-2">
+                <i class="align-middle" data-feather="edit"></i></a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="7">no records found</td>
+                <td colspan="7">Aucun avis trouvé</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_avis_client_new') }}">Create new</a>
+    
 {% endblock %}

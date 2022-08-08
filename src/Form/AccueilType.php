@@ -24,12 +24,12 @@ class AccueilType extends AbstractType
             ->remove('UpdatedAt')
             ->add('description')
             ->add('titre', TextType::class, ["label"=>"Titre :"])
-            ->add('carousels', EntityType::class, [ "class"=> Carousel::class, "multiple"=>true, "label"=>"carousel"])
+            ->add('carousels', EntityType::class, [ "class"=> Carousel::class, "multiple"=>true, "label"=>"carousel", "attr"=>["class"=>"select2"]])
             ->add('nom', TextType::class, ["label"=>"Nom :"])
-            ->add('avisClients', EntityType::class,["class"=>AvisClient::class, "multiple"=>true, "label"=>"avisClient"])
+            ->add('avisClients', EntityType::class,["class"=>AvisClient::class, "multiple"=>true, "label"=>"avisClient", "attr"=>["class"=>"select2"]])
             ->add('commentaire')
             ->add('texte', CKEditorType::class, ["label"=>"Texte :", "required"=>false])
-            ->add('partenaires', EntityType::class, ["class"=>Partenaire::class, "multiple"=>true, "label"=>"partenaire"])
+            ->add('partenaires', EntityType::class, ["class"=>Partenaire::class, "multiple"=>true, "label"=>"partenaire", "attr"=>["class"=>"select2"]])
             ->add('isActive', CheckboxType::class, ["label"=>"Active"])
         ;
     }
