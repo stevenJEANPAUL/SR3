@@ -1,0 +1,48 @@
+{% extends 'base-backend.html.twig' %}
+
+{% block title %}Equipe index{% endblock %}
+
+{% block body %}
+    <h1>Equipe index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>ImageName</th>
+                <th>Nom</th>
+                <th>Titre</th>
+                <th>Poste</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for equipe in equipes %}
+            <tr>
+                <td>{{ equipe.id }}</td>
+                <td>{{ equipe.imageName }}</td>
+                <td>{{ equipe.nom }}</td>
+                <td>{{ equipe.titre }}</td>
+                <td>{{ equipe.poste }}</td>
+                <td>{{ equipe.updatedAt ? equipe.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_admin_equipe_show', {'id': equipe.id}) }}" class="btn btn-dark"><i class="align-middle" data-feather="eye"></i></a>
+                    <a href="{{ path('app_admin_equipe_edit', {'id': equipe.id}) }}" class="btn btn-success"><i class="align-middle" data-feather="edit-2"></i></a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_equipe_new') }}" class="btn btn-dark">Nouveau</a>
+{% endblock %}
+{% block javascripts %}
+<script>
+
+    $(".select2").select2();
+</script>
+{% endblock %}
