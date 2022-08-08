@@ -26,9 +26,9 @@ class FormationFixtures extends Fixture
             $formation->setImageName9('bureau.png');
             $formation->setTheme('Bureautique');
             $formation->setFormation('Excel, Vba, Outlook, Powerpoint, Word, logiciel libre');
-            $formation->setTexte3("Nous sommes aussi présent dans les formations
-            TAI, TRI, CDA et DWWM. Vous êtes passionné par les métiers techniques et les technologies ayant trait au monde de l’informatique et de l’électronique,
-            ces formations sont faites pour vous ! ");
+            $formation->setTexte3("Nous sommes aussi présents dans les formations
+            TAI, TRI, CDA et DWWM. Vous êtes passionné par les métiers techniques et les technologies ayant trait au monde de l’informatique et de l’électronique?
+            Ces formations sont faites pour vous ! ");
         $manager->persist($formation);
 
         $manager->flush();

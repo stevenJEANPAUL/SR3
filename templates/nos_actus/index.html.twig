@@ -1,20 +1,43 @@
 {% extends 'base.html.twig' %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/nosActus.css')}}">
+{% endblock %}
 
-{% block title %}Hello NosActusController!{% endblock %}
+{% block title %}SR3GROUPE - Accueil{% endblock %}
+
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<main>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/SR3/src/Controller/NosActusController.php'|file_link(0) }}">src/Controller/NosActusController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/SR3/templates/nos_actus/index.html.twig'|file_link(0) }}">templates/nos_actus/index.html.twig</a></code></li>
-    </ul>
+        <h2>{{nos_actuses.titre }}</h2>
+    
+        <div>
+        <img src="{{ asset("images/nosActus/" ~ nos_actuses.imageName) }}" alt="" class="presentation">
+    </div>
+
+        <h2>{{nos_actuses.description }}</h2>
+    
+
+
+<div class="row">
+    {% for newletter in nos_actuses.newletters %}
+    <div class="card col-12 col-md-3 col-lg-3d-flex flex-wrap" id="newl">
+    <div class="aling-self-end">
+        <img src="{{ asset('images/newletter/' ~ newletter.imageName)}}" alt="{{newletter.titre}}" class="img-fluid">
+        <h6>{{newletter.titre}}</h6>
+            <p>{{newletter.presentation}}</p>
+    {# {% for nos_actu in nos_actuses %} #}
+<a href="{{ path('app_newletter_show',{'id': newletter.id})}}" class="btn btn-dark my-4">Lire plus</a>
+{# {% endfor %} #}
+    </div>
+    </div>
+    {% endfor %}
 </div>
+
+
+</main>
+
+
+
 {% endblock %}

@@ -13,6 +13,7 @@
                 <th>ImageName</th>
                 <th>Description</th>
                 <th>Commentaire</th>
+                <th>Slug</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -24,6 +25,7 @@
                 <td>{{ nos_actu.imageName }}</td>
                 <td>{{ nos_actu.description }}</td>
                 <td>{{ nos_actu.commentaire }}</td>
+                <td>{{ nos_actu.slug }}</td>
                 <td>
                     <a href="{{ path('app_admin_nos_actus_show', {'id': nos_actu.id}) }}">show</a>
                     <a href="{{ path('app_admin_nos_actus_edit', {'id': nos_actu.id}) }}">edit</a>

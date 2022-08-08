@@ -5,6 +5,8 @@ namespace App\Form;
 use App\Entity\Accueil;
 use App\Entity\AvisClient;
 use App\Entity\Carousel;
+use App\Entity\Newletter;
+use App\Entity\Partenaire;
 use Symfony\Component\Form\AbstractType;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -27,6 +29,7 @@ class AccueilType extends AbstractType
             ->add('avisClients', EntityType::class,["class"=>AvisClient::class, "multiple"=>true, "label"=>"avisClient"])
             ->add('commentaire')
             ->add('texte', CKEditorType::class, ["label"=>"Texte :", "required"=>false])
+            ->add('partenaires', EntityType::class, ["class"=>Partenaire::class, "multiple"=>true, "label"=>"partenaire"])
             ->add('isActive', CheckboxType::class, ["label"=>"Active"])
         ;
     }

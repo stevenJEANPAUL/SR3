@@ -17,3 +17,12 @@ vich_uploader:
         avisClient:
             uri_prefix: /images/avisClient
             upload_destination: '%kernel.project_dir%/public/images/avisClient'
+        partenaires:
+            uri_prefix: /images/partenaires
+            upload_destination: '%kernel.project_dir%/public/images/partenaires'
+        newletter:
+            uri_prefix: /images/newletter
+            upload_destination: '%kernel.project_dir%/public/images/newletter'
+        nosActus:
+            uri_prefix: /images/nosActus
+            upload_destination: '%kernel.project_dir%/public/images/nosActus'

@@ -1,23 +1,54 @@
-body{
+body, main{
+    /* background-color: blueviolet; */
+    margin: 0%;
+    padding: 0%;
 }
 
-.presentaion{
+.presentation{
     height: 40vh;
     width: 100%;
+    position: relative;
+
+}
+.text-over{
+    position: absolute;
+    top: 25%;
+    color: white;
+    width: 50%;
+    right: 10%;
+
+}
+.avis{
+    text-align: center;
 }
 
-#pho1, #pho2, #pho3, #pho4, #pho5{
-width: 1400px;
-height: 300px;
-}
 h2{
     text-align: center;
     margin: 15px;
 }
 
-.avis{
-    display: flex;
-    flex-direction: row;
-width: 30px;
-height: 30%;
+.carou, #pho1{
+    height: 40vh;
+    width: 100%;
 }
+
+#juste{
+align-items: center;
+padding: 0;
+margin: 5px;
+display: flex;
+}
+
+.avcli{
+    width: 50rem;
+}
+
+#parte{
+    width: 106px;
+    height: 98px;
+}
+
+#partena{
+    /* background:no-repeat url(../images/accueil/panneau.png); */
+    background-color: blueviolet;
+} 
