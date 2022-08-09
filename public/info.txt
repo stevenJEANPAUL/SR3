@@ -1,2 +1,6 @@
 Si problème avec Vendor, installer le bundle du captcha via la commande :
 	composer require karser/karser-recaptcha3-bundle
+
+Pour accèder au back-office taper /admin à la fin de n'importe quelle url.
+	ID : admin
+	MDP : pass

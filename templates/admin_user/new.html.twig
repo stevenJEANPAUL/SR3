@@ -1,16 +1,13 @@
 {% extends 'base-backend.html.twig' %}
-<a href="{{ path('app_admin_user_index') }}" class="btn btn-dark">Retour à la liste</a>
 {% block title %}New User{% endblock %}
 
 {% block body %}
+<a href="{{ path('app_admin_user_index') }}" class="btn btn-dark">Retour à la liste</a>
 
     <h1>Create new User</h1>
 
         {{ include('admin_user/_form.html.twig') }}
 {% endblock %}
-{% block javascripts %}
-    <script>
-    
-        $(".select2").select2();
-    </script>
-    {% endblock %}
+
+
+
