@@ -32,17 +32,39 @@ h2{
     width: 100%;
 }
 
-#juste{
-align-items: center;
-padding: 5px;
-display: flex;
+.juste{
+    position: sticky!important;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 30vh;
+    /* background-color: cornflowerblue; */
+    }
+
+
+
+/*.posi{
+    position:relative;
+} */
+
+.place{
+    padding: 5px;
 
 }
+
+
 
 .avcli{
     width: 50rem;
-    margin: 80px;
+    margin: 0%;
+    padding: 1%;
+    position: absolute;
+    top: 10%;
+    right: 10%;
 }
+
+
+
 
 #parte{
     width: 106px;
@@ -55,3 +77,10 @@ display: flex;
     /* background:no-repeat url(../images/accueil/panneau.png); */
     /* background-color: blueviolet; */
 } 
+
+@media screen and (max-width: 576px){
+    .card-img-top{
+    display: none;
+    
+    }
+}
