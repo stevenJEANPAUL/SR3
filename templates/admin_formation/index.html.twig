@@ -5,16 +5,12 @@
 {% block body %}
     <h1 class="text-center">Page Formation</h1>
 
-
+<a href="{{ path('app_admin_formation_new') }}" class="btn btn-dark my-3">Nouveau</a>
 <table class="table">
     <tbody>
     
     {% for formation in formations %}
-    <td>
-        <a href="{{ path('app_admin_formation_edit', {'id': formation.id}) }}"title="Modifier" class="btn btn-success my-2">
-            Modifier
-        </a>
-    </td>
+
 
     <tr>
         <th scope="row">Id</th>
@@ -120,6 +116,13 @@
         <th scope="row">Texte Pied de page</th> 
         <td>{{ formation.Texte3|raw }}</td>
     </tr>
+    <td>
+        <a href="{{ path('app_admin_formation_show', {'id': formation.id}) }}"title="Voir" class="btn btn-dark ms-2">
+            <i class="align-middle" data-feather="eye"></i></a>
+        <a href="{{ path('app_admin_formation_edit', {'id': formation.id}) }}"title="Modifier" class="btn btn-success my-2">
+            <i class="align-middle" data-feather="edit"></i>
+        </a>
+    </td>
     {% else %}
         <tr>
             <td colspan="7">Aucune Page trouvée</td>
