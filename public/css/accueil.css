@@ -34,14 +34,14 @@ h2{
 
 #juste{
 align-items: center;
-padding: 0;
-margin: 5px;
+padding: 5px;
 display: flex;
 
 }
 
 .avcli{
     width: 50rem;
+    margin: 80px;
 }
 
 #parte{
@@ -50,6 +50,8 @@ display: flex;
 }
 
 #partena{
+
+    padding: 5%;
     /* background:no-repeat url(../images/accueil/panneau.png); */
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 } 
