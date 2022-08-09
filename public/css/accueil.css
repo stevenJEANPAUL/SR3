@@ -33,16 +33,23 @@ h2{
 }
 
 #juste{
-align-items: center;
-padding: 5px;
-display: flex;
-
-}
+    align-items: center;
+    padding: 5px;
+    display: flex;
+    
+    }
 
 .avcli{
     width: 50rem;
     margin: 80px;
+
 }
+
+#place{
+color: blueviolet;
+    background-color: blueviolet;
+}
+
 
 #parte{
     width: 106px;
