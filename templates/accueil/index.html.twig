@@ -45,7 +45,7 @@
             <img id="pho1" src="{{ asset('images/carousels/' ~ carousel.imageName) }}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h5>
-                {{ carousel.texte}}
+                {{ carousel.texte|raw}}
               </h5>
             </div>
           </div>
@@ -144,7 +144,7 @@
         </div>
             <div class="avcli">
             <p class="card-text">
-              {{ avisClient.commentaire}}
+              {{ avisClient.commentaire|raw}}
             </p>
             </div>
         </div>
@@ -157,7 +157,7 @@
 {# ------ #}
 
 <h2 class="posi">{{ monAccueil.commentaire}}</h2>
-    <div><p>{{ monAccueil.texte}}</p></div>
+    <div><p>{{ monAccueil.texte|raw}}</p></div>
 
     <div class="row mt-4" id="partena">
       {% for partenaire in monAccueil.partenaires %}
