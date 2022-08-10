@@ -17,13 +17,13 @@ class AvisClientType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('imageName')
-            ->add('updatedAt')
+            ->remove('imageName')
+            ->remove('updatedAt')
             ->add('imageFile', FileType::class, ["label"=>"Image :", "required"=>true])
             ->add('nom', TextType::class, ["label"=>"Nom :"])
             ->add('poste')
             ->add('commentaire')
-            ->add('accueils', EntityType::class,["class"=>Accueil::class, "label"=>"Accueils", "multiple"=>true, "required"=>false])
+            ->add('accueils', EntityType::class,["class"=>Accueil::class, "label"=>"Accueils", "multiple"=>true, "required"=>false, "attr"=>["class"=>"select2"]])
         ;
     }
 

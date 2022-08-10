@@ -8,6 +8,7 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Bundle\FixturesBundle\FixtureGroupInterface;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
+
 class UserFixtures extends Fixture implements FixtureGroupInterface  
 {
     private $encoder;
@@ -22,7 +23,7 @@ class UserFixtures extends Fixture implements FixtureGroupInterface
         $user->setNom('Thierry');
         $user->setPrenom('DIANDY');
         $user->setEmail('tdiandy@hotmail.com');
-        // $user->setRoles(["ROLE_USER", "ROLE_ADMIN"]);
+        $user->setRoles(["ROLE_USER", "ROLE_ADMIN"]);
         $user->setPassword($this->encoder->hashPassword($user, "pass"));
         $manager->persist($user);
         

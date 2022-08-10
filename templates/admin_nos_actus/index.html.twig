@@ -1,9 +1,11 @@
 {% extends 'base-backend.html.twig' %}
 
-{% block title %}NosActus index{% endblock %}
+{% block title %}Nos Actus {% endblock %}
 
 {% block body %}
-    <h1>NosActus index</h1>
+    <h1 class="text-center">Nos Actus </h1>
+
+    <a href="{{ path('app_admin_nos_actus_new') }}" class="btn btn-dark my-3">Nouveau</a>
 
     <table class="table">
         <thead>
@@ -12,9 +14,8 @@
                 <th>Titre</th>
                 <th>ImageName</th>
                 <th>Description</th>
-                <th>Commentaire</th>
-                <th>Slug</th>
-                <th>actions</th>
+                <th>Commentaire</th>                
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -22,22 +23,28 @@
             <tr>
                 <td>{{ nos_actu.id }}</td>
                 <td>{{ nos_actu.titre }}</td>
-                <td>{{ nos_actu.imageName }}</td>
+                <td>{% if nos_actu.imageName is defined and nos_actu.imageName is not null %}
+                    <img class="img-list"style="width:20rem;" src="{{ asset('images/nosActus/' ~ nos_actu.imageName) }}"> 
+                {% else %}
+                    N/A                    
+                {% endif %}</td>
                 <td>{{ nos_actu.description }}</td>
                 <td>{{ nos_actu.commentaire }}</td>
-                <td>{{ nos_actu.slug }}</td>
+                
                 <td>
-                    <a href="{{ path('app_admin_nos_actus_show', {'id': nos_actu.id}) }}">show</a>
-                    <a href="{{ path('app_admin_nos_actus_edit', {'id': nos_actu.id}) }}">edit</a>
+                    <a href="{{ path('app_admin_nos_actus_show', {'id': nos_actu.id}) }}"title="Voir" class="btn btn-dark">
+                <i class="align-middle" data-feather="eye"></i></a>
+                    <a href="{{ path('app_admin_nos_actus_edit', {'id': nos_actu.id}) }}"itle="Modifier" class="btn btn-success ms-2">
+                <i class="align-middle" data-feather="edit"></i></a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">no records found</td>
+                <td colspan="6">Aucune Actus trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_nos_actus_new') }}">Create new</a>
+    
 {% endblock %}

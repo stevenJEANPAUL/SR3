@@ -1,9 +1,17 @@
 {% extends 'base-backend.html.twig' %}
 
-{% block title %}NosActus{% endblock %}
+{% block title %}Nos Actus{% endblock %}
 
 {% block body %}
-    <h1>NosActus</h1>
+<a href="{{ path('app_admin_nos_actus_index') }}"class="btn btn-dark my-3">Retour à la liste</a>
+    <h1>Nos Actus</h1>
+
+    <div class="d-flex justify-content-end align-items-end">
+        {{ include('admin_nos_actus/_delete_form.html.twig') }}
+        <a href="{{ path('app_admin_nos_actus_edit', {'id': nos_actu.id}) }}"title="Modifier" class="btn btn-success ms-2">
+            <i class="align-middle" data-feather="edit"></i>
+        </a>
+    </div>
 
     <table class="table">
         <tbody>
@@ -16,8 +24,12 @@
                 <td>{{ nos_actu.titre }}</td>
             </tr>
             <tr>
-                <th>ImageName</th>
-                <td>{{ nos_actu.imageName }}</td>
+                <th>Image</th>
+                <td>{% if nos_actu.imageName is defined and nos_actu.imageName is not null %}
+                    <img class="img-list"style="width:20rem;" src="{{ asset('images/nosActus/' ~ nos_actu.imageName) }}"> 
+                {% else %}
+                    N/A                    
+                {% endif %}</td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -27,16 +39,9 @@
                 <th>Commentaire</th>
                 <td>{{ nos_actu.commentaire }}</td>
             </tr>
-            <tr>
-            <th>Slug</th>
-            <td>{{ nos_actu.slug }}</td>
-        </tr>
+            
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_nos_actus_index') }}">back to list</a>
 
-    <a href="{{ path('app_admin_nos_actus_edit', {'id': nos_actu.id}) }}">edit</a>
-
-    {{ include('admin_nos_actus/_delete_form.html.twig') }}
 {% endblock %}

@@ -1,11 +1,17 @@
 {% extends 'base-backend.html.twig' %}
 
-{% block title %}New Accueil{% endblock %}
+{% block title %}Nouvelle Accueil{% endblock %}
 
 {% block body %}
-    <h1>Create new Accueil</h1>
+    <a href="{{ path('app_admin_accueil_index') }}"class="btn btn-dark my-3">Retour à la lsite</a>
+    <h1 class="text-center">Nouvelle page Accueil</h1>
 
     {{ include('admin_accueil/_form.html.twig') }}
 
-    <a href="{{ path('app_admin_accueil_index') }}">back to list</a>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $(".select2").select2();
+    </script>
 {% endblock %}

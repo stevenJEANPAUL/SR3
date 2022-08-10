@@ -10,6 +10,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class FormationType extends AbstractType
 {
@@ -30,6 +31,8 @@ class FormationType extends AbstractType
             ->add('texte2', CKEditorType::class, ["label"=> 'Texte de la photo :', "required"=>false])
             ->add('titre2', CKEditorType::class, ["label"=> 'Titre 2 :', "required"=>false])
             ->add('texte3', CKEditorType::class, ["label"=> 'Texte pied de page :', "required"=>false])
+            ->add('cours', EntityType::class, ["class"=>Cours::class, "label"=>"Cours :", "multiple"=>true, "attr"=>["class"=>"select2"]])
+            ->add('isActive', CheckboxType::class, ["label"=>"Active"])
             ->remove('imageName')
             ->remove('updatedAt')
             ->remove('imageName2')

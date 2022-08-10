@@ -15,10 +15,10 @@ class EquipeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('imageFile', FileType::class, ["label"=>"Icône de la formation :","required"=>false])
-            ->add('nom', TextType::class, ["label"=>"Thème de la formation :", "required"=>false])
-            ->add('titre',  CKEditorType::class, ["label"=> 'Texte de la page :', "required"=>false])
-            ->add('poste')
+            ->add('imageFile', FileType::class, ["label"=>"Photo du formateur(trice) :","required"=>false])
+            ->add('nom', TextType::class, ["label"=>"Nom du formateur(trice) :", "required"=>false])
+            ->add('poste', TextType::class, ["label"=>"Poste :", "required"=>false])
+            ->add('titre',  CKEditorType::class, ["label"=> 'Formation dispensée :', "required"=>false])
             ->remove('ImageName')
             ->remove('updatedAt')
         ;

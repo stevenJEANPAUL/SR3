@@ -1,16 +1,19 @@
 {% extends 'base-backend.html.twig' %}
 
-{% block title %}Carousel index{% endblock %}
+{% block title %}Carousel {% endblock %}
 
 {% block body %}
-    <h1>Carousel index</h1>
+
+    <a href="{{ path('app_admin_carousel_new') }}"class="btn btn-dark my-3">Nouveau</a>
+
+    <h1 class="text-center">Carousel</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>ImageName</th>
-                <th>UpdatedAt</th>
+                {# <th>UpdatedAt</th> #}
                 <th>Texte</th>
                 <th>actions</th>
             </tr>
@@ -19,21 +22,30 @@
         {% for carousel in carousels %}
             <tr>
                 <td>{{ carousel.id }}</td>
-                <td>{{ carousel.imageName }}</td>
-                <td>{{ carousel.updatedAt ? carousel.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    {% if carousel.imageName is defined and carousel.imageName is not null %}                   
+                    <img src="{{ asset('images/carousels/' ~ carousel.imageName) }}" alt="" class="img-list">
+                </a>
+                {% else %}
+                N/A                               
+            {% endif %}
+                </td>
+                {# <td>{{ carousel.updatedAt ? carousel.updatedAt|date('Y-m-d H:i:s') : '' }}</td> #}
                 <td>{{ carousel.texte }}</td>
                 <td>
-                    <a href="{{ path('app_admin_carousel_show', {'id': carousel.id}) }}">show</a>
-                    <a href="{{ path('app_admin_carousel_edit', {'id': carousel.id}) }}">edit</a>
+                    <a href="{{ path('app_admin_carousel_show', {'id': carousel.id}) }}"title="Voir" class="btn btn-dark">
+                <i class="align-middle" data-feather="eye"></i></a>
+                    <a href="{{ path('app_admin_carousel_edit', {'id': carousel.id}) }}"title="Modifier" class="btn btn-success ms-2">
+                <i class="align-middle" data-feather="edit"></i></a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="5">Aucun Carousel trouvé</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_carousel_new') }}">Create new</a>
+    
 {% endblock %}

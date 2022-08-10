@@ -2,11 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\FormationRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use App\Entity\Cours;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\FormationRepository;
+use Doctrine\Common\Collections\Collection;
 use Symfony\Component\HttpFoundation\File\File;
+use Doctrine\Common\Collections\ArrayCollection;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
@@ -226,6 +227,11 @@ class Formation
      * @ORM\ManyToMany(targetEntity=Cours::class, mappedBy="formations")
      */
     private $cours;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $isActive;
 
     public function __construct()
     {
@@ -700,6 +706,18 @@ class Formation
         if ($this->cours->removeElement($cour)) {
             $cour->removeFormation($this);
         }
+
+        return $this;
+    }
+
+    public function isIsActive(): ?bool
+    {
+        return $this->isActive;
+    }
+
+    public function setIsActive(?bool $isActive): self
+    {
+        $this->isActive = $isActive;
 
         return $this;
     }

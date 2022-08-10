@@ -1,46 +1,56 @@
 {% extends 'base-backend.html.twig' %}
 
-{% block title %}Accueil index{% endblock %}
+{% block title %}Accueil {% endblock %}
 
 {% block body %}
-    <h1>Accueil index</h1>
+    <h1 class="text-center">Page Accueil</h1>
 
+<a href="{{ path('app_admin_accueil_new') }}" class="btn btn-dark my-3">Nouveau</a>
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>UpdatedAt</th>
+                <th>Photo</th>
+                {# <th>UpdatedAt</th> #}
                 <th>Description</th>
                 <th>Titre</th>
                 <th>Nom</th>
                 <th>Commentaire</th>
                 <th>Texte</th>
-                <th>actions</th>
+                <th class="text-center">actions</th>
             </tr>
         </thead>
         <tbody>
         {% for accueil in accueils %}
             <tr>
                 <td>{{ accueil.id }}</td>
-                <td>{{ accueil.imageName }}</td>
-                <td>{{ accueil.UpdatedAt ? accueil.UpdatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{% if accueil.imageName is defined and accueil.imageName is not null %}
+                    <img src="{{ asset('images/accueil/' ~ accueil.imageName) }}" style="width:20rem;" alt="" class="img-fluid">
+                    {% else %}
+                        N/A
+                    {% endif %}
+                </td>
+                {# <td>{{ accueil.UpdatedAt ? accueil.UpdatedAt|date('Y-m-d H:i:s') : '' }}</td> #}
                 <td>{{ accueil.description }}</td>
                 <td>{{ accueil.titre }}</td>
                 <td>{{ accueil.nom }}</td>
                 <td>{{ accueil.commentaire }}</td>
-                <td>{{ accueil.texte }}</td>
-                <td>
-                    <a href="{{ path('app_admin_accueil_show', {'id': accueil.id}) }}">show</a>
-                    <a href="{{ path('app_admin_accueil_edit', {'id': accueil.id}) }}">edit</a>
+                <td>{{ accueil.texte|raw }}</td>
+                <td class="text-center">
+                    <a href="{{ path('app_admin_accueil_show', {'id': accueil.id}) }}"title="Voir" class="btn btn-dark">
+                        <i class="align-middle" data-feather="eye"></i>
+                    </a>
+                    <a href="{{ path('app_admin_accueil_edit', {'id': accueil.id}) }}"title="Modifier" class="btn btn-success ms-2">
+                <i class="align-middle" data-feather="edit"></i></a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="9">no records found</td>
+                <td colspan="7">Aucune page trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_accueil_new') }}">Create new</a>
+    
 {% endblock %}

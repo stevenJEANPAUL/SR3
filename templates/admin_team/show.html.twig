@@ -1,9 +1,17 @@
 {% extends 'base-backend.html.twig' %}
 
-{% block title %}Team{% endblock %}
+{% block title %}Qui sommes nous ?{% endblock %}
 
 {% block body %}
-    <h1>Team</h1>
+<a href="{{ path('app_admin_team_index') }}" class="btn btn-dark">Retour à la liste</a>
+    <h1 class="text-center">Qui sommes nous ?</h1>
+
+    <div class="d-flex justify-content-end align-items-end">
+        {{ include('admin_team/_delete_form.html.twig') }}
+        <a href="{{ path('app_admin_team_edit', {'id': team.id}) }}"title="Modifier" class="btn btn-success ms-2">
+        <i class="align-middle" data-feather="edit"></i></a>
+    </div>
+
 
     <table class="table">
         <tbody>
@@ -16,41 +24,37 @@
                 <td>{{ team.titre }}</td>
             </tr>
             <tr>
-                <th>ImageName</th>
-                <td>{{ team.imageName }}</td>
+                <th>Image1</th>
+                <td>{% if team.imageName is defined and team.imageName is not null %}
+                    <img class="img-list" src="{{ asset('images/team/' ~ team.imageName) }}"> 
+                {% else %}
+                    N/A                    
+                {% endif %}</td>
             </tr>
             <tr>
                 <th>Presentation</th>
                 <td>{{ team.presentation }}</td>
             </tr>
             <tr>
-                <th>ImageName2</th>
-                <td>{{ team.imageName2 }}</td>
+                <th>Image2</th>
+                <td>{% if team.imageName2 is defined and team.imageName2 is not null %}
+                    <img class="img-list" src="{{ asset('images/team/' ~ team.imageName) }}"> 
+                {% else %}
+                    N/A                    
+                {% endif %}</td>
             </tr>
             <tr>
-                <th>ImageName3</th>
-                <td>{{ team.imageName3 }}</td>
+                <th>Image3</th>
+                <td>{% if team.imageName3 is defined and team.imageName3 is not null %}
+                    <img class="img-list" src="{{ asset('images/team/' ~ team.imageName3) }}"> 
+                {% else %}
+                    N/A                    
+                {% endif %}</td>
             </tr>
-            <tr>
-                <th>Photo</th>
-                <td>{{ team.photo }}</td>
-            </tr>
-            <tr>
-                <th>Nom</th>
-                <td>{{ team.nom }}</td>
-            </tr>
-            <tr>
-                <th>Titre2</th>
-                <td>{{ team.titre2 }}</td>
-            </tr>
-            <tr>
-                <th>Poste</th>
-                <td>{{ team.poste }}</td>
-            </tr>
-            <tr>
+            {# <tr>
                 <th>UpdatedAt</th>
                 <td>{{ team.UpdatedAt ? team.UpdatedAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
+            </tr> #}
             <tr>
                 <th>Titre3</th>
                 <td>{{ team.titre3 }}</td>
@@ -61,14 +65,14 @@
             </tr>
             <tr>
                 <th>ImageName4</th>
-                <td>{{ team.imageName4 }}</td>
+                <td>{% if team.imageName4 is defined and team.imageName4 is not null %}
+                    <img class="img-list" src="{{ asset('images/team/' ~ team.imageName4) }}"> 
+                {% else %}
+                    N/A                    
+                {% endif %}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_team_index') }}" class="btn btn-dark">Retour à la liste</a>
 
-    <a href="{{ path('app_admin_team_edit', {'id': team.id}) }}">edit</a>
-
-    {{ include('admin_team/_delete_form.html.twig') }}
 {% endblock %}

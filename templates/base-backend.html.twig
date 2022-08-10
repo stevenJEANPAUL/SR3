@@ -36,18 +36,25 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
+                        <a class="sidebar-link text-white" href="#">                            
+                            <span class="align-middle">
+                                Mise en forme des pages
+                            </span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
                         <a class="sidebar-link" href="{{ path('app_admin_accueil_index') }}">
                             <i class="align-middle" data-feather="home"></i>
                             <span class="align-middle">
-                                Accueil - Onglet
+                                Accueil 
                             </span>
                         </a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{ path('app_admin_team_index') }}">
-                            <i class="align-middle" data-feather="home"></i>
+                            <i class="align-middle" data-feather="users"></i>
                             <span class="align-middle">
-                                Qui sommes nous ? - Onglet
+                                Qui sommes nous ?
                             </span>
                         </a>
                     </li>
@@ -55,15 +62,7 @@
                         <a class="sidebar-link" href="{{ path('app_admin_formation_index') }}">
                             <i class="align-middle" data-feather="book"></i>
                             <span class="align-middle">
-                                Formations - Onglet
-                            </span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ path('app_admin_cours_index') }}">
-                            <i class="align-middle" data-feather="edit-2"></i>
-                            <span class="align-middle">
-                                CRUD Cours
+                                Formations
                             </span>
                         </a>
                     </li>
@@ -71,7 +70,7 @@
                         <a class="sidebar-link" href="{{ path('app_admin_rncp_index') }}">
                             <i class="align-middle" data-feather="award"></i>
                             <span class="align-middle">
-                                Titres RNCP - Onglet
+                                Titres RNCP
                             </span>
                         </a>
                     </li>
@@ -79,28 +78,26 @@
                         <a class="sidebar-link" href="{{ path('app_admin_nos_actus_index') }}">
                             <i class="align-middle" data-feather="book-open"></i>
                             <span class="align-middle">
-                                Nos Actus - Onglet
+                                Nos Actus
                             </span>
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ path('app_admin_user_index') }}">
-                            <i class="align-middle" data-feather=""></i>
-                            <span class="align-middle">
-                                Utilisateur
-                            </span>
-                        </a>
-                    </li>
-                    
-                        <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ path('app_admin_carousel_index') }}">
-                            <i class="align-middle" data-feather="home"></i>
-                            <span class="align-middle">
-                                Carousel
-                            </span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
+                    <a class="sidebar-link text-white" href="3">                        
+                        <span class="align-middle">
+                            Ajout de contenu
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                <a class="sidebar-link" href="{{ path('app_admin_carousel_index') }}">
+                    <i class="align-middle" data-feather="home"></i>
+                    <span class="align-middle">
+                        Carousel
+                    </span>
+                </a>
+            </li>
+            <li class="sidebar-item">
                     <a class="sidebar-link" href="{{ path('app_admin_avis_client_index') }}">
                         <i class="align-middle" data-feather="home"></i>
                         <span class="align-middle">
@@ -116,18 +113,42 @@
                     </span>
                 </a>
             </li>
-            <li class="sidebar-item">
-            <a class="sidebar-link" href="{{ path('app_admin_newletter_index') }}">
-                <i class="align-middle" data-feather="home"></i>
-                <span class="align-middle">
-                    Newletter
-                </span>
-            </a>
-        </li>
                     
-                </ul>
-            </div>
-        </nav>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ path('app_admin_equipe_index') }}">
+                            <i class="align-middle" data-feather="users"></i>
+                            <span class="align-middle">
+                                Equipe
+                            </span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ path('app_admin_cours_index') }}">
+                        <i class="align-middle" data-feather="book"></i>
+                        <span class="align-middle">
+                            Cours
+                        </span>
+                    </a>
+                </li>  
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="{{ path('app_admin_newletter_index') }}">
+                    <i class="align-middle" data-feather="book-open"></i>
+                    <span class="align-middle">
+                        Newletter
+                    </span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="{{ path('app_admin_user_index') }}">
+                    <i class="align-middle" data-feather="user"></i>
+                    <span class="align-middle">
+                        Utilisateur
+                    </span>
+                </a>
+            </li> 
+        </ul>
+    </div>
+</nav>
         <div class="main">
             <nav class="navbar navbar-expand navbar-light navbar-bg">
                 <a class="sidebar-toggle js-sidebar-toggle">
@@ -136,13 +157,10 @@
 
                 <div class="navbar-collapse collapse">
                     <ul class="navbar-nav navbar-align">
-                        <li class="nav-item dropdown">
-                            <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
-                                <i class="align-middle" data-feather="settings"></i>
-                            </a>
-                            <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                                <span class="text-dark">Administrateur</span>
-                            </a>   
+                        <li class="nav-item dropdown">                            
+                            <a class="nav-link" href="{{ path('app_logout') }}">
+                                <span class="text-dark">Déconnexion</span>
+                            </a> 
                         </li>
                     </ul>
                 </div>

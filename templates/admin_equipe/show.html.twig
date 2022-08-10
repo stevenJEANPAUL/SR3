@@ -3,7 +3,14 @@
 {% block title %}Equipe{% endblock %}
 
 {% block body %}
-    <h1>Equipe</h1>
+    <h1 class="text-center">Equipe</h1>
+
+    <a href="{{ path('app_admin_equipe_index') }}" class="btn btn-dark">Retour à la liste</a>
+    <div class="d-flex justify-content-end align-items-end">
+        {{ include('admin_equipe/_delete_form.html.twig') }}
+        <a href="{{ path('app_admin_equipe_edit', {'id': equipe.id}) }} "class="btn btn-success ms-2"><i class="align-middle" data-feather="edit-2"></i></a>
+    </div>
+
 
     <table class="table">
         <tbody>
@@ -12,30 +19,33 @@
                 <td>{{ equipe.id }}</td>
             </tr>
             <tr>
-                <th>ImageName</th>
-                <td>{{ equipe.imageName }}</td>
+                <th>Photo</th>
+                <td>{% if equipe.imageName is defined and equipe.imageName is not null %}
+                    <img src="{{ asset('images/equipe/' ~ equipe.imageName) }}" alt="" class="img-list">
+                </a>
+                {% else %}
+                N/A                               
+            {% endif %}</td>
             </tr>
             <tr>
                 <th>Nom</th>
                 <td>{{ equipe.nom }}</td>
             </tr>
             <tr>
-                <th>Titre</th>
-                <td>{{ equipe.titre }}</td>
-            </tr>
-            <tr>
                 <th>Poste</th>
                 <td>{{ equipe.poste }}</td>
             </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ equipe.titre }}</td>
+            </tr>
+            
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_equipe_index') }}" class="btn btn-dark">Retour à la liste</a>
 
-    <a href="{{ path('app_admin_equipe_edit', {'id': equipe.id}) }} "class="btn btn-success ms-2"><i class="align-middle" data-feather="edit-2"></i></a>
-
-    {{ include('admin_equipe/_delete_form.html.twig') }}
 {% endblock %}
+
 {% block javascripts %}
 <script>
 
