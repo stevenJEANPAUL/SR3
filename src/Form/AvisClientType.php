@@ -19,7 +19,7 @@ class AvisClientType extends AbstractType
         $builder
             ->remove('imageName')
             ->remove('updatedAt')
-            ->add('imageFile', FileType::class, ["label"=>"Image :", "required"=>true])
+            ->add('imageFile', FileType::class, ["label"=>"Image :", "required"=>false])
             ->add('nom', TextType::class, ["label"=>"Nom :"])
             ->add('poste')
             ->add('commentaire')
