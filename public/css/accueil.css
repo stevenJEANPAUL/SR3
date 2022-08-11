@@ -88,26 +88,71 @@ h2{
     /* background-color: blueviolet; */
 } 
 
+@media only screen and (min-device-width: 350px) and (max-device-width: 480px){
+
+    .juste{
+        background-color: cornflowerblue;
+        /* height: 5vh; */
+        /* display: flex;
+        flex-direction: row-reverse !important; */
+    }
+    .avcli{
+        width: 70%;
+        /* left: 30vh; */
+    }
+
+    .card{
+    width: 8rem !important;
+    }
+
+}
 
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 576px) and (orientation:portrait) {
     .avcli{
         color: blueviolet ;}
 }
+.juste{
+    /* position: sticky!important;
+    top: 0;
+    right: 0;
+    left: 0; */
+    height: 15vh;
+}
+
+main{
+    margin:2px;
+    
+    }
+    
+.avcli{
+    width: 70%;
+    left: 20vh;
+}
+
+
+
 @media only screen and (min-device-width: 577px) and (max-device-width: 768px) {
+
+    .juste{
+        background-color: cornflowerblue;
+        height: 20vh;
+    }
     .avcli{
-        color: blueviolet ;}
+        width: 70%;
+        left: 25vh;
+    }
 }
 
 @media only screen and (min-device-width: 769px) and (max-device-width: 1199px){
 
 .avcli{
-        width: 30rem;
-        margin: 0%;
+
         position: absolute;
         top: 10%;
-        right: 1%;
-        color: blueviolet ;
+        right: 0%;
+        width: 70%;
+        left: 30vh;
 }
 
 .juste{
@@ -116,14 +161,18 @@ h2{
     right: 0;
     left: 0;
     height: 20vh;
-    background-color: cornflowerblue; 
+    background-color:green; 
 }
-
-.butt{
-    
-}
-.bum{
 
 }
 
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1600px){
+    .juste{
+        background-color: cornflowerblue;
+        height: 20vh;
+    }
+    .avcli{
+        width: 70%;
+        left: 30vh;
+    }
 }
