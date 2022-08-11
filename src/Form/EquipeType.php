@@ -4,7 +4,6 @@ namespace App\Form;
 
 use App\Entity\Team;
 use App\Entity\Equipe;
-use App\Entity\Team;
 use Symfony\Component\Form\AbstractType;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
