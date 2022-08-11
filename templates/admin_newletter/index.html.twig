@@ -31,9 +31,9 @@
                 <td>{{ newletter.titre }}</td>
                 <td>{{ newletter.text|raw }}</td>
                 <td>
-                    <a href="{{ path('app_admin_newletter_show', {'id': newletter.id}) }}"title="Voir" class="btn btn-dark">
+                    <a href="{{ path('app_admin_newletter_show', {'id': newletter.id}) }}"title="Voir" class="btn btn-dark mb-2">
                 <i class="align-middle" data-feather="eye"></i></a>
-                    <a href="{{ path('app_admin_newletter_edit', {'id': newletter.id}) }}"title="Modifier" class="btn btn-success ms-2">
+                    <a href="{{ path('app_admin_newletter_edit', {'id': newletter.id}) }}"title="Modifier" class="btn btn-success">
                 <i class="align-middle" data-feather="edit"></i></a>
                 </td>
             </tr>

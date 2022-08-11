@@ -37,10 +37,10 @@
                 <td>{{ accueil.commentaire }}</td>
                 <td>{{ accueil.texte|raw }}</td>
                 <td class="text-center">
-                    <a href="{{ path('app_admin_accueil_show', {'id': accueil.id}) }}"title="Voir" class="btn btn-dark">
+                    <a href="{{ path('app_admin_accueil_show', {'id': accueil.id}) }}"title="Voir" class="btn btn-dark mb-2">
                         <i class="align-middle" data-feather="eye"></i>
                     </a>
-                    <a href="{{ path('app_admin_accueil_edit', {'id': accueil.id}) }}"title="Modifier" class="btn btn-success ms-2">
+                    <a href="{{ path('app_admin_accueil_edit', {'id': accueil.id}) }}"title="Modifier" class="btn btn-success">
                 <i class="align-middle" data-feather="edit"></i></a>
                 </td>
             </tr>

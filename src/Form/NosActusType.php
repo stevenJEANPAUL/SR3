@@ -18,7 +18,7 @@ class NosActusType extends AbstractType
     {
         $builder
             ->add('titre', TextType::class, ["label"=>"Titre :"])
-            ->add('imageFile', FileType::class, ["label"=>"Image :", "required"=>true])
+            ->add('imageFile', FileType::class, ["label"=>"Image :", "required"=>false])
             ->remove('imageName')
             ->add('newletters', EntityType::class,["class"=>Newletter::class, "multiple"=>true, "label"=>"newletter", "attr"=>["class"=>"select2"]])
             ->add('description')
