@@ -29,7 +29,7 @@ class Team
     private $titre;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $imageName;
 
@@ -53,7 +53,7 @@ class Team
     private $presentation;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $imageName2;
 
@@ -72,7 +72,7 @@ class Team
     private $updatedAt2;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $imageName3;
 
@@ -242,7 +242,7 @@ class Team
 
     public function __toString()
     {
-        return $this->imageName;
+        return $this->titre;
     }
 
     public function setImageName4(?string $imageName4): self
