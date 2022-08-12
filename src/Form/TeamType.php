@@ -27,7 +27,7 @@ class TeamType extends AbstractType
         ->add('titre3', TextType::class, ["label"=>"Titre 3:"])
         ->add('presentation2', TextType::class, ["label"=>"Présentation 2 :"])
         ->add('imageFile4', FileType::class, ["label"=>"Image4 :", "required"=>false])
-        ->add('isActive', CheckboxType::class, ["label"=>"Active"])
+        ->add('isActive', CheckboxType::class, ["label"=>"Active", "required"=>false])
         ->remove('imageName2',FileType::class, ["label"=>"Image 2 :","required"=>false])
         ->remove('imageName3',FileType::class, ["label"=>"Logo :","required"=>false])
         ->remove('imageName4',FileType::class, ["label"=>"Image 4 :","required"=>false])

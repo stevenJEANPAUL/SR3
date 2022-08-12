@@ -6,7 +6,7 @@
 {% block body %}
 
 	{{ laTeam.titre }}
-
+	<img style="width:rem;" class="pt-2 " src="{{ asset ('images/team/') ~ laTeam.imageName}}">
 	<div class= "row my-5 justify-content-center mx-auto">
 
 	{% for equipe in laTeam.equipe %}
@@ -22,7 +22,7 @@
 				<p class="card-text">{{ equipe.titre}}</p>
 			</div>
 		</div>
-    
+		<img style="width:rem;" class="pt-2 " src="{{ asset ('images/team/') ~ laTeam.imageName}}">
 
 	{% endfor %}
 	</div>
