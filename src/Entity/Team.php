@@ -60,7 +60,7 @@ class Team
             /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="team", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="team", fileNameProperty="imageName2")
      * 
      * @var File|null
      */
@@ -79,7 +79,7 @@ class Team
                 /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="team", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="team", fileNameProperty="imageName3")
      * 
      * @var File|null
      */
@@ -108,7 +108,7 @@ class Team
                 /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="team", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="team", fileNameProperty="imageName4")
      * 
      * @var File|null
      */

@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Team;
 use App\Entity\Equipe;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -20,12 +21,12 @@ class TeamType extends AbstractType
         ->add('titre', TextType::class, ["label"=>"Titre de la page:"])
         ->remove('imageName', TextType::class)
         ->add('imageFile', FileType::class, ["label"=>"Image :", "required"=>false])
-        ->add('presentation', TextType::class, ["label"=>"Présentation :"])
+        ->add('presentation', CKEditorType::class, ["label"=>"Présentation :"])
         ->add('imageFile2', FileType::class, ["label"=>"Image2 :", "required"=>false])
         ->add('equipe', EntityType::class, ["class"=>Equipe::class, "label"=>"Equipe :", "multiple"=>true, "required"=>false, "attr"=>["class"=>"select2"]])
         ->add('imageFile3', FileType::class, ["label"=>"Image3 :", "required"=>false])
         ->add('titre3', TextType::class, ["label"=>"Titre 3:"])
-        ->add('presentation2', TextType::class, ["label"=>"Présentation 2 :"])
+        ->add('presentation2', CKEditorType::class, ["label"=>"Présentation 2 :"])
         ->add('imageFile4', FileType::class, ["label"=>"Image4 :", "required"=>false])
         ->add('isActive', CheckboxType::class, ["label"=>"Active", "required"=>false])
         ->remove('imageName2',FileType::class, ["label"=>"Image 2 :","required"=>false])
