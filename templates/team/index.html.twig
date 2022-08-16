@@ -1,12 +1,60 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello TeamController!{% endblock %}
+{% block title %}Hello TeamController!
+{% endblock %}
+
+{% block stylesheets %}
+
+	<link rel="stylesheet" href="{{ asset('css/team.css')}}">
+
+{% endblock %}
 
 {% block body %}
+	<main class="container-fluid ">
+		<h1>
+			{{ laTeam.titre }}
+		</h1>
+		<div class="row my-10 justify-content-center ">
+			<img style="max-width:900px;" class="pt-2 img-fluid " src="{{ asset ('images/team/') ~ laTeam.imageName}}">
+		</div>
+		<div class="my-5">
+			{{ laTeam.presentation}}
+		</div>
+		<div class="name2">
+			<img style="width:100%" style="" class="img-fluid" src="{{ asset ('images/team/') ~ laTeam.imageName2}}">
+		</div>
+		<div class="row justify-content-center">
+			<img style="width: 15rem;" class="my-3 image3 " src="{{ asset ('images/team/') ~ laTeam.imageName3}}">
+		</div>
+		<div class="row my-5 justify-content-center mx-auto">
 
-{{ laTeam.titre }}
-{# {% for team in teams %}
-{{ laTeam.titre }}
-{% endfor %} #}
+			{% for equipe in laTeam.equipe %}
 
+
+				<div class="card col-12 col-md-3 col-lg-4 col-xl-3 d-flex flex-wrap align-items-center" style="width: 25rem;">
+					<img style="width: 10rem;" src="{{ asset("images/equipe/") ~ equipe.imageName }}" class="card-img-top photo" alt="...">
+
+					<div class="card-body text-center">
+
+						<h5 class="card-title text-center">{{ equipe.nom}}</h5>
+						<p class="card-text">{{ equipe.poste}}</p>
+						<p class="card-text">{{ equipe.titre}}</p>
+					</div>
+
+				</div>
+
+
+			{% endfor %}
+		</div>
+<h2>
+	{{ laTeam.titre3 }}
+</h2>
+<div class="my-5">
+			{{ laTeam.presentation2}}
+		</div>
+<div>
+		<img style="width:100%;" class="img-fluid " src="{{ asset ('images/team/') ~ laTeam.imageName4}}">
+</div>
+
+	</main>
 {% endblock %}

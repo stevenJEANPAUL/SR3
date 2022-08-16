@@ -30,8 +30,8 @@
                 <td>{{ cour.nom|raw }}</td>
                 <td>{{ cour.theme|raw }}</td>
                 {# <td>{{ cour.updatedAt ? cour.updatedAt|date('d-m-Y H:i:s') : '' }}</td> #}
-                <td class="text-end">
-                    <a href="{{ path('app_admin_cours_show', {'id': cour.id}) }}"title="Voir" class="btn btn-dark mb-2">
+                <td class="text-end align-items-end">
+                    <a href="{{ path('app_admin_cours_show', {'id': cour.id}) }}"title="Voir" class="btn btn-dark">
                         <i class="align-middle" data-feather="eye"></i>
                     </a>
                     <a href="{{ path('app_admin_cours_edit', {'id': cour.id}) }}"title="Modifier" class="btn btn-success ms-2">

@@ -29,7 +29,7 @@ class Team
     private $titre;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $imageName;
 
@@ -60,7 +60,7 @@ class Team
             /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="team", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="team", fileNameProperty="imageName2")
      * 
      * @var File|null
      */
@@ -79,7 +79,7 @@ class Team
                 /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="team", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="team", fileNameProperty="imageName3")
      * 
      * @var File|null
      */
@@ -108,7 +108,7 @@ class Team
                 /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="team", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="team", fileNameProperty="imageName4")
      * 
      * @var File|null
      */
@@ -156,7 +156,7 @@ class Team
         return $this->imageName;
     }
 
-    public function setImageName(string $imageName): self
+    public function setImageName(?string $imageName): self
     {
         $this->imageName = $imageName;
 
