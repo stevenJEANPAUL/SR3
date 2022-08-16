@@ -33,7 +33,7 @@ class Team
      */
     private $imageName;
 
-        /**
+    /**
      * @ORM\Column(type="datetime_immutable", nullable=true)
      */
     private $updatedAt;

@@ -7,7 +7,9 @@ main{
 margin:50px;
 
 }
-
+p{
+    text-align: center;
+}
 .container{
     width: 100%;
     height: 100%;
@@ -17,14 +19,19 @@ margin:50px;
     height: 40vh;
     width: 100%;
     position: relative;
+    /* filter: blur(2px); */
+}
+
+.butt{
 
 }
+
 .text-over{
     position: absolute;
-    top: 25%;
+    top: 30%;
     color: white;
-    width: 50%;
-    right: 10%;
+    width: 40%;
+    right: 8%;
 
 }
 /* .avis{
@@ -33,12 +40,20 @@ margin:50px;
 
 h2{
     text-align: center;
-    margin: 15px;
+    margin: 5%;
 }
 
 .carou, #pho1{
     height: 40vh;
     width: 100%;
+}
+.caroutexte{
+    /* position: absolute;
+    top: 5%;
+    width: 50%;
+    right: 10%; */
+    height: 15vh;
+    font-size:x-large;
 }
 
 .juste{
@@ -56,10 +71,7 @@ h2{
     position:relative;
 } */
 
-.place{
-    padding: 5px;
 
-}
 
 
 
@@ -77,8 +89,9 @@ h2{
 
 
 #parte{
-    width: 106px;
-    height: 98px;
+    width: 150px;
+    align-items: center;
+
 }
 
 #partena{
@@ -88,10 +101,18 @@ h2{
     /* background-color: blueviolet; */
 } 
 
+
+
 @media only screen and (min-device-width: 350px) and (max-device-width: 480px){
+
+.carou{
+    display: none;
+}
+
 
     .juste{
         background-color: cornflowerblue;
+        height: 10vh !important;
         /* height: 5vh; */
         /* display: flex;
         flex-direction: row-reverse !important; */
@@ -107,19 +128,26 @@ h2{
 
 }
 
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 576px) and (orientation:portrait) {
-    .avcli{
-        color: blueviolet ;}
+.mobicon{
+background-color: red;
+width: 100%;
 }
-.juste{
-    /* position: sticky!important;
-    top: 0;
-    right: 0;
-    left: 0; */
-    height: 15vh;
+.centt{
+margin: 0 !important;
+padding: 0 !important;
+
 }
 
+#partena{
+
+
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 576px){
+
+.mobicon{
+    display: none;
+}
 main{
     margin:2px;
     
@@ -129,10 +157,22 @@ main{
     width: 70%;
     left: 20vh;
 }
+.avcli{
+    color: blueviolet ;}
+}
+.juste{
+height: 15vh;
+}
+
+
 
 
 
 @media only screen and (min-device-width: 577px) and (max-device-width: 768px) {
+
+    .mobicon{
+        display: none;
+    }
 
     .juste{
         background-color: cornflowerblue;
@@ -145,6 +185,9 @@ main{
 }
 
 @media only screen and (min-device-width: 769px) and (max-device-width: 1199px){
+    .mobicon{
+        display: none;
+    }
 
 .avcli{
 
@@ -167,8 +210,11 @@ main{
 }
 
 @media only screen and (min-device-width: 1200px) and (max-device-width: 1600px){
+    .mobicon{
+        display: none;
+    }
     .juste{
-        background-color: cornflowerblue;
+        /* background-color: cornflowerblue; */
         height: 20vh;
     }
     .avcli{
