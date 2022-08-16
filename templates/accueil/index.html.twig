@@ -12,11 +12,16 @@
 {% block body %}
 <main class="container-md-fluid">
 
-  <div class="presentaion1">
+  <div class="hautpage">
     <img src="{{ asset("images/accueil/" ~ monAccueil.imageName) }}" alt="" class="presentation">
     <div class="text-over">{{ monAccueil.description|raw}}</div> 
   </div>
+{#partie mobile de la presentation#}
 
+<div class="hautmob">
+<p class="mob-texte">{{ monAccueil.description}}</p> 
+</div>
+{# fin de la partie mobile de la presetation#}
 
   <h2>{{ monAccueil.titre}}</h2>
     {# --carousel nos domaines de formations--- #}
@@ -59,8 +64,8 @@
 {# --fin carousel nos domaines de formations--- #}
 
   {# début de la partie mobile#}
-  <div class="row justify-content-center mobicon" id=""> 
-  <div class="col-6 my-4 mx-3 p-2 centt">
+  <div class="row justify-content-center" id="mobicon"> 
+  <div class="col-6 my-3 mx-3 p-2 centt">
     <a href=""><img class="nav-item my-5 mx-3 " style="width: 4rem;" src="{{ asset ('images/formation/bureau.png') }}"><a>                                         
     <a href=""><img class="nav-item my-5 mx-3 " style="width: 4rem;" src="{{ asset ('images/formation/programming.png') }}"><a> 
     <a href=""><img class="nav-item my-5 mx-3 " style="width: 4rem;" src="{{ asset ('images/formation/project-management.png') }}"><a> 
@@ -88,7 +93,7 @@
                 {% set active = "" %}
                 {% endif %}
     
-        <button type="button" data-bs-target="#carouselExampleDark1" data-bs-slide-to="{{ loop.index0 }}" class="{{ active }} butt " aria-current="true" aria-label="{{ loop.index }}"></button>
+        <button type="button" data-bs-target="#carouselExampleDark1" data-bs-slide-to="{{ loop.index0 }}" class="{{ active }} py-1 butt" aria-current="true" aria-label="{{ loop.index }}" style="border: 2px solid red"></button>
       {% endfor %}
       </div>
     
@@ -102,7 +107,7 @@
     
       <div class="carousel-item {{ active }} juste" data-bs-interval="false">
         <div class="card" style="width: 12rem;">
-          <img src="{{ asset('images/avisClient/' ~ avisClient.imageName) }}" class="card-img-top"  alt="...">
+          <img src="{{ asset('images/avisClient/' ~ avisClient.imageName) }}" class="card-img-top"  alt="..."style="width: 8rem;">
           <div class="card-body">
             <h5 class="card-title">{{ avisClient.nom}}</h5>
             <p>{{ avisClient.poste}}</p>
@@ -110,7 +115,7 @@
 
         </div>
             <div class="avcli">
-            <p class="card-text ">
+            <p class="card-text">
               {{ avisClient.commentaire|raw}}
             </p>
             </div>
@@ -123,13 +128,13 @@
 {# -- fin avis de nos clients--- #}
 
 
-<h2 class="posi">{{ monAccueil.commentaire}}</h2>
+<h2>{{ monAccueil.commentaire}}</h2>
 
     <div><p>{{ monAccueil.texte|raw}}</p></div>
 {# ----début partenaire-- #}
     <div class="row mt-5" id="partena">
       {% for partenaire in monAccueil.partenaires %}
-      <div class="col-4 col-md- col-lg-4 d-flex justify-content-around  my-5">
+      <div class="col-12 col-md-3 col-lg-4 d-flex justify-content-around  my-5">
         <div class="">
           <img src="{{ asset('images/partenaires/' ~ partenaire.imageName) }}" alt="img-fluid" class="" id="parte">
         </div>

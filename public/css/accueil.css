@@ -5,11 +5,17 @@ body{
 }
 main{
 margin:50px;
-
 }
+
 p{
     text-align: center;
 }
+
+.butt{
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
 .container{
     width: 100%;
     height: 100%;
@@ -22,9 +28,7 @@ p{
     /* filter: blur(2px); */
 }
 
-.butt{
 
-}
 
 .text-over{
     position: absolute;
@@ -34,10 +38,9 @@ p{
     right: 8%;
     line-height: 15px;
 
+
 }
-/* .avis{
-    text-align: center;
-} */
+
 
 h2{
     text-align: center;
@@ -57,24 +60,36 @@ h2{
     font-size:x-large;
 }
 
+.avcli{
+    font-size: small;
+}
+
 .juste{
+    position: sticky!important;
+}
+
+/* .juste{
     position: sticky!important;
     top: 0;
     right: 0;
     left: 0;
     height: 30vh;
-    /* background-color: cornflowerblue; */
-    }
+    background-color: cornflowerblue;
+    } */
 
+    .card-text{
+        position: absolute;
+        width: 95%;
+        right: 15%;
+        }
 
-
-/*.posi{
-    position:relative;
-} */
-
-
-
-
+.carousel-indicators{
+    /* position: absolute;
+    top: 5%;
+    width: 50%;
+    right: 10%; */
+    height: 1vh;
+}
 
 .avcli{
     width: 50rem;
@@ -83,70 +98,79 @@ h2{
     position: absolute;
     top: 10%;
     right: 10%;
-
 }
-
-
-
 
 #parte{
     width: 150px;
     align-items: center;
-
 }
 
 #partena{
-
     padding: 5%;
     /* background:no-repeat url(../images/accueil/panneau.png); */
     /* background-color: blueviolet; */
 } 
 
-
-
 @media only screen and (min-device-width: 350px) and (max-device-width: 480px){
+
+    main{
+        padding: 0;
+        margin: 0;
+    }
+
+    .hautpage{
+    display: none;
+    }
+
+.hautmob{
+    background-color: #c00000;
+    color: white;
+    padding: 100px;
+    font-size:x-large;
+}
 
 .carou{
     display: none;
 }
 
-
-    .juste{
-        background-color: cornflowerblue;
-        height: 10vh !important;
-        /* height: 5vh; */
-        /* display: flex;
-        flex-direction: row-reverse !important; */
-    }
-    .avcli{
-        width: 70%;
-        /* left: 30vh; */
+.juste{
+        height: 5vh !important;
+        margin: 20px;
+        padding: 20px;
     }
 
-    .card{
-    width: 8rem !important;
+.centt{
+        margin: 50px !important;
+        padding: 0px !important;
     }
 
-}
+.avcli{
+        width: 50%;
+        padding: 0.5rem
+    }
+
+
 
 .mobicon{
-/* background-color: red; */
+background-color: red; 
+.card-text{
+        position: absolute;
+        width: 95%;
+        right: 1%;
+        } */
+
+#mobicon{
+
 width: 100%;
 }
-.centt{
-margin: 0 !important;
-padding: 0 !important;
 
 }
 
-#partena{
 
-
-}
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 576px){
 
-.mobicon{
+#mobicon, .hautmob{
     display: none;
 }
 main{
@@ -158,45 +182,64 @@ main{
     width: 70%;
     left: 20vh;
 }
-.avcli{
-    color: blueviolet ;}
-}
+
+
 .juste{
 height: 15vh;
 }
 
+.card-text{
+    position: absolute;
+    width: 95%;
+    right: 30%;
+    }
 
-
-
+}
 
 @media only screen and (min-device-width: 577px) and (max-device-width: 768px) {
 
-    .mobicon{
+    #mobicon, .hautmob{
         display: none;
+    }
+
+    .text-over{
+        position: absolute;
+        top: 20%;
+        width: 40%;
+        right: 8%;
+    
     }
 
     .juste{
-        background-color: cornflowerblue;
-        height: 20vh;
+        height: 12vh;
     }
+
     .avcli{
         width: 70%;
-        left: 25vh;
+        left: 15vh;
     }
 }
-
+/**tablette**/
 @media only screen and (min-device-width: 769px) and (max-device-width: 1199px){
-    .mobicon{
+    #mobicon, .hautmob{
         display: none;
+    }
+
+    .text-over{
+        position: absolute;
+        top: 20%;
+        width: 40%;
+        right: 8%;
+    
     }
 
 .avcli{
 
         position: absolute;
-        top: 10%;
+        top: 20%;
         right: 0%;
         width: 70%;
-        left: 30vh;
+        left: 15vh;
 }
 
 .juste{
@@ -204,22 +247,44 @@ height: 15vh;
     top: 0;
     right: 0;
     left: 0;
-    height: 20vh;
-    background-color:green; 
+    height: 15vh; 
 }
+
+.card-text{
+    position: absolute;
+    width: 95%;
+    right: 5%;
+    }
 
 }
 
 @media only screen and (min-device-width: 1200px) and (max-device-width: 1600px){
-    .mobicon{
+    #mobicon, .hautmob{
         display: none;
     }
     .juste{
-        /* background-color: cornflowerblue; */
         height: 20vh;
     }
     .avcli{
         width: 70%;
         left: 30vh;
     }
+}
+
+@media only screen and (min-device-width: 1601px) and (max-device-width: 1920px){
+    #mobicon, .hautmob{
+        display: none;
+    }
+    .juste{
+        height: 20vh;
+    }
+    .avcli{
+        width: 70%;
+        left: 30vh;
+    }
+    .card-text{
+        /* position: absolute; */
+        width: 60%;
+        right: 30%;
+        }
 }
