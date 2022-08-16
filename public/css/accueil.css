@@ -61,6 +61,10 @@ h2{
     font-size: small;
 }
 
+.juste{
+    position: sticky!important;
+}
+
 /* .juste{
     position: sticky!important;
     top: 0;
@@ -242,7 +246,7 @@ height: 15vh;
 .card-text{
     position: absolute;
     width: 95%;
-    right: 3%;
+    right: 5%;
     }
 
 }
@@ -258,4 +262,22 @@ height: 15vh;
         width: 70%;
         left: 30vh;
     }
+}
+
+@media only screen and (min-device-width: 1601px) and (max-device-width: 1920px){
+    #mobicon, .hautmob{
+        display: none;
+    }
+    .juste{
+        height: 20vh;
+    }
+    .avcli{
+        width: 70%;
+        left: 30vh;
+    }
+    .card-text{
+        /* position: absolute; */
+        width: 60%;
+        right: 30%;
+        }
 }
