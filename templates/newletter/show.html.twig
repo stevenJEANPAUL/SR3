@@ -13,8 +13,8 @@
         <div class="card align-items-center">
         <img src="{{ asset('images/newletter/' ~ newletter.imageName) }}" alt="{{newletter.titre}}" class="img-fluid col-lg-4" id="newimg">
             <div class="card-body flex-wrap">
-                <h6{#  class="text-center" style="height: 39px;"  #}><strong>{{newletter.titre}}</strong></h6>
-                <div {# class="mb-5" #}>{{newletter.text}}</div>
+                <h6{#  class="text-center" style="height: 39px;"  #}><strong>{{newletter.titre|raw}}</strong></h6>
+                <div {# class="mb-5" #}>{{newletter.text|raw}}</div>
             </div>
         </div> 
     </div>

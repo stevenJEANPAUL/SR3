@@ -1,9 +1,13 @@
 
 
-h1{text-align: center;
+h1, h2{text-align: center;
     margin: 50px;
+    color: #820000;
 }
 
 .image3, .photo{
     border: solid 3px #820000;
+}
+.formation{
+    line-height: .8rem;
 }

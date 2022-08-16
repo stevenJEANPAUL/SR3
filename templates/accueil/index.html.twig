@@ -14,7 +14,7 @@
 
   <div class="presentaion1">
     <img src="{{ asset("images/accueil/" ~ monAccueil.imageName) }}" alt="" class="presentation">
-    <p class="text-over">{{ monAccueil.description}}</p> 
+    <div class="text-over">{{ monAccueil.description|raw}}</div> 
   </div>
 
 
@@ -23,7 +23,7 @@
   <div class="carou">
 
     {% if monAccueil.carousels|length > 0 %}
-      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide text-white" data-bs-ride="carousel">
     
         <div class="carousel-indicators">
           {% for carousel in monAccueil.carousels  %}

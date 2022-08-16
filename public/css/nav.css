@@ -29,8 +29,8 @@ h1, h2, h3, h4, h5, h6 {
 /* ===================== PAGE FORMATION ================= */
 /* ====================================================== */
 .formation-text1{
-	padding-top: 180px;
-	
+	padding-top: 80px;
+	line-height : 15px;
 }
 .text2 {
 	width: 40%;
