@@ -1,43 +1,52 @@
 {% extends 'base.html.twig' %}
 {% block stylesheets %}
-<link rel="stylesheet" href="{{ asset('css/nosActus.css')}}">
-{% endblock %}
 
-{% block title %}SR3GROUPE - Accueil{% endblock %}
+    <link rel="stylesheet" href="{{ asset('css/nosActus.css') }}">
+    {% endblock %}
+
+    {% block title %}
+        SR3GROUPE - Accueil
+    {% endblock %}
+
+    {% block body %}
+
+        <main>
+
+            {# <h2>{{nos_actuses.titre }}</h2> #}
+
+            <div>
+                <img src="{{ asset("images/nosActus/" ~ nos_actuses.imageName) }}" alt="" class="presentation"></div>
+
+                {# <h2>{{nos_actuses.description }}</h2> #}
+
+                <div class="row">
+                    {% for newletter in nos_actuses.newletters %}
+                        <div class="col-12 col-md-3 d-flex" id="newl">
+                            <div class="">
+                                <img src="{{ asset('images/newletter/' ~ newletter.imageName) }}" alt="{{ newletter.titre }}" class="img-fluid">
+                                    <h6>
+                                        {{ newletter.titre }}
+                                    </h6>
+                                    <p class="align-items-baseline">
+                                        {{ newletter.presentation }}
+                                    </p>
+                                    {# {% for nos_actu in nos_actuses %} #}
+                                    
+                                {# {% endfor %} #}
+                                
+                                        <a href="{{ path('app_newletter_show',{'id': newletter.id}) }}" class="btn btn-dark mt-5">
+                                            Lire plus
+                                        </a>
+                                        
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                </main>
+
+            {% endblock %}
+            
 
 
-{% block body %}
 
-<main>
-
-        {# <h2>{{nos_actuses.titre }}</h2> #}
-    
-        <div>
-        <img src="{{ asset("images/nosActus/" ~ nos_actuses.imageName) }}" alt="" class="presentation">
-    </div>
-
-        {# <h2>{{nos_actuses.description }}</h2> #}
-    
-
-
-<div class="row">
-    {% for newletter in nos_actuses.newletters %}
-    <div class="col-12 col-md-3 d-flex" id="newl">
-    <div class="">
-        <img src="{{ asset('images/newletter/' ~ newletter.imageName)}}" alt="{{newletter.titre}}" class="img-fluid">
-        <h6>{{newletter.titre}}</h6>
-            <p>{{newletter.presentation}}</p>
-    {# {% for nos_actu in nos_actuses %} #}
-<a href="{{ path('app_newletter_show',{'id': newletter.id})}}" class="btn btn-dark my-4">Lire plus</a>
-{# {% endfor %} #}
-    </div>
-    </div>
-    {% endfor %}
-</div>
-
-
-</main>
-
-
-
-{% endblock %}
