@@ -1,7 +1,4 @@
-
-
-h1, h2{text-align: center;
-    margin: 50px;
+h1, h2{
     color: #820000;
 }
 
@@ -10,4 +7,23 @@ h1, h2{text-align: center;
 }
 .formation{
     line-height: .8rem;
+}
+@media screen and (max-width: 576px) {
+    h1, h2{
+        font-size: 1.5rem;
+        margin : 40px 0px!important;
+    }
+    .marge-mobile{
+        margin : 25 0px!important;
+    }
+    .marginbottom{
+        margin-bottom : 10px!important;
+    }
+    .logo{
+        width: 12rem!important;
+        margin-bottom : 10px!important;
+    }
+    .photo{
+        width: 8rem!important;
+    }
 }
