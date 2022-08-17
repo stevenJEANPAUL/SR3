@@ -4,7 +4,7 @@ body{
     padding: 0%;
 }
 main{
-margin:50px;
+margin:35px;
 }
 
 p{
@@ -49,36 +49,38 @@ h2{
     width: 100%;
 }
 .caroutexte{
-    /* position: absolute;
-    top: 5%;
-    width: 50%;
-    right: 10%; */
-    height: 15vh;
-    font-size:x-large;
+    color: white !important;
+    font-size:xx-large;
+    top: 50%;
 }
 
 .avcli{
     font-size: small;
-}
-
-.juste{
-    position: sticky!important;
+    width: 85% !important;
+    /* right: 20% !important; */
+    
 }
 
 /* .juste{
     position: sticky!important;
+} */
+
+.juste{
+    /* position: sticky!important; */
+
     top: 0;
     right: 0;
     left: 0;
     height: 30vh;
-    background-color: cornflowerblue;
-    } */
+    /* background-color: cornflowerblue; */
+    }
 
     .card-text{
-        position: absolute;
+        /*position: absolute;
         width: 95%;
-        right: 15%;
-        }
+        right: 15%;*/
+        
+        } 
 
 .carousel-indicators{
     /* position: absolute;
@@ -92,7 +94,7 @@ h2{
     width: 50rem;
     margin: 0%;
     padding: 1%;
-    position: absolute;
+    position: absolute !important;
     top: 10%;
     right: 10%;
 }
@@ -103,10 +105,12 @@ h2{
 }
 
 #partena{
-    padding: 5%;
+    padding: 5% !important;
     /* background:no-repeat url(../images/accueil/panneau.png); */
     /* background-color: blueviolet; */
 } 
+
+
 
 @media only screen and (min-device-width: 350px) and (max-device-width: 480px){
 
@@ -142,8 +146,9 @@ h2{
     }
 
 .avcli{
-        width: 50%;
-        padding: 0.5rem
+        width: 50% !important;
+        padding: 0.5rem;
+        position: absolute !important;
     }
 
 
@@ -172,19 +177,27 @@ main{
     }
     
 .avcli{
-    width: 70%;
-    left: 20vh;
+    /* width: 70%;
+    left: 20vh; */
+    width: 60% !important;
+    right: 5%;
+    position: absolute !important;
 }
 
 
 .juste{
-height: 15vh;
+height: 10vh !important;
 }
 
 .card-text{
     position: absolute;
-    width: 95%;
-    right: 30%;
+    width: 90%;
+    right: 20%;
+    }
+
+    .text-over{
+        top:20%;
+
     }
 
 }
@@ -208,8 +221,9 @@ height: 15vh;
     }
 
     .avcli{
-        width: 70%;
-        left: 15vh;
+        width: 60%;
+    left: 20vh;
+        right: 2vh;
     }
 }
 /**tablette**/
@@ -231,8 +245,8 @@ height: 15vh;
         position: absolute;
         top: 20%;
         right: 0%;
-        width: 70%;
-        left: 15vh;
+        width: 60%;
+        left: 19vh;
 }
 
 .juste{
@@ -240,7 +254,7 @@ height: 15vh;
     top: 0;
     right: 0;
     left: 0;
-    height: 15vh; 
+    height: 19vh; 
 }
 
 .card-text{
@@ -260,7 +274,7 @@ height: 15vh;
     }
     .avcli{
         width: 70%;
-        left: 30vh;
+        left: 19vh;
     }
 }
 
@@ -273,7 +287,7 @@ height: 15vh;
     }
     .avcli{
         width: 70%;
-        left: 30vh;
+        left: 40vh;
     }
     .card-text{
         /* position: absolute; */
