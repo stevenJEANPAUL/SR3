@@ -55,7 +55,7 @@ class Formation
         /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="formation", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="formation", fileNameProperty="imageName2")
      * 
      * @var File|null
      */
@@ -74,7 +74,7 @@ class Formation
         /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="formation", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="formation", fileNameProperty="imageName3")
      * 
      * @var File|null
      */
@@ -92,7 +92,7 @@ class Formation
         /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="formation", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="formation", fileNameProperty="imageName4")
      * 
      * @var File|null
      */
@@ -110,7 +110,7 @@ class Formation
         /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="formation", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="formation", fileNameProperty="imageName5")
      * 
      * @var File|null
      */
@@ -128,7 +128,7 @@ class Formation
         /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="formation", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="formation", fileNameProperty="imageName6")
      * 
      * @var File|null
      */
@@ -147,7 +147,7 @@ class Formation
         /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="formation", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="formation", fileNameProperty="imageName7")
      * 
      * @var File|null
      */
@@ -170,7 +170,7 @@ class Formation
         /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="formation", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="formation", fileNameProperty="imageName8")
      * 
      * @var File|null
      */
@@ -198,7 +198,7 @@ class Formation
         /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
-     * @Vich\UploadableField(mapping="formation", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="formation", fileNameProperty="imageName9")
      * 
      * @var File|null
      */
@@ -680,7 +680,7 @@ class Formation
     }
     public function __toString()
     {
-        return $this->theme;
+        return $this->imageName;
     }
 
     /**

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello TeamController!
+{% block title %}Qui sommes nous ?
 {% endblock %}
 
 {% block stylesheets %}
@@ -17,11 +17,11 @@
 		<div class="row my-10 justify-content-center ">
 			<img style="max-width:900px;" class="pt-2 img-fluid " src="{{ asset ('images/team/') ~ laTeam.imageName}}">
 		</div>
-		<div class="my-5">
-			{{ laTeam.presentation}}
+		<div class="my-5 mx-4 text-center">
+			{{ laTeam.presentation|raw}}
 		</div>
 		<div class="name2">
-			<img style="width:100%" style="" class="img-fluid" src="{{ asset ('images/team/') ~ laTeam.imageName2}}">
+			<img style="width:100%;" style="" class="img-fluid" src="{{ asset ('images/team/') ~ laTeam.imageName2}}">
 		</div>
 		<div class="row justify-content-center">
 			<img style="width: 15rem;" class="my-3 image3 " src="{{ asset ('images/team/') ~ laTeam.imageName3}}">
@@ -36,9 +36,9 @@
 
 					<div class="card-body text-center">
 
-						<h5 class="card-title text-center">{{ equipe.nom}}</h5>
-						<p class="card-text">{{ equipe.poste}}</p>
-						<p class="card-text">{{ equipe.titre}}</p>
+						<h5 class="card-title text-center fw-bold">{{ equipe.nom}}</h5>
+						<p class="card-text fw-semibold">{{ equipe.poste}}</p>
+						<div class="card-text formation">{{ equipe.titre|raw}}</div>
 					</div>
 
 				</div>
@@ -49,8 +49,8 @@
 <h2>
 	{{ laTeam.titre3 }}
 </h2>
-<div class="my-5">
-			{{ laTeam.presentation2}}
+<div class="m-5 text-center lh-1">
+			{{ laTeam.presentation2|raw}}
 		</div>
 <div>
 		<img style="width:100%;" class="img-fluid " src="{{ asset ('images/team/') ~ laTeam.imageName4}}">

@@ -36,6 +36,9 @@ p{
     color: white;
     width: 40%;
     right: 8%;
+    line-height: 15px;
+
+
 }
 
 
@@ -59,6 +62,10 @@ h2{
     width: 85% !important;
     /* right: 20% !important; */
     
+}
+
+.juste{
+    position: sticky!important;
 }
 
 /* .juste{
@@ -152,13 +159,17 @@ h2{
     }
 
 
-/* .card-text{
+
+.mobicon{
+background-color: red; 
+.card-text{
         position: absolute;
         width: 95%;
         right: 1%;
         } */
 
 #mobicon{
+
 width: 100%;
 }
 
@@ -289,6 +300,21 @@ height: 10vh !important;
         width: 70%;
         left: 40vh;
     }
+
+}
+
+@media only screen and (min-device-width: 1601px) and (max-device-width: 1920px){
+    #mobicon, .hautmob{
+        display: none;
+    }
+    .juste{
+        height: 20vh;
+    }
+    .avcli{
+        width: 70%;
+        left: 30vh;
+    }
+
     .card-text{
         /* position: absolute; */
         width: 60%;

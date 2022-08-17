@@ -31,7 +31,7 @@
                     {% endif %}
                 </td>
                 {# <td>{{ accueil.UpdatedAt ? accueil.UpdatedAt|date('Y-m-d H:i:s') : '' }}</td> #}
-                <td>{{ accueil.description }}</td>
+                <td>{{ accueil.description|raw }}</td>
                 <td>{{ accueil.titre }}</td>
                 <td>{{ accueil.nom }}</td>
                 <td>{{ accueil.commentaire }}</td>

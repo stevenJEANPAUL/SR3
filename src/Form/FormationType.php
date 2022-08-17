@@ -10,6 +10,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class FormationType extends AbstractType
@@ -17,27 +18,44 @@ class FormationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            
+            // ->add('imageName', TextType::class, ["label"=>"Nom de l'image :", "required"=>false])
             ->add('imageFile', FileType::class, ["label"=> "Photo de l'entête :", "required"=>false])
+            
             ->add('texte1', CKEditorType::class, ["label"=> 'Titre de la page :', "required"=>false])
+            
+            // ->add('imageName2', TextType::class, ["label"=>"Nom de logo1 :", "required"=>false])
             ->add('imageFile2', FileType::class, ["label"=> 'Logo 1 :', "required"=>false])
+
+            // ->add('imageName3', TextType::class, ["label"=>"Nom de logo2 :", "required"=>false])
             ->add('imageFile3', FileType::class, ["label"=> 'Logo 2 :', "required"=>false])
+
+            ->add('imageName4', TextType::class, ["label"=>"Nom de logo3 :", "required"=>false])
             ->add('imageFile4', FileType::class, ["label"=> 'Logo 3 :', "required"=>false])
+
+            ->add('imageName5', TextType::class, ["label"=>"Nom de logo4 :", "required"=>false])
             ->add('imageFile5', FileType::class, ["label"=> 'Logo 4 :', "required"=>false])
+
+            ->add('imageName6', TextType::class, ["label"=>"Nom de logo5 :", "required"=>false])
             ->add('imageFile6', FileType::class, ["label"=> 'Logo 5 :', "required"=>false])
+
+            ->add('imageName7', TextType::class, ["label"=>"Nom de logo6 :", "required"=>false])
             ->add('imageFile7', FileType::class, ["label"=> 'Logo 6 :', "required"=>false])
+
             ->add('titre', CKEditorType::class, ["label"=> 'Texte de la page :', "required"=>false])
+
+            ->add('imageName8', TextType::class, ["label"=>"Nom de la photo :", "required"=>false])
             ->add('imageFile8', FileType::class, ["label"=> 'Photo milieu de page :', "required"=>false])
+
             ->add('texte2', CKEditorType::class, ["label"=> 'Texte de la photo :', "required"=>false])
             ->add('titre2', CKEditorType::class, ["label"=> 'Titre 2 :', "required"=>false])
             ->add('texte3', CKEditorType::class, ["label"=> 'Texte pied de page :', "required"=>false])
             ->add('cours', EntityType::class, ["class"=>Cours::class, "label"=>"Cours :", "multiple"=>true, "attr"=>["class"=>"select2"]])
             ->add('isActive', CheckboxType::class, ["label"=>"Active"])
-            ->remove('imageName')
+            
             ->remove('updatedAt')
-            ->remove('imageName2')
+            
             ->remove('updatedAt2')
-            ->remove('imageName3')
+            
             ->remove('updatedAt3')
             ->remove('imageName4')
             ->remove('updatedAt4')

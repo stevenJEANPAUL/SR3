@@ -30,7 +30,7 @@
             {% endif %}</td>
                 <td>{{ equipe.nom }}</td>
                 <td>{{ equipe.poste }}</td>
-                <td>{{ equipe.titre }}</td>
+                <td>{{ equipe.titre|raw }}</td>
                 {# <td>{{ equipe.updatedAt ? equipe.updatedAt|date('Y-m-d H:i:s') : '' }}</td> #}
                 <td>
                     <a href="{{ path('app_admin_equipe_show', {'id': equipe.id}) }}" class="btn btn-dark"><i class="align-middle" data-feather="eye"></i></a>

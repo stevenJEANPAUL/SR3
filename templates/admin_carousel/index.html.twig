@@ -31,7 +31,7 @@
             {% endif %}
                 </td>
                 {# <td>{{ carousel.updatedAt ? carousel.updatedAt|date('Y-m-d H:i:s') : '' }}</td> #}
-                <td>{{ carousel.texte }}</td>
+                <td>{{ carousel.texte|raw }}</td>
                 <td>
                     <a href="{{ path('app_admin_carousel_show', {'id': carousel.id}) }}"title="Voir" class="btn btn-dark">
                 <i class="align-middle" data-feather="eye"></i></a>
