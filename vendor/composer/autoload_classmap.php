@@ -48,7 +48,6 @@ return array(
     'App\\Entity\\Cours' => $baseDir . '/src/Entity/Cours.php',
     'App\\Entity\\Equipe' => $baseDir . '/src/Entity/Equipe.php',
     'App\\Entity\\Formation' => $baseDir . '/src/Entity/Formation.php',
-    'App\\Entity\\Image' => $baseDir . '/src/Entity/Image.php',
     'App\\Entity\\Newletter' => $baseDir . '/src/Entity/Newletter.php',
     'App\\Entity\\NosActus' => $baseDir . '/src/Entity/NosActus.php',
     'App\\Entity\\Partenaire' => $baseDir . '/src/Entity/Partenaire.php',

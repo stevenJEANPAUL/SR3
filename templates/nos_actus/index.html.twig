@@ -22,7 +22,7 @@
 
 <div class="row">
     {% for newletter in nos_actuses.newletters %}
-    <div class="col-3 d-flex" id="newl">
+    <div class="col-12 col-md-3 d-flex" id="newl">
     <div class="">
         <img src="{{ asset('images/newletter/' ~ newletter.imageName)}}" alt="{{newletter.titre}}" class="img-fluid">
         <h6>{{newletter.titre}}</h6>
