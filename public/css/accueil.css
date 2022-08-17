@@ -34,11 +34,9 @@ p{
     position: absolute;
     top: 30%;
     color: white;
-    width: 40%;
-    right: 8%;
-    line-height: 15px;
-
-
+    width: 70%;
+    right: 5%;
+    line-height:15px;
 }
 
 
@@ -150,17 +148,13 @@ h2{
     }
 
 
-
-.mobicon{
-background-color: red; 
-.card-text{
+/* .card-text{
         position: absolute;
         width: 95%;
         right: 1%;
         } */
 
 #mobicon{
-
 width: 100%;
 }
 
