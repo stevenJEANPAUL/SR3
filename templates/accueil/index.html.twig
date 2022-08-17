@@ -19,7 +19,11 @@
 {#partie mobile de la presentation#}
 
 <div class="hautmob">
+
 <p class="mob-texte">{{ monAccueil.description|raw}}</p> 
+
+<div class="mob-texte">{{ monAccueil.description|raw}}</div> 
+
 </div>
 {# fin de la partie mobile de la presetation#}
 
@@ -50,10 +54,10 @@
           {% endif %}
           <div class="carousel-item {{ active }}" data-bs-interval="7000">
             <img id="pho1" src="{{ asset('images/carousels/' ~ carousel.imageName) }}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <p class="text-light caroutexte">
+            <div class="carousel-caption d-none d-md-block caroutexte">
+              <div class="caroutexte">
                 {{ carousel.texte|raw}}
-              </p>
+              </div>
             </div>
           </div>
           {% endfor %}
@@ -106,18 +110,20 @@
                 {% endif %}
     
       <div class="carousel-item {{ active }} juste" data-bs-interval="false">
-        <div class="card" style="width: 12rem;">
-          <img src="{{ asset('images/avisClient/' ~ avisClient.imageName) }}" class="card-img-top"  alt="..."style="width: 8rem;">
+
+        <div class="card justify-content-center" style="width: 12rem;">
+          <img src="{{ asset('images/avisClient/' ~ avisClient.imageName) }}" class="card-img-top ms-5"  alt="..."style="width: 5rem;">
+
           <div class="card-body">
-            <h5 class="card-title">{{ avisClient.nom}}</h5>
-            <p>{{ avisClient.poste}}</p>
+            <h5 class="card-title" style="font-size: 1rem;">{{ avisClient.nom}}</h5>
+            <div style="font-size: 0.8rem;">{{ avisClient.poste}}</div>
           </div>
 
         </div>
             <div class="avcli">
-            <p class="card-text">
+            <div class="card-text me-auto">
               {{ avisClient.commentaire|raw}}
-            </p>
+            </div>
             </div>
       </div>
         {% endfor %}
@@ -130,13 +136,13 @@
 
 <h2>{{ monAccueil.commentaire}}</h2>
 
-    <div><p>{{ monAccueil.texte|raw}}</p></div>
+    <div>{{ monAccueil.texte|raw}}</div>
 {# ----début partenaire-- #}
     <div class="row mt-5" id="partena">
       {% for partenaire in monAccueil.partenaires %}
       <div class="col-12 col-md-3 col-lg-4 d-flex justify-content-around  my-5">
         <div class="">
-          <img src="{{ asset('images/partenaires/' ~ partenaire.imageName) }}" alt="img-fluid" class="" id="parte">
+          <img src="{{ asset('images/partenaires/' ~ partenaire.imageName) }}" alt="" class="img-fluid shadow p-3 mb-5 bg-white" id="parte">
         </div>
 
       </div>

@@ -713,7 +713,6 @@ class ComposerStaticInit9ba4a6c21da1a84dcd6e3eb0a56cb1c5
         'App\\Entity\\Cours' => __DIR__ . '/../..' . '/src/Entity/Cours.php',
         'App\\Entity\\Equipe' => __DIR__ . '/../..' . '/src/Entity/Equipe.php',
         'App\\Entity\\Formation' => __DIR__ . '/../..' . '/src/Entity/Formation.php',
-        'App\\Entity\\Image' => __DIR__ . '/../..' . '/src/Entity/Image.php',
         'App\\Entity\\Newletter' => __DIR__ . '/../..' . '/src/Entity/Newletter.php',
         'App\\Entity\\NosActus' => __DIR__ . '/../..' . '/src/Entity/NosActus.php',
         'App\\Entity\\Partenaire' => __DIR__ . '/../..' . '/src/Entity/Partenaire.php',
