@@ -10,8 +10,10 @@
 {% endblock %}
 
 {% block body %}
+
 <main class="container-fluid ">
         <h1 class="text-center my-5 ">{{ laTeam.titre }}</h1>
+
 
         <div class="row justify-content-center ">
             <img style="max-width:900px;" class="img-fluid my-3" src="{{ asset ('images/team/') ~ laTeam.imageName}}">
@@ -22,6 +24,7 @@
         </div>
 
         <img style="width:100%;" class="img-fluid mb-5 marginbottom" src="{{ asset ('images/team/') ~ laTeam.imageName2}}">
+
 
         <div class="row justify-content-center">
             <img style="width: 14rem;" class="my-5 image3 marge-mobile logo" src="{{ asset ('images/team/') ~ laTeam.imageName3}}">
@@ -38,6 +41,7 @@
 				<div class="card-text formation">{{ equipe.titre|raw}}</div>
 			</div>
 		</div>
+
 	{% endfor %}
 </div>
 
