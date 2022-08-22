@@ -7,12 +7,67 @@ main{
 margin:35px;
 }
 
-p{
-    text-align: center;
+.primo{
+    position: sticky;
+    height: 40vh;
+    
 }
 
+.seco{
+    position: sticky;
+    height: 35vh;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.nom{
+
+}
+
+.poste{
+    /* width: 100%;
+        top: 0;
+    right: 0;
+    left: 0; */
+}
+
+.comment{
+    /* position: absolute;
+    top: 15% !important;
+    width: 95% !important; */
+    /* color: blueviolet; */
+
+}
+
+.avis{
+    position: absolute !important;
+    width: 80% !important;
+    height: 20%;
+    width: 50rem;
+    margin: 0%;
+    padding: 1%;
+    left: 17%;
+    top: 0%;
+    right: 10%;
+    font-size:1.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .butt{
-    margin-top: 20px;
+
     border-radius: 30px;
 }
 
@@ -32,11 +87,17 @@ p{
 
 .text-over{
     position: absolute;
-    top: 30%;
+    top: 30% !important;
     color: white;
-    width: 70%;
-    right: 5%;
-    line-height:15px;
+
+    width: 40%;
+    right: 8%;
+
+    line-height: 10px;
+
+    line-height: 15px;
+
+
 }
 
 
@@ -51,8 +112,9 @@ h2{
 }
 .caroutexte{
     color: white !important;
-    font-size:xx-large;
-    top: 50%;
+    font-size:x-large;
+    top: 20%;
+
 }
 
 .avcli{
@@ -104,13 +166,15 @@ h2{
     right: 10%;
 }
 
-#parte{
-    width: 150px;
-    align-items: center;
+.message{
+    font-size: 1.7rem;
 }
 
 #partena{
-    padding: 5% !important;
+    padding-left: 230px;
+    padding-right: 230px;
+    /* margin: 20px, 0px, 20px; */
+    /* padding: 5% !important; */
     /* background:no-repeat url(../images/accueil/panneau.png); */
     /* background-color: blueviolet; */
 } 
@@ -124,6 +188,62 @@ h2{
         margin: 0;
     }
 
+.text-over{
+    line-height: 20px;
+}
+
+.clis{
+top: 65%;
+left: 75%;
+height: 6vh;
+    }
+.card-body{
+    width: 250px;
+    /* display: flex; */
+    }
+
+.card-img-top{
+    display: none;
+}
+
+    .avis{
+        position: absolute !important;
+        width: 95% !important;
+        height: 20%;
+        width: 50rem;
+        margin: 0%;
+        padding: 1%;
+        left: 2%;
+        top: 0%;
+        right: 5%;
+        font-size: 1.4rem;
+    }
+
+    .primo{
+        position: sticky;
+        height: 20vh;
+    }
+    
+    .seco{
+        padding: 0 !important;
+        margin: 0 !important;
+        position: sticky;
+        height: 20vh;
+    }
+
+#partena{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.message{
+    display: none;
+}
+
+.mobil{
+    font-size: 1.7rem;
+}
+
     .hautpage{
     display: none;
     }
@@ -131,8 +251,10 @@ h2{
 .hautmob{
     background-color: #c00000;
     color: white;
-    padding: 100px;
+    padding: 50px;
     font-size:x-large;
+    line-height: 15px;
+    
 }
 
 .carou{
@@ -144,10 +266,16 @@ h2{
         margin: 20px;
         padding: 20px;
     }
+#mobicon{
+    padding: 0;
+    margin: auto;
 
+}
 .centt{
-        margin: 50px !important;
-        padding: 0px !important;
+        /* margin: 50px !important; */
+        /* padding: 0px !important; */
+        width: 100%;
+        margin: 60px, 0px,60px;
     }
 
 .avcli{
@@ -165,6 +293,7 @@ h2{
 
 #mobicon{
 width: 100%;
+
 }
 
 }
@@ -173,13 +302,69 @@ width: 100%;
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 576px){
 
+main{
+        margin:2px;
+        
+        }
+
+        .presentation{
+            height: 25vh;
+            width: 100%;
+            position: relative;
+            /* filter: blur(2px); */
+        }
+        
+        .text-over{
+            position: absolute;
+            top: 10% !important;
+            color: white;
+            width: 60%;
+            right: 5%;
+            font-size: 1.1rem;
+        }        
+
+.carou, #pho1{
+    height: 25vh;
+    width: 100%;
+}
+
+
+
 #mobicon, .hautmob{
     display: none;
 }
-main{
-    margin:2px;
-    
-    }
+
+.clis{
+    top: 5%;
+}
+.avis{
+    position: absolute !important;
+    width: 75% !important;
+    height: 20%;
+    width: 50rem;
+    margin: 0%;
+    padding: 1%;
+    left: 35%;
+    top: 5%;
+    right: 5%;
+    font-size: 1.6rem;
+}
+
+.primo{
+    position: sticky;
+    height: 35vh;
+}
+
+.seco{
+    position: sticky;
+    height: 30vh;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.mobil{
+    display: none;
+}
     
 .avcli{
     /* width: 70%;
@@ -188,6 +373,8 @@ main{
     right: 5%;
     position: absolute !important;
 }
+
+
 
 
 .juste{
@@ -210,6 +397,65 @@ height: 10vh !important;
 @media only screen and (min-device-width: 577px) and (max-device-width: 768px) {
 
     #mobicon, .hautmob{
+        display: none;
+    }
+
+.caroutexte{
+    font-size: 1.8rem;
+    top: 5%;
+}
+
+    .presentation{
+        height: 25vh;
+        width: 100%;
+        position: relative;
+        /* filter: blur(2px); */
+    }
+    
+    .text-over{
+        position: absolute;
+        top: 15% !important;
+        color: white;
+        width: 50% !important;
+        right: 8%;
+        line-height: 12px;
+    } 
+
+    .carou, #pho1{
+        height: 25vh;
+        width: 100%;
+    }
+
+    .avis{
+        position: absolute !important;
+        width: 75% !important;
+        height: 20%;
+        width: 50rem;
+        margin: 0%;
+        padding: 1%;
+        left: 22%;
+        top: 10%;
+        right: 5%;
+        font-size: 1.4rem;
+    }
+
+    .clis{
+        top: 15%;
+    }
+
+    .primo{
+        position: sticky;
+        height: 40vh;
+    }
+    
+    .seco{
+        position: sticky;
+        height: 35vh;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .mobil{
         display: none;
     }
 
@@ -236,6 +482,48 @@ height: 10vh !important;
     #mobicon, .hautmob{
         display: none;
     }
+
+    .presentation{
+        height: 30vh;
+        width: 100%;
+        position: relative;
+        /* filter: blur(2px); */
+    }
+    
+    .text-over{
+        position: absolute;
+        top: 19% !important;
+        color: white;
+        width: 50% !important;
+        right: 8%;
+        line-height: 10px;
+    }   
+
+    .carou, #pho1{
+        height: 30vh;
+        width: 100%;
+    }
+
+    .avis{
+        position: absolute !important;
+        width: 75% !important;
+        height: 20%;
+        width: 50rem;
+        margin: 0%;
+        padding: 1%;
+        left: 25%;
+        top: 10%;
+        right: 5%;
+    }
+
+    .mobil{
+        display: none;
+    }
+
+    .clis{
+        top: 15%;
+    }
+    
 
     .text-over{
         position: absolute;
@@ -274,6 +562,29 @@ height: 10vh !important;
     #mobicon, .hautmob{
         display: none;
     }
+
+    .avis{
+        position: absolute !important;
+        width: 75% !important;
+        height: 20%;
+        width: 50rem;
+        margin: 0%;
+        padding: 1%;
+        left: 25%;
+        top: 10%;
+        right: 5%;
+    }
+
+    .clis{
+        top: 15%;
+    }
+
+    .mobil{
+        display: none;
+    }
+
+
+
     .juste{
         height: 20vh;
     }
@@ -313,5 +624,8 @@ height: 10vh !important;
         /* position: absolute; */
         width: 60%;
         right: 30%;
+        }
+        .mobil{
+            display: none;
         }
 }

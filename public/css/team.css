@@ -1,13 +1,25 @@
+
+h1, h2{text-align: center;
+    margin: 50px;
+
 h1, h2{
+
     color: #820000;
 }
 
 .image3, .photo{
     border: solid 3px #820000;
 }
+
+
 .formation{
     line-height: .8rem;
 }
+
+.line,.line2{ 
+opacity: 1;
+border: 3px solid #820000;
+
 @media screen and (max-width: 576px) {
     h1, h2{
         font-size: 1.5rem;
@@ -26,4 +38,5 @@ h1, h2{
     .photo{
         width: 8rem!important;
     }
+
 }
