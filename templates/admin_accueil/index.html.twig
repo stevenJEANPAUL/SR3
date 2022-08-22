@@ -31,10 +31,10 @@
                     {% endif %}
                 </td>
                 {# <td>{{ accueil.UpdatedAt ? accueil.UpdatedAt|date('Y-m-d H:i:s') : '' }}</td> #}
-                <td>{{ accueil.description }}</td>
-                <td>{{ accueil.titre }}</td>
-                <td>{{ accueil.nom }}</td>
-                <td>{{ accueil.commentaire }}</td>
+                <td>{{ accueil.description|raw  }}</td>
+                <td>{{ accueil.titre|raw  }}</td>
+                <td>{{ accueil.nom|raw  }}</td>
+                <td>{{ accueil.commentaire|raw  }}</td>
                 <td>{{ accueil.texte|raw }}</td>
                 <td class="text-center">
                     <a href="{{ path('app_admin_accueil_show', {'id': accueil.id}) }}"title="Voir" class="btn btn-dark mb-2">

@@ -16,7 +16,6 @@ class AccueilController extends AbstractController
     public function index(RepositoryAccueilRepository $accueilRepository): Response
     {
         $accueil = $accueilRepository->findOneBy(["isActive"=> true]);
-        //dd($accueil);
         return $this->render('accueil/index.html.twig', [
             'monAccueil' => $accueil,
         ]);

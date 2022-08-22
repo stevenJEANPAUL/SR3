@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig'%}
 
 {% block title %}SR3GROUPE - Accueil{% endblock %}
 
@@ -13,8 +13,8 @@
 <main class="container-md-fluid">
 
   <div class="hautpage">
-    <img src="{{ asset("images/accueil/" ~ monAccueil.imageName) }}" alt="" class="presentation">
-    <div class="text-over">{{ monAccueil.description|raw}}</div> 
+    <img src="{{ asset("images/accueil/" ~ monAccueil.imageName) }}" alt="" class="img-fluid presentation">
+    <div class="text-over text-start">{{ monAccueil.description|raw}}</div> 
   </div>
 {#partie mobile de la presentation#}
 
@@ -64,17 +64,20 @@
 {# --fin carousel nos domaines de formations--- #}
 
   {# début de la partie mobile#}
-  <div class="row justify-content-center" id="mobicon"> 
-  <div class="col-6 my-3 mx-3 p-2 centt">
-    <a href=""><img class="nav-item my-5 mx-3 " style="width: 4rem;" src="{{ asset ('images/formation/bureau.png') }}"><a>                                         
-    <a href=""><img class="nav-item my-5 mx-3 " style="width: 4rem;" src="{{ asset ('images/formation/programming.png') }}"><a> 
-    <a href=""><img class="nav-item my-5 mx-3 " style="width: 4rem;" src="{{ asset ('images/formation/project-management.png') }}"><a> 
-    <a href=""><img class="nav-item my-5 mx-3 " style="width: 4rem;" src="{{ asset ('images/formation/croissance.png') }}"><a>                                         
-    <a href=""><img class="nav-item my-5 mx-3 " style="width: 4rem;" src="{{ asset ('images/formation/reseau-mondial.png') }}"><a> 
-    <a href=""><img class="nav-item my-5 mx-3 " style="width: 4rem;" src="{{ asset ('images/formation/la-cyber-securite.png') }}"><a> 
-    <a href=""><img class="nav-item my-5 mx-3 " style="width: 4rem;" src="{{ asset ('images/formation/programmation.png') }}"><a> 
-    <a href=""><img class="nav-item my-5 mx-3 " style="width: 4rem;" src="{{ asset ('images/formation/virtualisation.png') }}"><a> 
+  <div class="row" id="mobicon"> 
+  <div class=" text-center col-md-6 centt">
+    <a href=""><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/bureau.png') }}"><a>                                         
+    <a href=""><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/programming.png') }}"><a> 
+    <a href=""><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/project-management.png') }}"><a> 
+    <a href=""><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/croissance.png') }}"><a>
     </div>
+    <div class="text-center col-md-6 centt">                                        
+    <a href=""><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/reseau-mondial.png') }}"><a> 
+    <a href=""><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/la-cyber-securite.png') }}"><a> 
+    <a href=""><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/programmation.png') }}"><a> 
+    <a href=""><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/virtualisation.png') }}"><a>
+    </div>  
+    
 </div>   
   {# fin de la partie mobile #}
 
@@ -83,7 +86,7 @@
                 <h2>{{ monAccueil.nom}}</h2>
 
 {# --avis de nos clients--- #}
-    {% if monAccueil.avisClients|length > 0 %}
+    {# {% if monAccueil.avisClients|length > 0 %}
     <div id="carouselExampleDark1" class="carousel carousel-dark slide bum" data-bs-ride="carousel">
       <div class="carousel-indicators">
       {% for avisClient in monAccueil.avisClients  %}
@@ -124,26 +127,81 @@
     
       </div>
     </div>
-    {% endif %}
+    {% endif %} #}
+
+
+{% if monAccueil.avisClients|length > 0 %}
+<div id="carouselExampleCaptions" class="carousel slide primo" data-bs-ride="false">
+  <div class="carousel-indicators">
+
+  {% for avisClient in monAccueil.avisClients %}
+  {% if loop.index0 == 0 %}
+  {% set active = "active" %}
+  {% else %}
+  {% set active = "" %}
+  {% endif %}
+  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ loop.index0 }}"  class="{{ active }} p-1 butt" aria-current="true" aria-label="{{ loop.index }}" style="border: 3px solid red"></button>
+  {% endfor %}
+</div>
+
+<div class="carousel-inner  seco row">
+  {% for avisClient in monAccueil.avisClients %}
+  {% if loop.index0 == 0 %}
+  {% set active = "active" %}
+  {% else %}
+  {% set active = "" %}
+  {% endif %}
+  <div class="carousel-item {{ active }} col-12 col-md-3 col-lg-4 col-xl-3 poste" >
+    <div class="card justify-content-center clis" style="width: 12rem;">
+      <img src="{{ asset('images/avisClient/') ~ avisClient.imageName }}" class="card-img-top ms-5" style="width: 6rem;" alt="...">
+      <div class="card-body text-center">
+        <h5 class=" ">{{ avisClient.nom}}</h5>
+        <p class="poste ">{{ avisClient.poste}}</p>
+      </div>  
+      </div>
+      <div class="avis">
+        <div class="card-text comment">
+        {{ avisClient.commentaire|raw}}
+        </div>
+      </div>
+  </div>
+
+  {% endfor %}
+</div>
+
+{# <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button> #}
+</div>
+{% endif %} 
+    
 {# -- fin avis de nos clients--- #}
 
 
 <h2>{{ monAccueil.commentaire}}</h2>
-
-    <div>{{ monAccueil.texte|raw}}</div>
 {# ----début partenaire-- #}
-    <div class="row mt-5" id="partena">
+  
+    <div class="message text-center">{{ monAccueil.texte|raw}}</div>
+
+    <div class="row" id="partena">
       {% for partenaire in monAccueil.partenaires %}
-      <div class="col-12 col-md-3 col-lg-4 d-flex justify-content-around  my-5">
+      <div class="text-center col-12 col-md-4 col-lg-4 col -xl-3 parten">
         <div class="">
-          <img src="{{ asset('images/partenaires/' ~ partenaire.imageName) }}" alt="" class="img-fluid shadow p-3 mb-5 bg-white" id="parte">
+          <img src="{{ asset('images/partenaires/' ~ partenaire.imageName) }}" alt="" class="img-fluid mt-4" style="width: 8rem;" id="parte">
         </div>
 
       </div>
 
       {% endfor %}
     </div>
+  <div class="text-center mobil">{{ monAccueil.texte|raw}}</div>
 {# ---fin de partenaire--- #}
+
 </main> 
 
 {% block javascripts %}
