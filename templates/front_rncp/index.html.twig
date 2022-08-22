@@ -10,18 +10,15 @@
             <div class="col-md-4 mt-2" >
                 <img class="img-fluid img-rncp my-3" src="{{ asset ('images/rncp/') ~ rncp.imageName }}">
             </div>
-                <div class="col-md-8 diplome">
-                    <h6 class="mt-3">{{ rncp.formation }}</h6>
-                    <div class="col">{{ rncp.niveau }}</div>
+                <div class="col-md-8">
+                    <h6 class="mt-3 titre-rncp">{{ rncp.formation }}</h6>
+                    <div class="col titre-rncp">{{ rncp.niveau }}</div>
                     <div class="fw-bold py-3">{{ rncp.descriptif }}</div>
                     <div class="ps-3 lh-2 w-75">{{ rncp.texte|raw }}</div>                    
                 </div>
-{# ------------------------------------------ #}
                 
         {% endfor %}
     </div>
 </main>
-{% block javascripts %}
-<script src="../../public/js/rncp.js"></script>
-{% endblock %}
+
 {% endblock %}

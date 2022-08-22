@@ -18,7 +18,7 @@ class CarouselType extends AbstractType
         $builder
             ->remove('imageName')
             ->remove('updatedAt')
-            ->add('imageFile', FileType::class, ["label"=>"Image :", "required"=>true])
+            ->add('imageFile', FileType::class, ["label"=>"Image :", "required"=>false])
             ->add('texte', CKEditorType::class, ["label"=>"Texte :", "required"=>false])
             ->remove('accueils', EntityType::class,["class"=>Accueil::class, "label"=>"Accueils", "multiple"=>true, "required"=>false, "attr"=>["class"=>"select2"]])
         ;

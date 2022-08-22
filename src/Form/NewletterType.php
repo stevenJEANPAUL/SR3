@@ -19,9 +19,9 @@ class NewletterType extends AbstractType
         $builder
             ->remove('imageName')
             ->remove('updatedAt')
-            ->add('imageFile', FileType::class, ["label"=>"Image :", "required"=>true])
-            ->add('titre', TextType::class, ["label"=>"Titre :"])
-            ->add('presentation', TextType::class, ["label"=>"Présentation"])
+            ->add('imageFile', FileType::class, ["label"=>"Image :", "required"=>false])
+            ->add('titre', CKEditorType::class, ["label"=>"Titre :"])
+            ->add('presentation', CKEditorType::class, ["label"=>"Présentation"])
             ->add('text', CKEditorType::class, ["label"=>"Texte :", "required"=>false])
             ->add('nosActuses', EntityType::class, ["class"=>NosActus::class, "label"=>"nosActuses", "multiple"=>true, "required"=>false, "attr"=>["class"=>"select2"]])
         ;

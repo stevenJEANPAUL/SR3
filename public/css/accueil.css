@@ -89,14 +89,14 @@ margin:35px;
     position: absolute;
     top: 30% !important;
     color: white;
+
     width: 40%;
     right: 8%;
-<<<<<<< HEAD
+
     line-height: 10px;
-=======
+
     line-height: 15px;
 
->>>>>>> d85b066a37891b8e3a1312e8d5e504c070006704
 
 }
 
@@ -285,17 +285,13 @@ height: 6vh;
     }
 
 
-
-.mobicon{
-background-color: red; 
-.card-text{
+/* .card-text{
         position: absolute;
         width: 95%;
         right: 1%;
         } */
 
 #mobicon{
-
 width: 100%;
 
 }
