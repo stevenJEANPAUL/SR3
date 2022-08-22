@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d85b066a37891b8e3a1312e8d5e504c070006704
 h1, h2{text-align: center;
     margin: 50px;
     color: #820000;
@@ -6,6 +11,7 @@ h1, h2{text-align: center;
 .image3, .photo{
     border: solid 3px #820000;
 }
+<<<<<<< HEAD
 
 .formation{
     line-height: .8rem;
@@ -14,4 +20,8 @@ h1, h2{text-align: center;
 .line,.line2{ 
 opacity: 1;
 border: 3px solid #820000;
+=======
+.formation{
+    line-height: .8rem;
+>>>>>>> d85b066a37891b8e3a1312e8d5e504c070006704
 }

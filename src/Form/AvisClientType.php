@@ -22,8 +22,11 @@ class AvisClientType extends AbstractType
             ->add('imageFile', FileType::class, ["label"=>"Image :", "required"=>false])
             ->add('nom', TextType::class, ["label"=>"Nom :"])
             ->add('poste')
+
             ->add('commentaire', CKEditorType::class, ["label"=>"Commentaire :", "required"=>false])
-            ->add('accueils', EntityType::class,["class"=>Accueil::class, "label"=>"Accueils", "multiple"=>true, "required"=>false, "attr"=>["class"=>"select2"]])
+
+            ->remove('accueils', EntityType::class,["class"=>Accueil::class, "label"=>"Accueils", "multiple"=>true, "required"=>false, "attr"=>["class"=>"select2"]])
+
         ;
     }
 

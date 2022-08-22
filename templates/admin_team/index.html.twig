@@ -33,7 +33,7 @@
                 {% else %}
                     N/A                    
                 {% endif %}</td>
-                <td>{{ team.presentation }}</td>
+                <td>{{ team.presentation|raw }}</td>
                 <td>
                     {% if team.imageName2 is defined and team.imageName2 is not null %}
                     <img class="img-list" src="{{ asset('images/team/' ~ team.imageName2) }}"> 
@@ -49,7 +49,7 @@
 
                 {# <td>{{ team.UpdatedAt ? team.UpdatedAt|date('Y-m-d H:i:s') : '' }}</td> #}
                 <td>{{ team.titre3 }}</td>
-                <td>{{ team.presentation2 }}</td>
+                <td>{{ team.presentation2|raw }}</td>
                 <td>{{ team.imageName4 }}</td>
                 <td>
                     <a href="{{ path('app_admin_team_show', {'id': team.id}) }}" class="btn btn-dark"><i class="align-middle" data-feather="eye"></i></a>

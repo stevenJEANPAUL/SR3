@@ -20,7 +20,7 @@ class CarouselType extends AbstractType
             ->remove('updatedAt')
             ->add('imageFile', FileType::class, ["label"=>"Image :", "required"=>true])
             ->add('texte', CKEditorType::class, ["label"=>"Texte :", "required"=>false])
-            ->add('accueils', EntityType::class,["class"=>Accueil::class, "label"=>"Accueils", "multiple"=>true, "required"=>false, "attr"=>["class"=>"select2"]])
+            ->remove('accueils', EntityType::class,["class"=>Accueil::class, "label"=>"Accueils", "multiple"=>true, "required"=>false, "attr"=>["class"=>"select2"]])
         ;
     }
 

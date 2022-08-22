@@ -21,7 +21,11 @@ class AccueilType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+
+            ->remove('imageName', TextType::class, ["label"=>"Nom de l'image :", "required"=>false])
+
             ->add('imageName', TextType::class, ["label"=>"Nom de l'image :", "required"=>false])
+
             ->add('imageFile', FileType::class, ["label"=>"Image :", "required"=>false])
             ->add('description', CKEditorType::class, ["label"=>"Description :"])
             ->add('titre', TextType::class, ["label"=>"Titre :"])

@@ -91,7 +91,12 @@ margin:35px;
     color: white;
     width: 40%;
     right: 8%;
+<<<<<<< HEAD
     line-height: 10px;
+=======
+    line-height: 15px;
+
+>>>>>>> d85b066a37891b8e3a1312e8d5e504c070006704
 
 }
 
@@ -117,6 +122,10 @@ h2{
     width: 85% !important;
     /* right: 20% !important; */
     
+}
+
+.juste{
+    position: sticky!important;
 }
 
 /* .juste{
@@ -276,13 +285,17 @@ height: 6vh;
     }
 
 
-/* .card-text{
+
+.mobicon{
+background-color: red; 
+.card-text{
         position: absolute;
         width: 95%;
         right: 1%;
         } */
 
 #mobicon{
+
 width: 100%;
 
 }
@@ -596,6 +609,21 @@ height: 10vh !important;
         width: 70%;
         left: 40vh;
     }
+
+}
+
+@media only screen and (min-device-width: 1601px) and (max-device-width: 1920px){
+    #mobicon, .hautmob{
+        display: none;
+    }
+    .juste{
+        height: 20vh;
+    }
+    .avcli{
+        width: 70%;
+        left: 30vh;
+    }
+
     .card-text{
         /* position: absolute; */
         width: 60%;
