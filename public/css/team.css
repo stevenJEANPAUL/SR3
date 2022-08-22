@@ -1,27 +1,29 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> d85b066a37891b8e3a1312e8d5e504c070006704
-h1, h2{text-align: center;
-    margin: 50px;
+h1, h2{
     color: #820000;
 }
 
 .image3, .photo{
     border: solid 3px #820000;
 }
-<<<<<<< HEAD
-
 .formation{
     line-height: .8rem;
 }
-
-.line,.line2{ 
-opacity: 1;
-border: 3px solid #820000;
-=======
-.formation{
-    line-height: .8rem;
->>>>>>> d85b066a37891b8e3a1312e8d5e504c070006704
+@media screen and (max-width: 576px) {
+    h1, h2{
+        font-size: 1.5rem;
+        margin : 40px 0px!important;
+    }
+    .marge-mobile{
+        margin : 25 0px!important;
+    }
+    .marginbottom{
+        margin-bottom : 10px!important;
+    }
+    .logo{
+        width: 12rem!important;
+        margin-bottom : 10px!important;
+    }
+    .photo{
+        width: 8rem!important;
+    }
 }

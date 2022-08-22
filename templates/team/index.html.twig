@@ -10,57 +10,45 @@
 {% endblock %}
 
 {% block body %}
-	<main class="container-fluid ">
-		<h1>
-			{{ laTeam.titre }}
-		</h1>
-		<div class="row my-10 justify-content-center ">
-			<img style="max-width:900px;" class="pt-2 img-fluid " src="{{ asset ('images/team/') ~ laTeam.imageName}}">
-			<hr style="width:100%" class="line">
-		</div>
-<<<<<<< HEAD
+<main class="container-fluid ">
+        <h1 class="text-center my-5 ">{{ laTeam.titre }}</h1>
 
-=======
->>>>>>> d85b066a37891b8e3a1312e8d5e504c070006704
-		<div class="my-5 mx-4 text-center">
-			{{ laTeam.presentation|raw}}
-		</div>
-		<div class="name2">
-			<img style="width:100%;" style="" class="img-fluid" src="{{ asset ('images/team/') ~ laTeam.imageName2}}">
-		</div>
-		<div class="row justify-content-center">
-			<img style="width: 15rem;" class="my-3 image3 " src="{{ asset ('images/team/') ~ laTeam.imageName3}}">
-		</div>
-		<div class="row my-5 justify-content-center mx-auto">
+        <div class="row justify-content-center ">
+            <img style="max-width:900px;" class="img-fluid my-3" src="{{ asset ('images/team/') ~ laTeam.imageName}}">
+        </div>
+
+        <div class="my-5 mx-4 text-center marge-mobile">
+            {{ laTeam.presentation|raw}}
+        </div>
+
+        <img style="width:100%;" class="img-fluid mb-5 marginbottom" src="{{ asset ('images/team/') ~ laTeam.imageName2}}">
+
+        <div class="row justify-content-center">
+            <img style="width: 14rem;" class="my-5 image3 marge-mobile logo" src="{{ asset ('images/team/') ~ laTeam.imageName3}}">
+        </div>
+
+        <div class="row my-5 justify-content-center mx-auto">
 
 			{% for equipe in laTeam.equipe %}
-
-
-				<div class="card col-12 col-md-3 col-lg-4 col-xl-3 d-flex flex-wrap align-items-center" style="width: 25rem;">
-					<img style="width: 10rem;" src="{{ asset("images/equipe/") ~ equipe.imageName }}" class="card-img-top photo" alt="...">
-
-					<div class="card-body text-center">
-
-						<h5 class="card-title text-center fw-bold">{{ equipe.nom}}</h5>
-						<p class="card-text fw-semibold">{{ equipe.poste}}</p>
-						<div class="card-text formation">{{ equipe.titre|raw}}</div>
-					</div>
-
-				</div>
-
-
-			{% endfor %}
+			<div class="card col-12 col-md-3 col-lg-4 col-xl-3 d-flex flex-wrap align-items-center" style="width: 25rem;">
+			<img style="width: 10rem;" src="{{ asset("images/equipe/") ~ equipe.imageName }}" class="card-img-top photo" alt="...">
+			<div class="card-body text-center">
+				<h5 class="card-title text-center fw-bold">{{ equipe.nom}}</h5>
+				<p class="card-text fw-semibold">{{ equipe.poste}}</p>
+				<div class="card-text formation">{{ equipe.titre|raw}}</div>
+			</div>
 		</div>
-<h2>
-	{{ laTeam.titre3 }}
-</h2>
-<div class="m-5 text-center lh-1">
-			{{ laTeam.presentation2|raw}}
-		</div>
-<div class="row my-10 justify-content-center ">
-		<img style="width:100%;" class="img-fluid " src="{{ asset ('images/team/') ~ laTeam.imageName4}}">
-		<hr style="width:100%" class="line2">
+	{% endfor %}
 </div>
 
-	</main>
+<h2 class="text-center my-5 marge-mobile">{{ laTeam.titre3 }}</h2>
+
+<div class="my-5 text-center lh-1 marge-mobile">
+	{{ laTeam.presentation2|raw}}
+</div>
+<div>
+	<img style="width:100%;" class="img-fluid " src="{{ asset ('images/team/') ~ laTeam.imageName4}}">
+</div>
+
+</main>
 {% endblock %}
