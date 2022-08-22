@@ -1,23 +1,18 @@
-body, main{
-    /* background-color: blueviolet; */
-    margin: 0%;
-    padding: 0%;
-}
 
-h2{
-    text-align: center;
-    margin: 15px;
-}
-h6{
-    text-align: center;
-}
 .presentation{
     height: 40vh;
     width: 100%;
-    position: relative;
-}
-#newl{
-    /* background-color: blueviolet; */
-margin: 4%;
 }
 
+@media screen and (max-width: 768px) {
+    .titre-newletter{
+        height : 2vh;
+        padding-left: 9%;
+    }
+    .texte-newletter{
+        height : 2vh;
+    }
+    .bouton-newletter{
+        margin-top :15px!important;
+    }         
+}
