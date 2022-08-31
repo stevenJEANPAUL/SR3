@@ -254,7 +254,7 @@ height: 6vh;
 }
 
 .carou{
-    display: none;
+    display: none !important;
 }
 
 .juste{
