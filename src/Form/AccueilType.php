@@ -22,19 +22,16 @@ class AccueilType extends AbstractType
     {
         $builder
 
-            ->remove('imageName', TextType::class, ["label"=>"Nom de l'image :", "required"=>false])
-
             ->add('imageName', TextType::class, ["label"=>"Nom de l'image :", "required"=>false])
-
             ->add('imageFile', FileType::class, ["label"=>"Image :", "required"=>false])
             ->add('description', CKEditorType::class, ["label"=>"Description :"])
             ->add('titre', TextType::class, ["label"=>"Titre :"])
-            ->add('carousels', EntityType::class, [ "class"=> Carousel::class, "multiple"=>true, "label"=>"carousel", "attr"=>["class"=>"select2"]])
-            ->add('nom', TextType::class, ["label"=>"Nom :"])
-            ->add('avisClients', EntityType::class,["class"=>AvisClient::class, "multiple"=>true, "label"=>"avisClient", "attr"=>["class"=>"select2"]])
-            ->add('commentaire')
+            ->add('carousels', EntityType::class, [ "class"=> Carousel::class, "multiple"=>true, "label"=>"Images carousel :", "attr"=>["class"=>"select2"]])
+            ->add('nom', TextType::class, ["label"=>"TItre :"])
+            ->add('avisClients', EntityType::class,["class"=>AvisClient::class, "multiple"=>true, "label"=>"Avis Client :", "attr"=>["class"=>"select2"]])
+            ->add('commentaire', TextType::class, ["label"=>"Titre 2 :"])
             ->add('texte', CKEditorType::class, ["label"=>"Texte :", "required"=>false])
-            ->add('partenaires', EntityType::class, ["class"=>Partenaire::class, "multiple"=>true, "label"=>"partenaire", "attr"=>["class"=>"select2"]])
+            ->add('partenaires', EntityType::class, ["class"=>Partenaire::class, "multiple"=>true, "label"=>"Partenaires :", "attr"=>["class"=>"select2"]])
             ->add('isActive', CheckboxType::class, ["label"=>"Active"])
             ->remove('UpdatedAt')
         ;

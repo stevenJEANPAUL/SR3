@@ -50,7 +50,7 @@ class FormationType extends AbstractType
             ->add('titre2', CKEditorType::class, ["label"=> 'Titre 2 :', "required"=>false])
             ->add('texte3', CKEditorType::class, ["label"=> 'Texte pied de page :', "required"=>false])
             ->add('cours', EntityType::class, ["class"=>Cours::class, "label"=>"Cours :", "multiple"=>true, "attr"=>["class"=>"select2"]])
-            ->add('isActive', CheckboxType::class, ["label"=>"Active"])
+            ->add('isActive', CheckboxType::class, ["label"=>"Page active", "required"=>false])
             
             ->remove('updatedAt')
             

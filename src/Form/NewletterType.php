@@ -10,6 +10,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class NewletterType extends AbstractType
@@ -17,8 +18,8 @@ class NewletterType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->remove('imageName')
-            ->remove('updatedAt')
+            ->add('imageName', HiddenType::class, ["label"=> "Nom de la photo :"])
+            ->remove('updatedAt')   
             ->add('imageFile', FileType::class, ["label"=>"Image :", "required"=>false])
             ->add('titre', CKEditorType::class, ["label"=>"Titre :"])
             ->add('presentation', CKEditorType::class, ["label"=>"Présentation"])

@@ -4,11 +4,13 @@ namespace App\Controller;
 
 use App\Form\ContactType;
 use Symfony\Component\Mime\Email;
+use Symfony\Component\Mime\Address;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Mailer\MailerInterface;
 
 class ContactController extends AbstractController
 {
@@ -24,16 +26,18 @@ class ContactController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()){
             $data = $form->getData();
 
+            $nom = $data['nom'];
             $couriel = $data['email'];
             $message = $data['message'];
             $sujet = $data['sujet'];  
 
-            $email = (new Email())
-                ->from($couriel)
+                $email = (new TemplatedEmail())
+                ->from(new Address($couriel, $nom))
                 ->to('admin@admin.com')
-                ->subject($sujet)           
+                ->subject($sujet) 
                 ->text($message);
-
+                
+            ;
         $mailer->send($email);
         
         return $this->redirectToRoute('app_accueil');

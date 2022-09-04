@@ -89,6 +89,8 @@ margin:35px;
     position: absolute;
     top: 30% !important;
     color: white;
+    text-shadow: 1px 1px 2px #000;
+    
 
     width: 40%;
     right: 8%;
@@ -110,6 +112,8 @@ h2{
     color: white !important;
     font-size:x-large;
     top: 20%;
+    text-shadow: 1px 1px 2px #000;
+    
 
 }
 
@@ -186,6 +190,7 @@ h2{
 
 .text-over{
     line-height: 20px;
+    text-align: justify;
 }
 
 .clis{

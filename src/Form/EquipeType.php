@@ -17,7 +17,7 @@ class EquipeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('imageFile', FileType::class, ["label"=>"Photo du formateur(trice) :","required"=>false])
+            ->add('imageFile', FileType::class, ["label"=>"Photo du formateur(trice) :","required"=>true])
             ->add('nom', TextType::class, ["label"=>"Nom du formateur(trice) :", "required"=>false])
             ->add('poste', TextType::class, ["label"=>"Poste :", "required"=>false])
             ->add('titre',  CKEditorType::class, ["label"=> 'Formation dispensée :', "required"=>false])

@@ -11,6 +11,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class NosActusType extends AbstractType
@@ -18,12 +19,12 @@ class NosActusType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('titre', TextType::class, ["label"=>"Titre :", "required"=>false])
+            ->add('titre', HiddenType::class, ["label"=>"Titre :", "required"=>false])
             ->add('imageFile', FileType::class, ["label"=>"Image :", "required"=>false])
             ->remove('imageName')
             ->add('newletters', EntityType::class,["class"=>Newletter::class, "multiple"=>true, "label"=>"newletter", "attr"=>["class"=>"select2"]])
-            ->add('description')
-            ->add('commentaire')
+            ->add('description', HiddenType::class)
+            ->add('commentaire', HiddenType::class)
             ->add('isActive', CheckboxType::class, ["label"=>"Active"])
             
         ;
