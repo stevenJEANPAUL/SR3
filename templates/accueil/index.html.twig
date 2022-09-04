@@ -20,8 +20,6 @@
 
 <div class="hautmob">
 
-<p class="mob-texte">{{ monAccueil.description|raw}}</p> 
-
 <div class="mob-texte">{{ monAccueil.description|raw}}</div> 
 
 </div>
@@ -52,7 +50,7 @@
           {% else %}
           {% set active = "" %}
           {% endif %}
-          <div class="carousel-item {{ active }}" data-bs-interval="7000">
+          <div class="carousel-item {{ active }}" data-bs-interval="4500">
             <img id="pho1" src="{{ asset('images/carousels/' ~ carousel.imageName) }}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block caroutexte">
               <div class="caroutexte">
@@ -70,16 +68,16 @@
   {# début de la partie mobile#}
   <div class="row" id="mobicon"> 
   <div class=" text-center col-md-6 centt">
-    <a href=""><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/bureau.png') }}"><a>                                         
-    <a href=""><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/programming.png') }}"><a> 
-    <a href=""><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/project-management.png') }}"><a> 
-    <a href=""><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/croissance.png') }}"><a>
+    <a href="{{ path('app_front_formation') }}"><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/bureau.png') }}"><a>                                         
+    <a href="{{ path('app_front_formation') }}"><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/programming.png') }}"><a> 
+    <a href="{{ path('app_front_formation') }}"><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/project-management.png') }}"><a> 
+    <a href="{{ path('app_front_formation') }}"><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/croissance.png') }}"><a>
     </div>
     <div class="text-center col-md-6 centt">                                        
-    <a href=""><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/reseau-mondial.png') }}"><a> 
-    <a href=""><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/la-cyber-securite.png') }}"><a> 
-    <a href=""><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/programmation.png') }}"><a> 
-    <a href=""><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/virtualisation.png') }}"><a>
+    <a href="{{ path('app_front_formation') }}"><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/reseau-mondial.png') }}"><a> 
+    <a href="{{ path('app_front_formation') }}"><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/la-cyber-securite.png') }}"><a> 
+    <a href="{{ path('app_front_formation') }}"><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/programmation.png') }}"><a> 
+    <a href="{{ path('app_front_formation') }}"><img class="nav-item my-5 mx-5 " style="width: 5rem;" src="{{ asset ('images/formation/virtualisation.png') }}"><a>
     </div>  
     
 </div>   
@@ -113,15 +111,12 @@
                 {% endif %}
     
       <div class="carousel-item {{ active }} juste" data-bs-interval="false">
-
         <div class="card justify-content-center" style="width: 12rem;">
           <img src="{{ asset('images/avisClient/' ~ avisClient.imageName) }}" class="card-img-top ms-5"  alt="..."style="width: 5rem;">
-
           <div class="card-body">
             <h5 class="card-title" style="font-size: 1rem;">{{ avisClient.nom}}</h5>
             <div style="font-size: 0.8rem;">{{ avisClient.poste}}</div>
           </div>
-
         </div>
             <div class="avcli">
             <div class="card-text me-auto">

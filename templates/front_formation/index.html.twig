@@ -8,7 +8,7 @@
     <div class="row"></div>
     <div class="card">
         <img class="img-fluid m-0 p-0" src="{{ asset ('images/formation/') ~ formation.imageName }}">    
-        <div class="card-img-overlay text-center text-white">
+        <div class="card-img-overlay text-center text-white text-shadow">
             
             <div class="d-none d-sm-block d-sm-none d-md-block formation-text1 ms-auto col-md-8 ms-5">
             {{ formation.texte1|raw }}
@@ -43,7 +43,7 @@
 {# SECTION COMPETENCE EN MODE DESKTOP #}
     <div class="row my-5 justify-content-center mx-auto cours d-none d-sm-block d-sm-none d-md-flex">
         {% for cours in formation.cours %}
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex flex-wrap mb-3 border rounded border-3 border-danger mx-2" style="width: 12rem;">
+        <div class="col d-flex flex-wrap mb-3 border rounded border-3 border-danger mx-2" style="width: 13rem;">
             <div class="card align-items-center">
                 <img style="width: 3rem;" class="pt-2 " src="{{ asset ('images/formation/') ~ cours.imageName}}">
                 <div class="card-body flex-wrap justify-content-center">
@@ -53,14 +53,13 @@
             </div> 
         </div>
         {% endfor %}
-
     </div>
 
 
 {# SECTION COMPETENCE EN MODE MOBILE #}
     <div class="row m-2 mt-4 d-md-none d-lg-block d-lg-none d-xl-block d-xl-none d-xxl-none d-xxl-block">
         {% for cours in formation.cours %}
-            <div class="col-12 d-flex justify-content-between align-items-center">
+            <div class="col d-flex justify-content-between align-items-center">
                 <img style="max-width: 3rem;" class="img-fluid" src="{{ asset ('images/formation/') ~ cours.imageName}}">
                 <h6 class="fw-light text-center formation-mobile" >{{cours.nom|raw}} </h6>
             <a class="nav-link" href="{{ path('app_cours_show', {'id': cours.id}) }}"><img style="width: 1.2rem;" src="images/formation/down.png"></a>          

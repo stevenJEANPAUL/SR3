@@ -1,10 +1,11 @@
 
 h1, h2{text-align: center;
     margin: 50px;
-
-h1, h2{
-
     color: #820000;
+}
+.marge{
+    margin-left: 200px!important;
+    margin-right: 200px!important;
 }
 
 .image3, .photo{
@@ -18,7 +19,7 @@ h1, h2{
 
 .line,.line2{ 
 opacity: 1;
-border: 3px solid #820000;
+border: 3px solid #820000;}
 
 @media screen and (max-width: 576px) {
     h1, h2{

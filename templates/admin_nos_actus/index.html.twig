@@ -11,10 +11,10 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Titre</th>
+                {# <th>Titre</th> #}
                 <th>ImageName</th>
-                <th>Description</th>
-                <th>Commentaire</th>                
+                {# <th>Description</th> #}
+                {# <th>Commentaire</th>                 #}
                 <th>Actions</th>
             </tr>
         </thead>
@@ -22,14 +22,14 @@
         {% for nos_actu in nos_actuses %}
             <tr>
                 <td>{{ nos_actu.id }}</td>
-                <td>{{ nos_actu.titre }}</td>
+                {# <td>{{ nos_actu.titre }}</td> #}
                 <td>{% if nos_actu.imageName is defined and nos_actu.imageName is not null %}
                     <img class="img-list"style="width:20rem;" src="{{ asset('images/nosActus/' ~ nos_actu.imageName) }}"> 
                 {% else %}
                     N/A                    
                 {% endif %}</td>
-                <td>{{ nos_actu.description }}</td>
-                <td>{{ nos_actu.commentaire }}</td>
+                {# <td>{{ nos_actu.description }}</td> #}
+                {# <td>{{ nos_actu.commentaire }}</td> #}
                 
                 <td>
                     <a href="{{ path('app_admin_nos_actus_show', {'id': nos_actu.id}) }}"title="Voir" class="btn btn-dark">

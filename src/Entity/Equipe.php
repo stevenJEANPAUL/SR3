@@ -73,7 +73,7 @@ class Equipe
 
     public function __toString()
     {
-        return $this->imageName;
+        return $this->nom;
     }
 
     public function getImageName(): ?string
